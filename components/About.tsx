@@ -10,7 +10,6 @@ export default function About() {
     <section className="about section" id="about">
       <div className="container">
         <div className="section-header">
-          <span className="section-tag">{a.sectionTag}</span>
           <h2 className="section-title">{a.sectionTitle}</h2>
           <div className="section-divider" />
         </div>

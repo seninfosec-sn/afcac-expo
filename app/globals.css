@@ -1308,8 +1308,10 @@ button { cursor: pointer; font-family: var(--font-body); }
 
 .travel-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 .travel-card {
   text-align: center;
@@ -1344,6 +1346,13 @@ button { cursor: pointer; font-family: var(--font-body); }
   margin-bottom: 12px;
 }
 .travel-card p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.7; }
+.travel-evisa-btn {
+  display: inline-block;
+  margin-top: 16px;
+  font-size: 0.8rem;
+  padding: 8px 20px;
+  letter-spacing: 0.08em;
+}
 
 /* =====================================================
    ACCOMMODATION
@@ -1731,7 +1740,7 @@ button { cursor: pointer; font-family: var(--font-body); }
 @media (max-width: 1024px) {
   .about-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
-  .travel-grid { grid-template-columns: repeat(2, 1fr); }
+  .travel-grid { grid-template-columns: repeat(2, 1fr); max-width: 100%; }
   .hotels-grid { grid-template-columns: 1fr 1fr; }
   .featured-hotel { grid-column: 1 / -1; }
   .venue-grid { gap: 40px; }

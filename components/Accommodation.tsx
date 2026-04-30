@@ -23,17 +23,15 @@ export default function Accommodation() {
               {Array.from({ length: 5 }).map((_, i) => <i key={i} className="fas fa-star" />)}
             </div>
             <h4>{ac.hotel1Name}</h4>
-            <p>{ac.hotel1Desc}</p>
-            <a href="mailto:secretariat@afcac.org" className="btn btn-primary sm">{ac.hotel1Btn}</a>
+            <p style={{ whiteSpace: 'pre-line' }}>{ac.hotel1Desc}</p>
           </div>
 
           <div className="hotel-card">
             <div className="hotel-icon">
-              {Array.from({ length: 5 }).map((_, i) => <i key={i} className="fas fa-star" />)}
+              {Array.from({ length: 4 }).map((_, i) => <i key={i} className="fas fa-star" />)}
             </div>
             <h4>{ac.hotel2Name}</h4>
-            <p>{ac.hotel2Desc}</p>
-            <a href="mailto:secretariat@afcac.org" className="btn btn-outline-dark sm">{ac.hotel2Btn}</a>
+            <p style={{ whiteSpace: 'pre-line' }}>{ac.hotel2Desc}</p>
           </div>
 
           <div className="hotel-card">
@@ -41,8 +39,7 @@ export default function Accommodation() {
               {Array.from({ length: 4 }).map((_, i) => <i key={i} className="fas fa-star" />)}
             </div>
             <h4>{ac.hotel3Name}</h4>
-            <p>{ac.hotel3Desc}</p>
-            <a href="mailto:secretariat@afcac.org" className="btn btn-outline-dark sm">{ac.hotel3Btn}</a>
+            <p style={{ whiteSpace: 'pre-line' }}>{ac.hotel3Desc}</p>
           </div>
         </div>
       </div>

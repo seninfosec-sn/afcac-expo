@@ -223,8 +223,7 @@ export const translations = {
       sectionTitle: 'Travel Tips',
       cards: [
         { icon: 'fas fa-plane', title: 'By Air', desc: 'Lomé\'s Gnassingbé Eyadema International Airport is just 4 km from the city centre. It serves numerous African and international destinations via direct and connecting flights.' },
-        { icon: 'fas fa-passport', title: 'Visas', desc: 'Nationals of many African countries enjoy facilitated access to Togo. International delegates should check entry requirements at their nearest Togolese embassy or via the e-visa portal.' },
-        { icon: 'fas fa-thermometer-half', title: 'Climate', desc: 'Lomé in June has a tropical climate with temperatures of 25–30°C. The coastal city enjoys a pleasant breeze from the Atlantic Ocean. Light clothing is recommended.' },
+        { icon: 'fas fa-passport', title: 'Visas', accentTitle: true, desc: 'Nationals of many African countries enjoy facilitated access to Togo. International delegates should check entry requirements at their nearest Togolese embassy or via the e-visa portal.', link: 'https://voyage.gouv.tg/', linkLabel: 'E-VISA' },
         { icon: 'fas fa-coins', title: 'Currency', desc: 'The official currency is the CFA Franc (XOF). Hotels and convention venues accept international payment cards. ATMs and currency exchange offices are available.' },
       ],
     },
@@ -233,18 +232,18 @@ export const translations = {
       sectionTitle: 'Accommodation',
       sectionDesc:
         'AFCAC has negotiated preferential rates with partner hotels in Lomé for convention delegates.',
-      officialBadge: 'Official Hotel',
+      officialBadge: 'Venue',
       hotel1Name: 'Hôtel 2 Février',
       hotel1Desc:
-        'The official hotel of AFCAC Expo 2026, directly on the convention site. The ideal option for delegates wishing to maximise their participation in sessions and networking.',
+        'The official hotel of AFCAC Expo 2026, directly on the convention site. The ideal option for delegates wishing to maximise their participation in sessions and networking.\n\nPhone: +228 22 23 86 00\nWhatsApp: +228 93 88 90 20\n320 rooms\n\nExecutive suite: CFA 317,625\nJunior single suite: CFA 187,000\nBusiness single room: CFA 158,400\nStandard single room: CFA 121,000',
       hotel1Btn: 'Book Now',
-      hotel2Name: '5-Star Hotels — Lomé',
+      hotel2Name: 'HOTEL SARAKAWA',
       hotel2Desc:
-        'Several luxury hotels in Lomé offer preferential rates for registered delegates. Contact the secretariat for the full list.',
+        'Along the road to the Port\nPhone: +228 22 27 65 90\n70 rooms\n\nStandard room with city view: CFA 76,000\nSea view room: CFA 86,000\nPrivilege room: CFA 121,000\n\nThese rates include standard package services (breakfast, Wi-Fi access, etc.).',
       hotel2Btn: 'Enquire',
-      hotel3Name: 'Mid-Range Hotels — Lomé',
+      hotel3Name: 'HOTEL ONOMO',
       hotel3Desc:
-        'Comfortable, affordable accommodation options are available near the venue. Contact the secretariat for recommendations.',
+        'Located at Bè Souza-netimé\nPhone: +228 22 53 63 00 / 92 15 72 00\n\n58 Standard rooms | 63 Superior rooms | 4 Junior suites | 2 Suites\n\nStandard Room (single/double): FCFA 73,000\nSuperior Room: FCFA 88,000\nJunior Suite: FCFA 103,000\nSuite: FCFA 118,000',
       hotel3Btn: 'Enquire',
     },
     register: {
@@ -526,8 +525,7 @@ export const translations = {
       sectionTitle: 'Conseils de voyage',
       cards: [
         { icon: 'fas fa-plane', title: 'Par avion', desc: 'L\'aéroport international Gnassingbé Eyadema de Lomé est situé à seulement 4 km du centre-ville. Il dessert de nombreuses destinations africaines et internationales.' },
-        { icon: 'fas fa-passport', title: 'Visas', desc: 'Les ressortissants de nombreux pays africains bénéficient d\'une facilité d\'accès au Togo. Les délégués internationaux doivent vérifier les conditions d\'entrée auprès de l\'ambassade togolaise.' },
-        { icon: 'fas fa-thermometer-half', title: 'Climat', desc: 'Lomé en juin bénéficie d\'un climat tropical avec des températures de 25–30 °C. La ville côtière offre une brise agréable depuis l\'Atlantique. Des vêtements légers sont recommandés.' },
+        { icon: 'fas fa-passport', title: 'Visas', accentTitle: true, desc: 'Les ressortissants de nombreux pays africains bénéficient d\'une facilité d\'accès au Togo. Les délégués internationaux doivent vérifier les conditions d\'entrée auprès de l\'ambassade togolaise.', link: 'https://voyage.gouv.tg/', linkLabel: 'E-VISA' },
         { icon: 'fas fa-coins', title: 'Monnaie', desc: 'La monnaie officielle est le Franc CFA (XOF). Les hôtels et sites de la convention acceptent les cartes de paiement internationales. Des DAB et bureaux de change sont disponibles.' },
       ],
     },
@@ -536,18 +534,18 @@ export const translations = {
       sectionTitle: 'Hébergement',
       sectionDesc:
         'L\'AFCAC a négocié des tarifs préférentiels avec les hôtels partenaires de Lomé pour les délégués de la convention.',
-      officialBadge: 'Hôtel officiel',
+      officialBadge: 'Venue',
       hotel1Name: 'Hôtel 2 Février',
       hotel1Desc:
-        'Hôtel officiel de l\'AFCAC Expo 2026, directement sur le site de la convention. Le lieu idéal pour maximiser sa participation aux sessions et au networking.',
+        'Hôtel officiel de l\'AFCAC Expo 2026, directement sur le site de la convention. Le lieu idéal pour maximiser sa participation aux sessions et au networking.\n\nTél. : +228 22 23 86 00\nWhatsApp : +228 93 88 90 20\n320 chambres\n\nSuite exécutive : FCFA 317 625\nSuite junior simple : FCFA 187 000\nChambre business simple : FCFA 158 400\nChambre standard simple : FCFA 121 000',
       hotel1Btn: 'Réserver',
-      hotel2Name: 'Hôtels 5 étoiles — Lomé',
+      hotel2Name: 'HOTEL SARAKAWA',
       hotel2Desc:
-        'Plusieurs hôtels de luxe à Lomé proposent des tarifs préférentiels pour les délégués enregistrés. Contactez le secrétariat pour la liste complète.',
+        'Route du Port\nTél. : +228 22 27 65 90\n70 chambres\n\nChambre standard vue ville : FCFA 76 000\nChambre vue mer : FCFA 86 000\nChambre Privilège : FCFA 121 000\n\nCes tarifs incluent les services du forfait standard (petit-déjeuner, accès Wi-Fi, etc.).',
       hotel2Btn: 'Renseignements',
-      hotel3Name: 'Hôtels intermédiaires — Lomé',
+      hotel3Name: 'HOTEL ONOMO',
       hotel3Desc:
-        'Des options d\'hébergement confortables à tarifs accessibles sont disponibles à proximité du site. Contactez le secrétariat pour les recommandations.',
+        'Situé à Bè Souza-netimé\nTél. : +228 22 53 63 00 / 92 15 72 00\n\n58 chambres Standard | 63 chambres Supérieures | 4 Suites Junior | 2 Suites\n\nChambre Standard (simple/double) : FCFA 73 000\nChambre Supérieure : FCFA 88 000\nSuite Junior : FCFA 103 000\nSuite : FCFA 118 000',
       hotel3Btn: 'Renseignements',
     },
     register: {
@@ -829,8 +827,7 @@ export const translations = {
       sectionTitle: 'Dicas de Viagem',
       cards: [
         { icon: 'fas fa-plane', title: 'De Avião', desc: 'O Aeroporto Internacional Gnassingbé Eyadema de Lomé está situado a apenas 4 km do centro da cidade, com ligações para numerosos destinos africanos e internacionais.' },
-        { icon: 'fas fa-passport', title: 'Vistos', desc: 'Os cidadãos de muitos países africanos beneficiam de acesso facilitado ao Togo. Os delegados internacionais devem verificar os requisitos de entrada na embaixada togolesa ou através do portal de e-visto.' },
-        { icon: 'fas fa-thermometer-half', title: 'Clima', desc: 'Lomé em junho tem um clima tropical com temperaturas de 25–30 °C. A cidade costeira beneficia de uma brisa agradável do Atlântico. Recomenda-se vestuário leve.' },
+        { icon: 'fas fa-passport', title: 'Vistos', accentTitle: true, desc: 'Os cidadãos de muitos países africanos beneficiam de acesso facilitado ao Togo. Os delegados internacionais devem verificar os requisitos de entrada na embaixada togolesa ou através do portal de e-visto.', link: 'https://voyage.gouv.tg/', linkLabel: 'E-VISA' },
         { icon: 'fas fa-coins', title: 'Moeda', desc: 'A moeda oficial é o Franco CFA (XOF). Os hotéis e os locais da convenção aceitam cartões de pagamento internacionais. Há caixas multibanco e casas de câmbio disponíveis.' },
       ],
     },
@@ -839,18 +836,18 @@ export const translations = {
       sectionTitle: 'Alojamento',
       sectionDesc:
         'A AFCAC negociou tarifas preferenciais com hotéis parceiros em Lomé para os delegados da convenção.',
-      officialBadge: 'Hotel Oficial',
+      officialBadge: 'Venue',
       hotel1Name: 'Hotel 2 Février',
       hotel1Desc:
-        'Hotel oficial da AFCAC Expo 2026, diretamente no local da convenção. A opção ideal para os delegados que desejam maximizar a sua participação nas sessões e no networking.',
+        'Hotel oficial da AFCAC Expo 2026, diretamente no local da convenção. A opção ideal para os delegados que desejam maximizar a sua participação nas sessões e no networking.\n\nTel.: +228 22 23 86 00\nWhatsApp: +228 93 88 90 20\n320 quartos\n\nSuite executiva: CFA 317.625\nSuite junior individual: CFA 187.000\nQuarto business individual: CFA 158.400\nQuarto standard individual: CFA 121.000',
       hotel1Btn: 'Reservar',
-      hotel2Name: 'Hotéis 5 estrelas — Lomé',
+      hotel2Name: 'HOTEL SARAKAWA',
       hotel2Desc:
-        'Vários hotéis de luxo em Lomé oferecem tarifas preferenciais para delegados registados. Contacte o secretariado para a lista completa.',
+        'Estrada do Porto\nTel.: +228 22 27 65 90\n70 quartos\n\nQuarto standard vista cidade: CFA 76.000\nQuarto vista mar: CFA 86.000\nQuarto Privilégio: CFA 121.000\n\nEstas tarifas incluem os serviços do pacote padrão (pequeno-almoço, acesso Wi-Fi, etc.).',
       hotel2Btn: 'Informações',
-      hotel3Name: 'Hotéis intermédios — Lomé',
+      hotel3Name: 'HOTEL ONOMO',
       hotel3Desc:
-        'Opções de alojamento confortáveis e acessíveis estão disponíveis perto do local. Contacte o secretariado para recomendações.',
+        'Localizado em Bè Souza-netimé\nTel.: +228 22 53 63 00 / 92 15 72 00\n\n58 quartos Standard | 63 quartos Superior | 4 Suites Junior | 2 Suites\n\nQuarto Standard (individual/duplo): FCFA 73.000\nQuarto Superior: FCFA 88.000\nSuite Junior: FCFA 103.000\nSuite: FCFA 118.000',
       hotel3Btn: 'Informações',
     },
     register: {

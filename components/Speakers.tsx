@@ -10,7 +10,6 @@ export default function Speakers() {
     <section className="speakers section" id="speakers">
       <div className="container">
         <div className="section-header">
-          <span className="section-tag">{s.sectionTag}</span>
           <h2 className="section-title">{s.sectionTitle}</h2>
           <div className="section-divider" />
           <p className="section-desc">{s.sectionDesc}</p>
