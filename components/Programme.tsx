@@ -18,6 +18,20 @@ export default function Programme() {
           <p className="section-desc">{p.sectionDesc}</p>
         </div>
 
+        <div className="prog-bulletin-bar">
+          <a
+            href="#"
+            className="btn btn-primary prog-bulletin-btn"
+          >
+            <i className="fas fa-file-alt" /> Information Bulletin
+          </a>
+          <div className="prog-bulletin-langs">
+            <a href="https://www.afcac.org/wp-content/uploads/2026/04/ENEXPO-Information-Bulletin-Lome-TOGO-FINAL-3.pdf" target="_blank" rel="noopener noreferrer" className="prog-lang-btn">EN</a>
+            <a href="https://www.afcac.org/wp-content/uploads/2026/04/FR_Draft-Program-and-Annotated-Agenda-April-27-04-26-SG.pdf" target="_blank" rel="noopener noreferrer" className="prog-lang-btn">FR</a>
+            <a href="https://www.afcac.org/wp-content/uploads/2026/04/Port_Draft-Program-and-Annotated-Agenda-April-27-04-26-SG.pdf" target="_blank" rel="noopener noreferrer" className="prog-lang-btn">PR</a>
+          </div>
+        </div>
+
         <div className="programme-tabs">
           {p.days.map((day, i) => (
             <button

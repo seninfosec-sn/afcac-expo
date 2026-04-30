@@ -927,6 +927,44 @@ button { cursor: pointer; font-family: var(--font-body); }
 ===================================================== */
 .programme { background: var(--white); }
 
+.prog-bulletin-bar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+.prog-bulletin-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+.prog-bulletin-langs {
+  display: flex;
+  gap: 8px;
+}
+.prog-lang-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--green);
+  color: var(--green);
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  transition: var(--transition);
+}
+.prog-lang-btn:hover {
+  background: var(--green);
+  color: #fff;
+}
+
 .programme-tabs {
   display: flex;
   gap: 8px;
