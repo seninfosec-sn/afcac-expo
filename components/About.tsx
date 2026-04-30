@@ -38,7 +38,7 @@ export default function About() {
             <div className="about-card-icon"><i className="fas fa-landmark" /></div>
             <h3>{a.card3Title}</h3>
             <p>{a.card3Text}</p>
-            <a href="#venue" className="card-link">
+            <a href="https://togotourisme.tg/" target="_blank" rel="noopener noreferrer" className="card-link">
               {a.card3Link} <i className="fas fa-arrow-right" />
             </a>
           </div>
