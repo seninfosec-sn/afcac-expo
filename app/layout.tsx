@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Montserrat, Open_Sans } from 'next/font/google'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 import './globals.css'
+import 'maplibre-gl/dist/maplibre-gl.css'
 
 const montserrat = Montserrat({
   subsets: ['latin'],
