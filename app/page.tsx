@@ -11,8 +11,6 @@ import Venue from '@/components/Venue'
 import Travel from '@/components/Travel'
 import Accommodation from '@/components/Accommodation'
 import RegisterCTA from '@/components/RegisterCTA'
-import Contact from '@/components/Contact'
-import Footer from '@/components/Footer'
 import BackToTop from '@/components/BackToTop'
 import ScrollReveal from '@/components/ScrollReveal'
 
@@ -33,9 +31,7 @@ export default function Home() {
         <Travel />
         <Accommodation />
         <RegisterCTA />
-        <Contact />
       </main>
-      <Footer />
       <BackToTop />
       <ScrollReveal />
     </>
