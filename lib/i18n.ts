@@ -43,9 +43,9 @@ export const translations = {
     about: {
       sectionTag: 'Who We Are',
       sectionTitle: 'About the Expo',
-      card1Title: 'About AFCAC',
+      card1Title: 'Who is AFCAC?',
       card1Text:
-        'The African Civil Aviation Commission (AFCAC/CAFAC) is the specialised aviation agency of the African Union. It coordinates, develops and harmonises civil aviation activities across Africa\'s 54 member states, promoting safe, secure and sustainable aviation on the continent.',
+        'AFCAC is the African Union\'s Specialized Agency for all civil aviation matters on the African continent and the Executing Agency of the Yamoussoukro Decision (YD) and Single African Air Transport Market (SAATM).',
       card1Link: 'Learn More',
       card2Title: 'African Air Transport Convention & Expo 2026',
       card2Text:
