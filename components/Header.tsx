@@ -40,13 +40,13 @@ export default function Header() {
   return (
     <header id="header" ref={headerRef} className={scrolled ? 'scrolled' : ''}>
       <div className="container header-inner">
-        <div className="logo">
+        <a className="logo" href="https://www.afcac.org/" target="_blank" rel="noopener noreferrer">
           <div className="logo-icon"><LogoIcon width={64} height={64} /></div>
           <div className="logo-text">
             <span className="logo-title">AFCAC</span>
             <span className="logo-sub">EXPO 2026</span>
           </div>
-        </div>
+        </a>
 
         <button
           className={`hamburger${menuOpen ? ' open' : ''}`}
