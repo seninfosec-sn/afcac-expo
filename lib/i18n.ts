@@ -25,8 +25,8 @@ export const translations = {
       title1: 'African Air Transport',
       title2: 'Convention & Expo 2026',
       subtitle:
-        'Anchored in the principles of SAATM and the African Union\'s Agenda 2063, the Expo will promote strategic dialogue, showcase innovation, and catalyze investment aimed at bridging infrastructure gaps and building a resilient, sustainable, and competitive African aviation ecosystem.',
-      location: 'Lomé, Togo — 15–19 June 2026',
+        'The premier continental platform bringing together policymakers, regulators, airlines, airport operators, investors, MRO providers, training institutions, ANSPs, cargo operators and innovators to accelerate the growth and modernisation of Africa\'s air transport sector — aligned with SAATM and Agenda 2063.',
+      location: 'Lomé, TOGO : 15 –19 June 2026',
       cta: 'Register Now',
       ctaSecondary: 'Learn More',
       scrollHint: 'Scroll to explore',
@@ -36,7 +36,7 @@ export const translations = {
       seconds: 'Seconds',
     },
     stats: [
-      { num: '54', label: 'African Member States' },
+      { num: '7', label: 'Aviation Pillars (Themes)' },
       { num: '5', label: 'Convention Days' },
       { num: '12', label: 'Strategic Objectives' },
       { num: '500+', label: 'Expected Participants' },
@@ -50,7 +50,7 @@ export const translations = {
       card1Link: 'Learn More',
       card2Title: 'African Air Transport Convention & Expo 2026',
       card2Text:
-        'The premier continental platform bringing together policymakers, regulators, airlines, airport operators, investors, MRO providers, training institutions, ANSPs, cargo operators and innovators to accelerate the growth and modernisation of Africa\'s air transport sector — aligned with SAATM and Agenda 2063.',
+        'Anchored in the principles of SAATM and the African Union\'s Agenda 2063, the Expo will promote strategic dialogue, showcase innovation, and catalyze investment aimed at bridging infrastructure gaps and building a resilient, sustainable, and competitive African aviation ecosystem.',
       card2Link: 'View Programme',
       card3Title: 'Host State — Togo',
       card3Text:
@@ -329,7 +329,7 @@ export const translations = {
       title2: 'Convention & Expo 2026',
       subtitle:
         'Ancré dans les principes du SAATM et de l\'Agenda 2063 de l\'Union africaine, l\'Expo favorisera le dialogue stratégique, mettra en valeur l\'innovation et catalysera les investissements visant à combler les déficits d\'infrastructure et à bâtir un écosystème de l\'aviation africaine résilient, durable et compétitif.',
-      location: 'Lomé, Togo — 15–19 juin 2026',
+      location: 'Lomé, TOGO : 15 –19 juin 2026',
       cta: 'S\'inscrire',
       ctaSecondary: 'En savoir plus',
       scrollHint: 'Défiler pour explorer',
@@ -339,7 +339,7 @@ export const translations = {
       seconds: 'Secondes',
     },
     stats: [
-      { num: '54', label: 'États membres africains' },
+      { num: '7', label: 'Piliers de l\'aviation (Thèmes)' },
       { num: '5', label: 'Jours de convention' },
       { num: '12', label: 'Objectifs stratégiques' },
       { num: '500+', label: 'Participants attendus' },
@@ -353,7 +353,7 @@ export const translations = {
       card1Link: 'En savoir plus',
       card2Title: 'African Air Transport Convention & Expo 2026',
       card2Text:
-        'Plateforme continentale de référence réunissant décideurs, régulateurs, compagnies aériennes, aéroports, investisseurs, prestataires MRO, institutions de formation, fournisseurs ANS, opérateurs cargo et innovateurs pour accélérer la croissance et la modernisation du transport aérien africain — en ligne avec le SAATM et l\'Agenda 2063.',
+        'Ancré dans les principes du SAATM et de l\'Agenda 2063 de l\'Union africaine, l\'Expo favorisera le dialogue stratégique, mettra en valeur l\'innovation et catalysera les investissements visant à combler les déficits d\'infrastructure et à bâtir un écosystème de l\'aviation africaine résilient, durable et compétitif.',
       card2Link: 'Voir le programme',
       card3Title: 'État hôte — Togo',
       card3Text:
@@ -632,7 +632,7 @@ export const translations = {
       title2: 'Convention & Expo 2026',
       subtitle:
         'Ancorada nos princípios do SAATM e da Agenda 2063 da União Africana, a Expo promoverá o diálogo estratégico, apresentará inovações e catalisará investimentos destinados a colmatar as lacunas de infraestrutura e a construir um ecossistema de aviação africana resiliente, sustentável e competitivo.',
-      location: 'Lomé, Togo — 15–19 de junho de 2026',
+      location: 'Lomé, TOGO : 15 –19 de junho de 2026',
       cta: 'Inscrever-se',
       ctaSecondary: 'Saber mais',
       scrollHint: 'Rolar para explorar',
@@ -642,7 +642,7 @@ export const translations = {
       seconds: 'Segundos',
     },
     stats: [
-      { num: '54', label: 'Estados Membros Africanos' },
+      { num: '7', label: 'Pilares da Aviação (Temas)' },
       { num: '5', label: 'Dias de Convenção' },
       { num: '12', label: 'Objetivos Estratégicos' },
       { num: '500+', label: 'Participantes Esperados' },
@@ -656,7 +656,7 @@ export const translations = {
       card1Link: 'Saber mais',
       card2Title: 'African Air Transport Convention & Expo 2026',
       card2Text:
-        'A plataforma continental de referência que reúne decisores, reguladores, companhias aéreas, operadores aeroportuários, investidores, prestadores MRO, instituições de formação, prestadores ANS, operadores de carga e inovadores para acelerar o crescimento e a modernização do transporte aéreo africano — alinhado com o SAATM e a Agenda 2063.',
+        'Ancorada nos princípios do SAATM e da Agenda 2063 da União Africana, a Expo promoverá o diálogo estratégico, apresentará inovações e catalisará investimentos destinados a colmatar as lacunas de infraestrutura e a construir um ecossistema de aviação africana resiliente, sustentável e competitivo.',
       card2Link: 'Ver programa',
       card3Title: 'País Anfitrião — Togo',
       card3Text:
