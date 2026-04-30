@@ -59,7 +59,8 @@ export default function Hero() {
         <div className="hero-badge">{t.hero.badge}</div>
         <h1 className="hero-title">
           {t.hero.title1}<br />
-          <span className="hero-accent">{t.hero.title2}</span>
+          <span className="hero-accent">{t.hero.title2}</span><br />
+          <span className="hero-location">{t.hero.location}</span>
         </h1>
         <p className="hero-subtitle">{t.hero.subtitle}</p>
 

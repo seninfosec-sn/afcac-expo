@@ -480,6 +480,24 @@ button { cursor: pointer; font-family: var(--font-body); }
   color: var(--gold);
   position: relative;
 }
+.hero-location {
+  display: inline-block;
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  font-weight: 500;
+  color: rgba(255,255,255,0.85);
+  letter-spacing: 0.04em;
+  margin-top: 10px;
+  position: relative;
+  padding-bottom: 6px;
+}
+.hero-location::after {
+  content: '';
+  position: absolute;
+  bottom: -4px; left: 0; right: 0;
+  height: 3px;
+  background: var(--gold);
+  border-radius: 2px;
+}
 .hero-accent::after {
   content: '';
   position: absolute;
