@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AFCAC Expo 2026 – African Civil Aviation Commission</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ===== TOP BAR ===== -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span><i class="fas fa-envelope"></i> expo@afcac-aviation.org</span>
+      <div class="topbar-socials">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Twitter/X"><i class="fab fa-x-twitter"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== HEADER / NAV ===== -->
+  <header id="header">
+    <div class="container header-inner">
+      <!-- Logo -->
+      <div class="logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 60 60" width="54" height="54" fill="none" image src="afcac_logo 1.PNG">
+            <circle cx="30" cy="30" r="28" stroke="rgba(179,174,65,1)" stroke-width="3"/>
+            <path d="M15 30 Q22 14 30 12 Q38 14 45 30 Q38 46 30 48 Q22 46 15 30Z" stroke="rgba(179,174,65,1)" stroke-width="1.5" fill="none"/>
+            <ellipse cx="30" cy="30" rx="11" ry="18" stroke="rgba(179,174,65,1)" stroke-width="1.5" fill="none"/>
+            <line x1="13" y1="22" x2="47" y2="22" stroke="rgba(179,174,65,1)" stroke-width="1.2"/>
+            <line x1="11" y1="30" x2="49" y2="30" stroke="rgba(179,174,65,1)" stroke-width="1.2"/>
+            <line x1="13" y1="38" x2="47" y2="38" stroke="rgba(179,174,65,1)" stroke-width="1.2"/>
+            <path d="M22 18 L34 28 L26 32 L30 44" stroke="rgba(254,255,255,0.9)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-title">AFCAC</span>
+          <span class="logo-sub">EXPO 2026</span>
+        </div>
+      </div>
+
+      <!-- Hamburger -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <!-- Navigation -->
+      <nav class="nav" id="nav">
+        <ul>
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li class="dropdown">
+            <a href="#about" class="nav-link">About <i class="fas fa-chevron-down fa-xs"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="#about-afcac">About AFCAC</a></li>
+              <li><a href="#about-expo">Expo Overview</a></li>
+              <li><a href="#host-state">Host State</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><a href="#visas">Visa Information</a></li>
+            </ul>
+          </li>
+          <li><a href="#programme" class="nav-link">Programme</a></li>
+          <li><a href="#speakers" class="nav-link">Speakers</a></li>
+          <li><a href="#sponsors" class="nav-link">Sponsors & Exhibitors</a></li>
+          <li><a href="#travel" class="nav-link">Travel Tips</a></li>
+          <li><a href="#accommodation" class="nav-link">Accommodation</a></li>
+          <li><a href="#register" class="nav-link btn-register">Register Now</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <div class="hero-particles" id="particles"></div>
+    <div class="container hero-content">
+      <div class="hero-badge">AFCAC EXPO 2026</div>
+      <h1 class="hero-title">
+        Shaping the Future of<br/>
+        <span class="hero-accent">African Aviation</span>
+      </h1>
+      <p class="hero-subtitle">
+        Join us in Addis Ababa, Ethiopia — November 10–12, 2026 — where African aviation leaders, innovators, and partners unite to drive sustainable connectivity across the continent.
+      </p>
+
+      <!-- Countdown -->
+      <div class="countdown" id="countdown">
+        <div class="countdown-item">
+          <span class="count-num" id="days">000</span>
+          <span class="count-label">Days</span>
+        </div>
+        <div class="countdown-sep">:</div>
+        <div class="countdown-item">
+          <span class="count-num" id="hours">00</span>
+          <span class="count-label">Hours</span>
+        </div>
+        <div class="countdown-sep">:</div>
+        <div class="countdown-item">
+          <span class="count-num" id="minutes">00</span>
+          <span class="count-label">Minutes</span>
+        </div>
+        <div class="countdown-sep">:</div>
+        <div class="countdown-item">
+          <span class="count-num" id="seconds">00</span>
+          <span class="count-label">Seconds</span>
+        </div>
+      </div>
+
+      <div class="hero-actions">
+        <a href="#register" class="btn btn-primary">Register Now</a>
+        <a href="#about" class="btn btn-outline">Learn More</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll to explore</span>
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </section>
+
+  <!-- ===== STATS STRIP ===== -->
+  <section class="stats-strip">
+    <div class="container stats-grid">
+      <div class="stat-item">
+        <span class="stat-num">54</span>
+        <span class="stat-label">African Member States</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-num">3</span>
+        <span class="stat-label">Conference Days</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-num">100+</span>
+        <span class="stat-label">Speakers & Moderators</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-num">500+</span>
+        <span class="stat-label">Expected Participants</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Who We Are</span>
+        <h2 class="section-title">About the Expo</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="about-grid">
+
+        <!-- Card 1 -->
+        <div class="about-card" id="about-afcac">
+          <div class="about-card-icon">
+            <i class="fas fa-globe-africa"></i>
+          </div>
+          <h3>About AFCAC</h3>
+          <p>
+            The African Civil Aviation Commission (AFCAC) is the specialized aviation agency of the African Union, established to coordinate, develop, and harmonize civil aviation activities across Africa's 54 member states. Since its inception, AFCAC has championed safe, secure, and sustainable aviation on the continent.
+          </p>
+          <a href="#" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="about-card featured" id="about-expo">
+          <div class="about-card-icon">
+            <i class="fas fa-plane-departure"></i>
+          </div>
+          <h3>AFCAC Expo 2026</h3>
+          <p>
+            The AFCAC Expo 2026 is a premier platform to accelerate sustainable aviation across Africa. Aligned with the Single African Air Transport Market (SAATM) and Agenda 2063, the Expo brings together governments, airlines, airports, technology providers, and international organizations to advance Africa's aviation ecosystem.
+          </p>
+          <a href="#" class="card-link">Explore Programme <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="about-card" id="host-state">
+          <div class="about-card-icon">
+            <i class="fas fa-landmark"></i>
+          </div>
+          <h3>Host State – Ethiopia</h3>
+          <p>
+            Ethiopia, home to Addis Ababa — the diplomatic capital of Africa — is the ideal host for this landmark event. With Ethiopian Airlines, one of Africa's fastest-growing carriers, and a booming economy, Ethiopia embodies the spirit of African aviation excellence and ambition.
+          </p>
+          <a href="#" class="card-link">Discover Ethiopia <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WELCOME REMARKS ===== -->
+  <section class="remarks section" id="remarks">
+    <div class="remarks-bg-overlay"></div>
+    <div class="container">
+      <div class="section-header light">
+        <span class="section-tag">Leadership</span>
+        <h2 class="section-title">Welcome Remarks</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="remarks-grid">
+
+        <div class="remark-card">
+          <div class="remark-video">
+            <div class="video-placeholder">
+              <div class="play-btn"><i class="fas fa-play"></i></div>
+              <div class="video-overlay-text">
+                <span>Watch Message</span>
+              </div>
+            </div>
+          </div>
+          <div class="remark-info">
+            <div class="remark-avatar">
+              <i class="fas fa-user-tie"></i>
+            </div>
+            <div>
+              <h4>Dr. Tesfaye Biru</h4>
+              <p>Secretary General, AFCAC</p>
+            </div>
+          </div>
+          <blockquote>
+            "The AFCAC Expo 2026 represents a defining moment for African aviation. Together, we will chart a bold course for connectivity, sustainability, and economic growth across our continent."
+          </blockquote>
+        </div>
+
+        <div class="remark-card">
+          <div class="remark-video">
+            <div class="video-placeholder">
+              <div class="play-btn"><i class="fas fa-play"></i></div>
+              <div class="video-overlay-text">
+                <span>Watch Message</span>
+              </div>
+            </div>
+          </div>
+          <div class="remark-info">
+            <div class="remark-avatar">
+              <i class="fas fa-user-tie"></i>
+            </div>
+            <div>
+              <h4>H.E. Dagmawit Moges</h4>
+              <p>Minister of Transport & Logistics, Ethiopia</p>
+            </div>
+          </div>
+          <blockquote>
+            "Ethiopia is proud to host this pivotal gathering. Our skies are open to Africa's future, and Addis Ababa stands ready to welcome aviation leaders from across the globe."
+          </blockquote>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROGRAMME ===== -->
+  <section class="programme section" id="programme">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Schedule</span>
+        <h2 class="section-title">Event Programme</h2>
+        <div class="section-divider"></div>
+        <p class="section-desc">Three days of high-level sessions, technical workshops, networking events, and exhibition showcases.</p>
+      </div>
+
+      <div class="programme-tabs">
+        <button class="tab-btn active" data-day="1">Day 1 — Nov 10</button>
+        <button class="tab-btn" data-day="2">Day 2 — Nov 11</button>
+        <button class="tab-btn" data-day="3">Day 3 — Nov 12</button>
+      </div>
+
+      <div class="programme-content" id="prog-day-1">
+        <div class="prog-item">
+          <span class="prog-time">08:00 – 09:00</span>
+          <div class="prog-detail">
+            <h4>Registration & Welcome Coffee</h4>
+            <p>Networking and delegate registration at the Palais des Congrès d'Addis Abeba</p>
+          </div>
+          <span class="prog-tag">Opening</span>
+        </div>
+        <div class="prog-item">
+          <span class="prog-time">09:00 – 10:30</span>
+          <div class="prog-detail">
+            <h4>Opening Ceremony</h4>
+            <p>Remarks from AFCAC Secretary General, Host Minister, and African Union Representative</p>
+          </div>
+          <span class="prog-tag">Plenary</span>
+        </div>
+        <div class="prog-item">
+          <span class="prog-time">11:00 – 12:30</span>
+          <div class="prog-detail">
+            <h4>SAATM Implementation: Progress & Challenges</h4>
+            <p>Panel discussion on liberalizing African airspace under the Single African Air Transport Market</p>
+          </div>
+          <span class="prog-tag">Panel</span>
+        </div>
+        <div class="prog-item">
+          <span class="prog-time">14:00 – 15:30</span>
+          <div class="prog-detail">
+            <h4>Safety & Security Standards Across Africa</h4>
+            <p>Technical session on aligning African states with ICAO's USOAP and USAP frameworks</p>
+          </div>
+          <span class="prog-tag">Technical</span>
+        </div>
+        <div class="prog-item">
+          <span class="prog-time">16:00 – 17:30</span>
+          <div class="prog-detail">
+            <h4>Exhibition Hall Opening & Networking Reception</h4>
+            <p>Launch of the Expo exhibition floor with live demonstrations from industry partners</p>
+          </div>
+          <span class="prog-tag">Networking</span>
+        </div>
+      </div>
+
+      <div class="programme-content hidden" id="prog-day-2">
+        <div class="prog-item">
+          <span class="prog-time">09:00 – 10:30</span>
+          <div class="prog-detail">
+            <h4>Sustainable Aviation Fuels (SAF) in Africa</h4>
+            <p>Roadmap for SAF adoption and green aviation infrastructure investment</p>
+          </div>
+          <span class="prog-tag">Plenary</span>
+        </div>
+        <div class="prog-item">
+          <span class="prog-time">11:00 – 12:30</span>
+          <div class="prog-detail">
+            <h4>Digital Transformation of African Airports</h4>
+            <p>Showcasing smart airport technology and AI-driven operations</p>
+          </div>
+          <span class="prog-tag">Technical</span>
+        </div>
+        <div class="prog-item">
+          <span class="prog-time">14:00 – 15:30</span>
+          <div class="prog-detail">
+            <h4>Financing Aviation Infrastructure</h4>
+            <p>Roundtable with African Development Bank, IFC, and private investors</p>
+          </div>
+          <span class="prog-tag">Roundtable</span>
+        </div>
+        <div class="prog-item">
+          <span class="prog-time">16:00 – 17:00</span>
+          <div class="prog-detail">
+            <h4>Gala Dinner — African Aviation Night</h4>
+            <p>Formal dinner celebrating African aviation pioneers and award presentations</p>
+          </div>
+          <span class="prog-tag">Gala</span>
+        </div>
+      </div>
+
+      <div class="programme-content hidden" id="prog-day-3">
+        <div class="prog-item">
+          <span class="prog-time">09:00 – 10:30</span>
+          <div class="prog-detail">
+            <h4>Youth & Innovation in African Aviation</h4>
+            <p>Spotlighting the next generation of African aviation professionals and startups</p>
+          </div>
+          <span class="prog-tag">Innovation</span>
+        </div>
+        <div class="prog-item">
+          <span class="prog-time">11:00 – 12:30</span>
+          <div class="prog-detail">
+            <h4>Air Cargo & Trade Facilitation</h4>
+            <p>Unlocking Africa's intra-continental trade potential through air cargo networks</p>
+          </div>
+          <span class="prog-tag">Panel</span>
+        </div>
+        <div class="prog-item">
+          <span class="prog-time">14:00 – 15:00</span>
+          <div class="prog-detail">
+            <h4>Addis Ababa Declaration Adoption</h4>
+            <p>Member states adopt the Addis Ababa Declaration on the Future of African Aviation</p>
+          </div>
+          <span class="prog-tag">Closing</span>
+        </div>
+        <div class="prog-item">
+          <span class="prog-time">15:00 – 16:00</span>
+          <div class="prog-detail">
+            <h4>Closing Ceremony & Farewell</h4>
+            <p>Closing remarks and announcement of AFCAC Expo 2028 host country</p>
+          </div>
+          <span class="prog-tag">Closing</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SPEAKERS ===== -->
+  <section class="speakers section" id="speakers">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Voices of Change</span>
+        <h2 class="section-title">Speakers & Moderators</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="speakers-grid">
+        <div class="speaker-card">
+          <div class="speaker-photo"><i class="fas fa-user"></i></div>
+          <h4>Dr. Tesfaye Biru</h4>
+          <p>Secretary General<br/><span>AFCAC</span></p>
+        </div>
+        <div class="speaker-card">
+          <div class="speaker-photo"><i class="fas fa-user"></i></div>
+          <h4>Juan Carlos Salazar</h4>
+          <p>Secretary General<br/><span>ICAO</span></p>
+        </div>
+        <div class="speaker-card">
+          <div class="speaker-photo"><i class="fas fa-user"></i></div>
+          <h4>H.E. Dagmawit Moges</h4>
+          <p>Minister of Transport<br/><span>Ethiopia</span></p>
+        </div>
+        <div class="speaker-card">
+          <div class="speaker-photo"><i class="fas fa-user"></i></div>
+          <h4>Tewolde GebreMariam</h4>
+          <p>Former CEO<br/><span>Ethiopian Airlines</span></p>
+        </div>
+        <div class="speaker-card">
+          <div class="speaker-photo"><i class="fas fa-user"></i></div>
+          <h4>Abderahmane Berthé</h4>
+          <p>Secretary General<br/><span>ASECNA</span></p>
+        </div>
+        <div class="speaker-card">
+          <div class="speaker-photo"><i class="fas fa-user"></i></div>
+          <h4>More Speakers</h4>
+          <p>To Be Announced<br/><span>Stay Tuned</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SPONSORS ===== -->
+  <section class="sponsors section" id="sponsors">
+    <div class="sponsors-bg">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Partners</span>
+          <h2 class="section-title">Sponsors & Exhibitors</h2>
+          <div class="section-divider"></div>
+          <p class="section-desc">Join leading aviation companies, governments, and organizations in showcasing innovations at AFCAC Expo 2026.</p>
+        </div>
+
+        <div class="sponsor-tiers">
+          <div class="tier">
+            <h3 class="tier-title platinum">Platinum Partners</h3>
+            <div class="sponsor-logos">
+              <div class="sponsor-logo-box">Ethiopian Airlines</div>
+              <div class="sponsor-logo-box">African Development Bank</div>
+              <div class="sponsor-logo-box">Airbus</div>
+            </div>
+          </div>
+          <div class="tier">
+            <h3 class="tier-title gold">Gold Partners</h3>
+            <div class="sponsor-logos">
+              <div class="sponsor-logo-box sm">Boeing</div>
+              <div class="sponsor-logo-box sm">IATA</div>
+              <div class="sponsor-logo-box sm">ACI Africa</div>
+              <div class="sponsor-logo-box sm">Thales</div>
+            </div>
+          </div>
+          <div class="tier">
+            <h3 class="tier-title silver">Supporting Partners</h3>
+            <div class="sponsor-logos">
+              <div class="sponsor-logo-box xs">Partner 1</div>
+              <div class="sponsor-logo-box xs">Partner 2</div>
+              <div class="sponsor-logo-box xs">Partner 3</div>
+              <div class="sponsor-logo-box xs">Partner 4</div>
+              <div class="sponsor-logo-box xs">Partner 5</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sponsor-cta">
+          <p>Interested in becoming a sponsor or exhibitor?</p>
+          <a href="#contact" class="btn btn-primary">Become a Partner</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VENUE ===== -->
+  <section class="venue section" id="venue">
+    <div class="container">
+      <div class="venue-grid">
+        <div class="venue-info">
+          <span class="section-tag">Location</span>
+          <h2 class="section-title left">The Venue</h2>
+          <div class="section-divider left"></div>
+          <h3>United Nations Conference Centre (UNCC)</h3>
+          <p class="venue-address">
+            <i class="fas fa-map-marker-alt"></i>
+            Menelik II Avenue, Addis Ababa, Ethiopia
+          </p>
+          <p>
+            The UNCC in Addis Ababa is one of Africa's most prestigious conference facilities, hosting major international events and serving as the seat of the African Union. With state-of-the-art technology, flexible spaces, and a capacity for thousands of delegates, it is the perfect stage for AFCAC Expo 2026.
+          </p>
+          <ul class="venue-features">
+            <li><i class="fas fa-check-circle"></i> Plenary Hall — 2,000 capacity</li>
+            <li><i class="fas fa-check-circle"></i> 15 Breakout Rooms</li>
+            <li><i class="fas fa-check-circle"></i> 5,000 m² Exhibition Floor</li>
+            <li><i class="fas fa-check-circle"></i> High-speed Wi-Fi throughout</li>
+            <li><i class="fas fa-check-circle"></i> Simultaneous interpretation (6 languages)</li>
+          </ul>
+          <a href="#travel" class="btn btn-outline-dark">Travel Information</a>
+        </div>
+        <div class="venue-map">
+          <div class="map-placeholder">
+            <div class="map-pin">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Addis Ababa, Ethiopia</span>
+            </div>
+            <div class="map-grid"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TRAVEL TIPS ===== -->
+  <section class="travel section" id="travel">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Getting There</span>
+        <h2 class="section-title">Travel Tips</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="travel-grid">
+        <div class="travel-card">
+          <div class="travel-icon"><i class="fas fa-plane"></i></div>
+          <h4>By Air</h4>
+          <p>Addis Ababa Bole International Airport is one of Africa's busiest hubs, with direct connections to over 100 destinations worldwide via Ethiopian Airlines and multiple international carriers.</p>
+        </div>
+        <div class="travel-card">
+          <div class="travel-icon"><i class="fas fa-passport"></i></div>
+          <h4>Visas</h4>
+          <p>Citizens of most African Union countries enjoy visa-free or visa-on-arrival access to Ethiopia. International delegates should check requirements at their nearest Ethiopian embassy or apply via the e-Visa portal.</p>
+        </div>
+        <div class="travel-card">
+          <div class="travel-icon"><i class="fas fa-thermometer-half"></i></div>
+          <h4>Climate</h4>
+          <p>Addis Ababa in November enjoys mild temperatures of 15–25°C with minimal rainfall — perfect conference weather at an altitude of 2,355m. Light layers are recommended for evenings.</p>
+        </div>
+        <div class="travel-card">
+          <div class="travel-icon"><i class="fas fa-coins"></i></div>
+          <h4>Currency</h4>
+          <p>The official currency is the Ethiopian Birr (ETB). USD and EUR are widely accepted at hotels and conference venues. ATMs and currency exchange services are readily available.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ACCOMMODATION ===== -->
+  <section class="accommodation section" id="accommodation">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Where to Stay</span>
+        <h2 class="section-title">Accommodation</h2>
+        <div class="section-divider"></div>
+        <p class="section-desc">AFCAC has partnered with leading hotels in Addis Ababa to offer preferential rates for Expo delegates.</p>
+      </div>
+
+      <div class="hotels-grid">
+        <div class="hotel-card featured-hotel">
+          <div class="hotel-badge">Official Hotel</div>
+          <div class="hotel-icon"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <h4>Sheraton Addis</h4>
+          <p>The iconic Sheraton Addis, adjacent to the AU headquarters, is the official hotel of AFCAC Expo 2026. A 5-minute drive from the venue.</p>
+          <a href="#" class="btn btn-primary sm">Book Now</a>
+        </div>
+        <div class="hotel-card">
+          <div class="hotel-icon"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <h4>Radisson Blu Addis Ababa</h4>
+          <p>Modern luxury hotel in the heart of the city. Exclusive rates available for registered delegates.</p>
+          <a href="#" class="btn btn-outline-dark sm">Book Now</a>
+        </div>
+        <div class="hotel-card">
+          <div class="hotel-icon"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <h4>Hilton Addis Ababa</h4>
+          <p>Centrally located, the Hilton Addis offers comfort and connectivity for conference delegates.</p>
+          <a href="#" class="btn btn-outline-dark sm">Book Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== REGISTER CTA ===== -->
+  <section class="register-cta" id="register">
+    <div class="cta-overlay"></div>
+    <div class="container cta-content">
+      <h2>Ready to Shape Africa's Aviation Future?</h2>
+      <p>Secure your place at AFCAC Expo 2026. Early bird registration is now open.</p>
+      <div class="cta-actions">
+        <a href="#" class="btn btn-gold">Register Now</a>
+        <a href="#contact" class="btn btn-outline-white">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Get in Touch</span>
+        <h2 class="section-title">Contact Us</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:expo@afcac-aviation.org">expo@afcac-aviation.org</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+            <div>
+              <h4>Phone</h4>
+              <span>+251 11 551 7804</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <h4>Address</h4>
+              <span>AFCAC Secretariat, Dakar, Senegal</span>
+            </div>
+          </div>
+          <div class="contact-socials">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <div class="form-row">
+            <input type="text" placeholder="First Name" required />
+            <input type="text" placeholder="Last Name" required />
+          </div>
+          <input type="email" placeholder="Email Address" required />
+          <input type="text" placeholder="Organisation" />
+          <select>
+            <option value="" disabled selected>Subject</option>
+            <option>General Enquiry</option>
+            <option>Registration</option>
+            <option>Sponsorship / Exhibition</option>
+            <option>Media & Press</option>
+            <option>Travel & Visas</option>
+          </select>
+          <textarea rows="4" placeholder="Your message..."></textarea>
+          <button type="submit" class="btn btn-primary full-width">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container footer-grid">
+
+        <div class="footer-brand">
+          <div class="logo footer-logo">
+            <div class="logo-icon">
+              <svg viewBox="0 0 60 60" width="44" height="44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="30" cy="30" r="28" stroke="rgba(179,174,65,1)" stroke-width="3"/>
+                <path d="M15 30 Q22 14 30 12 Q38 14 45 30 Q38 46 30 48 Q22 46 15 30Z" stroke="rgba(179,174,65,1)" stroke-width="1.5" fill="none"/>
+                <ellipse cx="30" cy="30" rx="11" ry="18" stroke="rgba(179,174,65,1)" stroke-width="1.5" fill="none"/>
+                <line x1="13" y1="22" x2="47" y2="22" stroke="rgba(179,174,65,1)" stroke-width="1.2"/>
+                <line x1="11" y1="30" x2="49" y2="30" stroke="rgba(179,174,65,1)" stroke-width="1.2"/>
+                <line x1="13" y1="38" x2="47" y2="38" stroke="rgba(179,174,65,1)" stroke-width="1.2"/>
+                <path d="M22 18 L34 28 L26 32 L30 44" stroke="rgba(254,255,255,0.9)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              </svg>
+            </div>
+            <div class="logo-text">
+              <span class="logo-title">AFCAC</span>
+              <span class="logo-sub">EXPO 2026</span>
+            </div>
+          </div>
+          <p>Uniting Africa's aviation leaders, innovators, and partners to build a safer, greener, and more connected continent.</p>
+          <p class="footer-event-details"><i class="fas fa-calendar-alt"></i> November 10–12, 2026<br/><i class="fas fa-map-marker-alt"></i> Addis Ababa, Ethiopia</p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About the Expo</a></li>
+            <li><a href="#programme">Programme</a></li>
+            <li><a href="#speakers">Speakers</a></li>
+            <li><a href="#sponsors">Sponsors & Exhibitors</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Information</h4>
+          <ul>
+            <li><a href="#travel">Travel Tips</a></li>
+            <li><a href="#accommodation">Accommodation</a></li>
+            <li><a href="#venue">Venue</a></li>
+            <li><a href="#visas">Visa Information</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-newsletter">
+          <h4>Stay Updated</h4>
+          <p>Subscribe for programme updates, speaker announcements, and registration alerts.</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your email address" />
+            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+          </form>
+          <div class="footer-socials">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; 2026 African Civil Aviation Commission (AFCAC). All Rights Reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Accessibility</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
