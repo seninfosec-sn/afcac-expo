@@ -1,6 +1,5 @@
 'use client'
 
-import Image from 'next/image'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function About() {
@@ -47,13 +46,11 @@ export default function About() {
 
         <div className="event-banner">
           <a href="https://www.afcac.org/expo-registration/" target="_blank" rel="noopener noreferrer">
-            <Image
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
               src="/29-April-Togo-Event-Banner-.gif"
               alt="AFCAC Expo 2026 — Lomé, Togo"
-              width={1200}
-              height={400}
               style={{ width: '100%', height: 'auto', display: 'block', borderRadius: 'var(--radius)', cursor: 'pointer' }}
-              unoptimized
             />
           </a>
         </div>
