@@ -178,8 +178,8 @@ export const translations = {
       sectionDesc:
         'Policymakers, regulators, airline executives and international experts take the floor at this convention.',
       list: [
-        { name: 'Secretary General, AFCAC', role: 'Secretariat General', org: 'AFCAC' },
-        { name: 'Minister of Transport', role: 'Host Government', org: 'Republic of Togo' },
+        { name: 'Secretary General, AFCAC', role: 'Secretariat General', org: 'AFCAC', photo: '/SG.png' },
+        { name: 'Minister of Transport', role: 'Host Government', org: 'Republic of Togo', photo: '/MTRT.png' },
         { name: 'ICAO Representative', role: 'Civil Aviation Organisation', org: 'ICAO' },
         { name: 'ACI Africa President', role: 'Airports Council International', org: 'ACI Africa' },
         { name: 'IATA Representative', role: 'International Association', org: 'IATA' },
@@ -480,8 +480,8 @@ export const translations = {
       sectionDesc:
         'Des décideurs, régulateurs, dirigeants de compagnies aériennes et experts internationaux prennent la parole lors de cette convention.',
       list: [
-        { name: 'Secrétaire Général AFCAC', role: 'Secrétariat général', org: 'AFCAC' },
-        { name: 'Ministre des Transports', role: 'Gouvernement hôte', org: 'République du Togo' },
+        { name: 'Secrétaire Général AFCAC', role: 'Secrétariat général', org: 'AFCAC', photo: '/SG.png' },
+        { name: 'Ministre des Transports', role: 'Gouvernement hôte', org: 'République du Togo', photo: '/MTRT.png' },
         { name: 'Représentant OACI', role: 'Organisation de l\'aviation civile', org: 'OACI / ICAO' },
         { name: 'Président ACI Africa', role: 'Conseil international des aéroports', org: 'ACI Afrique' },
         { name: 'Représentant IATA', role: 'Association internationale', org: 'IATA' },
@@ -782,8 +782,8 @@ export const translations = {
       sectionDesc:
         'Decisores políticos, reguladores, gestores de companhias aéreas e especialistas internacionais tomam a palavra nesta convenção.',
       list: [
-        { name: 'Secretário-Geral da AFCAC', role: 'Secretariado Geral', org: 'AFCAC' },
-        { name: 'Ministro dos Transportes', role: 'Governo Anfitrião', org: 'República do Togo' },
+        { name: 'Secretário-Geral da AFCAC', role: 'Secretariado Geral', org: 'AFCAC', photo: '/SG.png' },
+        { name: 'Ministro dos Transportes', role: 'Governo Anfitrião', org: 'República do Togo', photo: '/MTRT.png' },
         { name: 'Representante da ICAO', role: 'Organização da Aviação Civil', org: 'ICAO' },
         { name: 'Presidente da ACI África', role: 'Conselho Internacional de Aeroportos', org: 'ACI África' },
         { name: 'Representante da IATA', role: 'Associação Internacional', org: 'IATA' },
