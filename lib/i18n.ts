@@ -56,6 +56,14 @@ export const translations = {
       card3Text:
         'Togo, at the heart of West Africa, hosts this continental event in Lomé, its dynamic capital. Lomé\'s international airport, located just 4 km from the city centre, offers direct connections to major African and international destinations.',
       card3Link: 'Discover Lomé',
+      coorgTitle: 'Co-Organizers',
+      coorganizers: [
+        { name: 'AFCAC', logo: '/afcac_logo.png' },
+        { name: 'AUC', logo: '/african-union.png' },
+        { name: 'TOGO', logo: '/TOGO.png' },
+        { name: 'AfCFTA', logo: '/AfCFTA.png' },
+        { name: 'AUDA-NEPAD', logo: '/AUDA- NEPAD.png' },
+      ],
       outcomesTag: 'Strategic Impact',
       outcomesTitle: 'Major Expected Outcomes',
       outcomes: [
@@ -358,6 +366,14 @@ export const translations = {
       card3Text:
         'Le Togo, au cœur de l\'Afrique de l\'Ouest, accueille cet événement continental à Lomé, sa capitale dynamique. L\'aéroport international de Lomé, situé à seulement 4 km du centre-ville, offre des connexions directes avec les principales destinations africaines et internationales.',
       card3Link: 'Découvrir Lomé',
+      coorgTitle: 'Co-Organisateurs',
+      coorganizers: [
+        { name: 'AFCAC', logo: '/afcac_logo.png' },
+        { name: 'AUC', logo: '/african-union.png' },
+        { name: 'TOGO', logo: '/TOGO.png' },
+        { name: 'AfCFTA', logo: '/AfCFTA.png' },
+        { name: 'AUDA-NEPAD', logo: '/AUDA- NEPAD.png' },
+      ],
       outcomesTag: 'Impact Stratégique',
       outcomesTitle: 'Résultats Attendus Majeurs',
       outcomes: [
@@ -660,6 +676,14 @@ export const translations = {
       card3Text:
         'O Togo, no coração da África Ocidental, acolhe este evento continental em Lomé, a sua dinâmica capital. O aeroporto internacional de Lomé, situado a apenas 4 km do centro da cidade, oferece ligações diretas para os principais destinos africanos e internacionais.',
       card3Link: 'Descobrir Lomé',
+      coorgTitle: 'Co-Organizadores',
+      coorganizers: [
+        { name: 'AFCAC', logo: '/afcac_logo.png' },
+        { name: 'AUC', logo: '/african-union.png' },
+        { name: 'TOGO', logo: '/TOGO.png' },
+        { name: 'AfCFTA', logo: '/AfCFTA.png' },
+        { name: 'AUDA-NEPAD', logo: '/AUDA- NEPAD.png' },
+      ],
       outcomesTag: 'Impacto Estratégico',
       outcomesTitle: 'Principais Resultados Esperados',
       outcomes: [

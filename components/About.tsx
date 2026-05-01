@@ -54,6 +54,19 @@ export default function About() {
           </a>
         </div>
 
+        <div className="coorg-section">
+          <h3 className="coorg-title">{a.coorgTitle}</h3>
+          <div className="coorg-logos">
+            {a.coorganizers.map((org) => (
+              <div key={org.name} className="coorg-logo-box">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={org.logo} alt={org.name} className="coorg-logo-img" />
+                <span>{org.name}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
         <div className="outcomes-section">
           <div className="outcomes-header">
             <span className="section-tag outcomes-tag">{a.outcomesTag}</span>

@@ -731,6 +731,61 @@ button { cursor: pointer; font-family: var(--font-body); }
 .event-banner {
   margin: 48px 0 48px;
 }
+.coorg-section {
+  text-align: center;
+  padding: 40px 0 32px;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  margin: 40px 0;
+}
+.coorg-title {
+  display: inline-block;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  background: rgba(179,174,65,0.12);
+  padding: 5px 14px;
+  border-radius: 30px;
+  margin-bottom: 24px;
+}
+.coorg-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+.coorg-logo-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 20px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--white);
+  min-width: 110px;
+  transition: var(--transition);
+}
+.coorg-logo-box:hover {
+  border-color: var(--green);
+  box-shadow: var(--shadow);
+}
+.coorg-logo-img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+.coorg-logo-box span {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--green-dark);
+}
 .outcomes-section {
   margin-top: 0;
 }

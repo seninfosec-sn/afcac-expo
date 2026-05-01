@@ -15,7 +15,7 @@ export default function Travel() {
           <div className="section-divider" />
         </div>
 
-        <div className="prog-bulletin-bar" style={{ justifyContent: 'center' }}>
+        <div className="prog-bulletin-bar" style={{ justifyContent: 'center', flexDirection: 'column', alignItems: 'center' }}>
           <a href="#" className="btn btn-primary prog-bulletin-btn">
             <i className="fas fa-file-alt" /> Download the Information Bulletin
           </a>
