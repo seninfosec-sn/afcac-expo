@@ -785,7 +785,6 @@ button { cursor: pointer; font-family: var(--font-body); }
   font-weight: 700;
   font-size: 0.72rem;
   letter-spacing: 2px;
-  text-transform: uppercase;
   color: var(--green-dark);
 }
 .outcomes-section {
