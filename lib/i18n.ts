@@ -25,7 +25,7 @@ export const translations = {
       title1: 'African Air Transport',
       title2: 'Convention & Expo 2026',
       subtitle:
-        'The premier continental platform bringing together policymakers, regulators, airlines, airport operators, investors, MRO providers, training institutions, ANSPs, cargo operators and innovators to accelerate the growth and modernisation of Africa\'s air transport sector — aligned with SAATM and Agenda 2063.',
+        'The premier continental platform bringing together policymakers, regulators, airlines, airport operators, investors, MRO providers, training institutions, ANSPs, cargo operators and innovators to accelerate the growth and modernisation of Africa\'s air transport sector, aligned with SAATM and Agenda 2063.',
       location: 'Lomé, TOGO : 15 –19 June 2026',
       cta: 'Register Now',
       ctaSecondary: 'Learn More',
