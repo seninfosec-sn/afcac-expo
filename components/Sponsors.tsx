@@ -46,7 +46,7 @@ export default function Sponsors() {
 
           <div className="sponsor-cta">
             <p>{s.ctaText}</p>
-            <a href="mailto:jdridi@afcac.org" className="btn btn-primary">{s.ctaBtn}</a>
+            <a href="#register" className="btn btn-primary">{s.ctaBtn}</a>
           </div>
         </div>
       </div>
