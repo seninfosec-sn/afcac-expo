@@ -243,15 +243,15 @@ export const translations = {
       officialBadge: 'Venue',
       hotel1Name: 'Hôtel 2 Février',
       hotel1Desc:
-        'The official hotel of AFCAC Expo 2026, directly on the convention site. The ideal option for delegates wishing to maximise their participation in sessions and networking.\n\nPhone: +228 22 23 86 00\nWhatsApp: +228 93 88 90 20\n320 rooms\n\nExecutive suite: CFA 317,625\nJunior single suite: CFA 187,000\nBusiness single room: CFA 158,400\nStandard single room: CFA 121,000',
+        'Hôtel 2 Février – Venue of the AFCAC Expo Convention 2026\nHôtel 2 Février is Lomé\'s most prestigious five‑star hotel and the official venue of the AFCAC Expo Convention 2026. Located at Place de l\'Indépendance in the city center, it is Togo\'s primary convention and conference hub, offering large, fully equipped meeting halls suitable for high‑level international events. Its central location, security standards, and modern infrastructure make it the ideal setting for AFCAC\'s continental gathering.',
       hotel1Btn: 'Book Now',
       hotel2Name: 'HOTEL SARAKAWA',
       hotel2Desc:
-        'Along the road to the Port\nPhone: +228 22 27 65 90\n70 rooms\n\nStandard room with city view: CFA 76,000\nSea view room: CFA 86,000\nPrivilege room: CFA 121,000\n\nThese rates include standard package services (breakfast, Wi-Fi access, etc.).',
+        'Hôtel Sarakawa (approximately 3 km from Hôtel 2 Février)\nHôtel Sarakawa is a well‑known beachfront hotel set in a vast 40‑hectare tropical park along Boulevard du Mono, approximately 3 kilometers from Hôtel 2 Février. Renowned for its calm and resort‑style environment, it offers conference rooms, expansive gardens, and leisure facilities including an Olympic‑size swimming pool. Its proximity to the city center and relaxed atmosphere make it a convenient accommodation option for delegates attending events at Hôtel 2 Février.',
       hotel2Btn: 'Enquire',
       hotel3Name: 'HOTEL ONOMO',
       hotel3Desc:
-        'Located at Bè Souza-netimé\nPhone: +228 22 53 63 00 / 92 15 72 00\n\n58 Standard rooms | 63 Superior rooms | 4 Junior suites | 2 Suites\n\nStandard Room (single/double): FCFA 73,000\nSuperior Room: FCFA 88,000\nJunior Suite: FCFA 103,000\nSuite: FCFA 118,000',
+        'ONOMO Hotel Lomé (approximately 3 km from Hôtel 2 Février)\nONOMO Hotel Lomé is a modern, business‑oriented hotel located along Boulevard du Mono, roughly 3 kilometers from Hôtel 2 Février and close to the seafront. The hotel features contemporary rooms, meeting spaces, a restaurant, and a pool, catering mainly to business travelers. Its short distance from the AFCAC Expo Convention venue makes it a practical choice for participants seeking efficient access to Hôtel 2 Février while staying in a more informal business setting.',
       hotel3Btn: 'Enquire',
     },
     register: {
@@ -553,15 +553,15 @@ export const translations = {
       officialBadge: 'Venue',
       hotel1Name: 'Hôtel 2 Février',
       hotel1Desc:
-        'Hôtel officiel de l\'AFCAC Expo 2026, directement sur le site de la convention. Le lieu idéal pour maximiser sa participation aux sessions et au networking.\n\nTél. : +228 22 23 86 00\nWhatsApp : +228 93 88 90 20\n320 chambres\n\nSuite exécutive : FCFA 317 625\nSuite junior simple : FCFA 187 000\nChambre business simple : FCFA 158 400\nChambre standard simple : FCFA 121 000',
+        'Hôtel 2 Février – Lieu de la Convention AFCAC Expo 2026\nL\'Hôtel 2 Février est l\'hôtel cinq étoiles le plus prestigieux de Lomé et le site officiel de la Convention AFCAC Expo 2026. Situé sur la Place de l\'Indépendance en plein centre-ville, c\'est le principal centre de conventions et de conférences du Togo, offrant de grandes salles de réunion entièrement équipées adaptées aux événements internationaux de haut niveau. Sa situation centrale, ses normes de sécurité et ses infrastructures modernes en font le cadre idéal pour le rassemblement continental de l\'AFCAC.',
       hotel1Btn: 'Réserver',
       hotel2Name: 'HOTEL SARAKAWA',
       hotel2Desc:
-        'Route du Port\nTél. : +228 22 27 65 90\n70 chambres\n\nChambre standard vue ville : FCFA 76 000\nChambre vue mer : FCFA 86 000\nChambre Privilège : FCFA 121 000\n\nCes tarifs incluent les services du forfait standard (petit-déjeuner, accès Wi-Fi, etc.).',
+        'Hôtel Sarakawa (à environ 3 km de l\'Hôtel 2 Février)\nL\'Hôtel Sarakawa est un hôtel de bord de mer bien connu, situé dans un vaste parc tropical de 40 hectares le long du Boulevard du Mono, à environ 3 kilomètres de l\'Hôtel 2 Février. Réputé pour son cadre calme et son ambiance de resort, il propose des salles de conférence, de vastes jardins et des équipements de loisirs dont une piscine olympique. Sa proximité avec le centre-ville et son atmosphère détendue en font une option d\'hébergement pratique pour les délégués participant aux événements à l\'Hôtel 2 Février.',
       hotel2Btn: 'Renseignements',
       hotel3Name: 'HOTEL ONOMO',
       hotel3Desc:
-        'Situé à Bè Souza-netimé\nTél. : +228 22 53 63 00 / 92 15 72 00\n\n58 chambres Standard | 63 chambres Supérieures | 4 Suites Junior | 2 Suites\n\nChambre Standard (simple/double) : FCFA 73 000\nChambre Supérieure : FCFA 88 000\nSuite Junior : FCFA 103 000\nSuite : FCFA 118 000',
+        'ONOMO Hotel Lomé (à environ 3 km de l\'Hôtel 2 Février)\nL\'ONOMO Hotel Lomé est un hôtel moderne orienté business situé le long du Boulevard du Mono, à environ 3 kilomètres de l\'Hôtel 2 Février et proche du front de mer. L\'hôtel propose des chambres contemporaines, des espaces de réunion, un restaurant et une piscine, destinés principalement aux voyageurs d\'affaires. Sa courte distance du site de la Convention AFCAC Expo en fait un choix pratique pour les participants souhaitant un accès efficace à l\'Hôtel 2 Février dans un cadre business plus informel.',
       hotel3Btn: 'Renseignements',
     },
     register: {
@@ -863,15 +863,15 @@ export const translations = {
       officialBadge: 'Venue',
       hotel1Name: 'Hotel 2 Février',
       hotel1Desc:
-        'Hotel oficial da AFCAC Expo 2026, diretamente no local da convenção. A opção ideal para os delegados que desejam maximizar a sua participação nas sessões e no networking.\n\nTel.: +228 22 23 86 00\nWhatsApp: +228 93 88 90 20\n320 quartos\n\nSuite executiva: CFA 317.625\nSuite junior individual: CFA 187.000\nQuarto business individual: CFA 158.400\nQuarto standard individual: CFA 121.000',
+        'Hôtel 2 Février – Local da Convenção AFCAC Expo 2026\nO Hôtel 2 Février é o hotel cinco estrelas mais prestigioso de Lomé e o local oficial da Convenção AFCAC Expo 2026. Situado na Place de l\'Indépendance, no centro da cidade, é o principal centro de convenções e conferências do Togo, oferecendo grandes salas de reunião totalmente equipadas para eventos internacionais de alto nível. A sua localização central, os padrões de segurança e a infraestrutura moderna tornam-no no cenário ideal para o encontro continental da AFCAC.',
       hotel1Btn: 'Reservar',
       hotel2Name: 'HOTEL SARAKAWA',
       hotel2Desc:
-        'Estrada do Porto\nTel.: +228 22 27 65 90\n70 quartos\n\nQuarto standard vista cidade: CFA 76.000\nQuarto vista mar: CFA 86.000\nQuarto Privilégio: CFA 121.000\n\nEstas tarifas incluem os serviços do pacote padrão (pequeno-almoço, acesso Wi-Fi, etc.).',
+        'Hôtel Sarakawa (aproximadamente 3 km do Hôtel 2 Février)\nO Hôtel Sarakawa é um conhecido hotel de frente para a praia situado num vasto parque tropical de 40 hectares ao longo do Boulevard du Mono, a aproximadamente 3 quilómetros do Hôtel 2 Février. Reconhecido pelo seu ambiente calmo e estilo resort, oferece salas de conferência, jardins amplos e instalações de lazer, incluindo uma piscina olímpica. A sua proximidade ao centro da cidade e a atmosfera descontraída tornam-no uma opção de alojamento conveniente para os delegados que participam nos eventos no Hôtel 2 Février.',
       hotel2Btn: 'Informações',
       hotel3Name: 'HOTEL ONOMO',
       hotel3Desc:
-        'Localizado em Bè Souza-netimé\nTel.: +228 22 53 63 00 / 92 15 72 00\n\n58 quartos Standard | 63 quartos Superior | 4 Suites Junior | 2 Suites\n\nQuarto Standard (individual/duplo): FCFA 73.000\nQuarto Superior: FCFA 88.000\nSuite Junior: FCFA 103.000\nSuite: FCFA 118.000',
+        'ONOMO Hotel Lomé (aproximadamente 3 km do Hôtel 2 Février)\nO ONOMO Hotel Lomé é um hotel moderno orientado para negócios situado ao longo do Boulevard du Mono, a cerca de 3 quilómetros do Hôtel 2 Février e próximo da orla marítima. O hotel dispõe de quartos contemporâneos, espaços de reunião, restaurante e piscina, servindo principalmente viajantes de negócios. A sua curta distância do local da Convenção AFCAC Expo torna-o uma escolha prática para os participantes que procuram acesso eficiente ao Hôtel 2 Février num ambiente de negócios mais informal.',
       hotel3Btn: 'Informações',
     },
     register: {

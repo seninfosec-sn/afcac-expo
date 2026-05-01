@@ -14,6 +14,16 @@ export default function Accommodation() {
           <h2 className="section-title">{ac.sectionTitle}</h2>
           <div className="section-divider" />
           <p className="section-desc">{ac.sectionDesc}</p>
+          <div className="prog-bulletin-bar" style={{ justifyContent: 'center', flexDirection: 'column', alignItems: 'center' }}>
+            <a href="#" className="btn btn-primary prog-bulletin-btn">
+              <i className="fas fa-file-alt" /> Download list of hotels
+            </a>
+            <div className="prog-bulletin-langs">
+              <a href="#" className="prog-lang-btn">EN</a>
+              <a href="#" className="prog-lang-btn">FR</a>
+              <a href="#" className="prog-lang-btn">PR</a>
+            </div>
+          </div>
         </div>
 
         <div className="hotels-grid">
@@ -23,7 +33,7 @@ export default function Accommodation() {
               {Array.from({ length: 5 }).map((_, i) => <i key={i} className="fas fa-star" />)}
             </div>
             <h4>{ac.hotel1Name}</h4>
-            <p style={{ whiteSpace: 'pre-line' }}>{ac.hotel1Desc}</p>
+            <p style={{ whiteSpace: 'pre-line', textAlign: 'justify' }}>{ac.hotel1Desc}</p>
           </div>
 
           <div className="hotel-card">
