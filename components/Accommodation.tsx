@@ -19,9 +19,9 @@ export default function Accommodation() {
               <i className="fas fa-file-alt" /> Download list of hotels
             </a>
             <div className="prog-bulletin-langs">
-              <a href="#" className="prog-lang-btn">EN</a>
-              <a href="#" className="prog-lang-btn">FR</a>
-              <a href="#" className="prog-lang-btn">PR</a>
+              <a href="https://www.afcac.org/wp-content/uploads/2026/05/Hotels-Information.pdf" target="_blank" rel="noopener noreferrer" className="prog-lang-btn">EN</a>
+              <a href="https://www.afcac.org/wp-content/uploads/2026/05/Hotels-Information-FR.pdf" target="_blank" rel="noopener noreferrer" className="prog-lang-btn">FR</a>
+              <a href="https://www.afcac.org/wp-content/uploads/2026/05/Hotels-Information-PR.pdf" target="_blank" rel="noopener noreferrer" className="prog-lang-btn">PR</a>
             </div>
           </div>
         </div>

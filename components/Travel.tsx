@@ -21,8 +21,8 @@ export default function Travel() {
           </a>
           <div className="prog-bulletin-langs">
             <a href="https://www.afcac.org/wp-content/uploads/2026/04/EN_up-APRIL-29-ENG-EXPO-Information-Bulletin-Lome-TOGO-28_04_2026-003.pdf" target="_blank" rel="noopener noreferrer" className="prog-lang-btn">EN</a>
-            <a href="https://www.afcac.org/wp-content/uploads/2026/04/FR_Draft-Program-and-Annotated-Agenda-April-27-04-26-SG.pdf" target="_blank" rel="noopener noreferrer" className="prog-lang-btn">FR</a>
-            <a href="https://www.afcac.org/wp-content/uploads/2026/04/Port_Draft-Program-and-Annotated-Agenda-April-27-04-26-SG.pdf" target="_blank" rel="noopener noreferrer" className="prog-lang-btn">PR</a>
+            <a href="https://www.afcac.org/wp-content/uploads/2026/05/FREXPO-Information-Bulletin-Lome-TOGO-28_04_20-FINAL.pdf" target="_blank" rel="noopener noreferrer" className="prog-lang-btn">FR</a>
+            <a href="https://www.afcac.org/wp-content/uploads/2026/04/Port_up-APRIL-29-Port-EXPO-Information-Bulletin-Lome-TOGO-28_04_2026.pdf" target="_blank" rel="noopener noreferrer" className="prog-lang-btn">PR</a>
           </div>
         </div>
 
