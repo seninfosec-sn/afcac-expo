@@ -15,9 +15,9 @@ export default function Accommodation() {
           <div className="section-divider" />
           <p className="section-desc">{ac.sectionDesc}</p>
           <div className="prog-bulletin-bar" style={{ justifyContent: 'center', flexDirection: 'column', alignItems: 'center' }}>
-            <a href="#" className="btn btn-primary prog-bulletin-btn">
+            <span className="btn btn-primary prog-bulletin-btn" style={{ cursor: 'default', pointerEvents: 'none' }}>
               <i className="fas fa-file-alt" /> Download list of hotels
-            </a>
+            </span>
             <div className="prog-bulletin-langs">
               <a href="https://www.afcac.org/wp-content/uploads/2026/05/Hotels-Information.pdf" target="_blank" rel="noopener noreferrer" className="prog-lang-btn">EN</a>
               <a href="https://www.afcac.org/wp-content/uploads/2026/05/Hotels-Information-FR.pdf" target="_blank" rel="noopener noreferrer" className="prog-lang-btn">FR</a>

@@ -18,15 +18,27 @@ export default function Remarks() {
 
         <div className="remarks-grid">
           {[
-            { name: r.speaker1Name, org: r.speaker1Org, quote: r.speaker1Quote },
-            { name: r.speaker2Name, org: r.speaker2Org, quote: r.speaker2Quote },
+            { name: r.speaker1Name, org: r.speaker1Org, quote: r.speaker1Quote, videoId: 'DaTS_W3QaRc' },
+            { name: r.speaker2Name, org: r.speaker2Org, quote: r.speaker2Quote, videoId: 'nhJpoh_zD_A' },
           ].map((sp) => (
             <div key={sp.name} className="remark-card">
               <div className="remark-video">
-                <div className="video-placeholder">
-                  <div className="play-btn"><i className="fas fa-play" /></div>
-                  <div className="video-overlay-text"><span>{r.watchMessage}</span></div>
-                </div>
+                {sp.videoId ? (
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src={`https://www.youtube.com/embed/${sp.videoId}`}
+                    title={sp.name}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    style={{ display: 'block', borderRadius: 'var(--radius)', border: 'none' }}
+                  />
+                ) : (
+                  <div className="video-placeholder">
+                    <div className="play-btn"><i className="fas fa-play" /></div>
+                    <div className="video-overlay-text"><span>{r.watchMessage}</span></div>
+                  </div>
+                )}
               </div>
               <div className="remark-info">
                 <div className="remark-avatar"><i className="fas fa-user-tie" /></div>

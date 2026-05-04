@@ -9,7 +9,7 @@ interface Particle {
 
 export default function Hero() {
   const { t } = useLanguage()
-  const [cd, setCd] = useState({ days: '000', hours: '00', minutes: '00', seconds: '00' })
+  const [cd, setCd] = useState({ days: '0', hours: '00', minutes: '00', seconds: '00' })
   const [particles, setParticles] = useState<Particle[]>([])
 
   useEffect(() => {
@@ -32,7 +32,7 @@ export default function Hero() {
       const m = Math.floor((diff % 3600000) / 60000)
       const s = Math.floor((diff % 60000) / 1000)
       setCd({
-        days: String(d).padStart(3, '0'),
+        days: String(d),
         hours: String(h).padStart(2, '0'),
         minutes: String(m).padStart(2, '0'),
         seconds: String(s).padStart(2, '0'),

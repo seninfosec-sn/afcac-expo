@@ -74,7 +74,7 @@ export const translations = {
         { letter: 'E', color: 'gold', title: 'Bankable Infrastructure Project Pipeline', desc: 'A pipeline of investment-ready airport and ANSP modernisation projects presented to international financiers.' },
         { letter: 'F', color: 'green', title: 'Innovation, Technology & Human Capital', desc: 'Shared continental understanding of priority technology, skills, and innovation investment areas for African aviation.' },
         { letter: 'G', color: 'gold', title: 'Aviation Financing & Infrastructure Direction', desc: 'Strategic guidance on financing priorities, infrastructure projects, financial commitments, and MoUs signed at the event.' },
-        { letter: 'H', color: 'green', title: 'ASAs Aligned with Yamoussoukro Decision', desc: 'Bilateral Air Service Agreements negotiated and aligned with YD liberalisation provisions.' },
+        { letter: 'H', color: 'green', title: 'ASAs Aligned with Yamoussoukro Decision', desc: 'Air Service Agreements negotiated and aligned with YD liberalisation provisions.' },
         { letter: 'I', color: 'gold', title: 'SAF / LCAF Framework Actions', desc: 'Agreed framework and action priorities for SAF and LCAF adoption across the African continent.' },
       ],
     },
@@ -86,7 +86,7 @@ export const translations = {
       speaker1Org: 'African Civil Aviation Commission',
       speaker1Quote:
         'The African Air Transport Convention & Expo 2026 is the premier continental platform to accelerate SAATM implementation and build a more connected, competitive and sustainable African aviation sector.',
-      speaker2Name: 'Minister of Transport, Togo',
+      speaker2Name: 'AFCAC President and Bureau Member',
       speaker2Org: 'Host State — Republic of Togo',
       speaker2Quote:
         'Togo is proud to host this major event in Lomé. Our international airport and hotel infrastructure are ready to welcome Africa\'s aviation leaders under the best conditions.',
@@ -332,7 +332,7 @@ export const translations = {
     },
     hero: {
       badge: 'AFCAC EXPO 2026 — LOMÉ, TOGO',
-      title1: 'African Air Transport',
+      title1: 'Transport Aérien Africain',
       title2: 'Convention & Expo 2026',
       subtitle:
         'Ancré dans les principes du SAATM et de l\'Agenda 2063 de l\'Union africaine, l\'Expo favorisera le dialogue stratégique, mettra en valeur l\'innovation et catalysera les investissements visant à combler les déficits d\'infrastructure et à bâtir un écosystème de l\'aviation africaine résilient, durable et compétitif.',
@@ -396,7 +396,7 @@ export const translations = {
       speaker1Org: 'Commission africaine de l\'aviation civile',
       speaker1Quote:
         'L\'African Air Transport Convention & Expo 2026 est la plateforme continentale de référence pour accélérer la mise en œuvre du SAATM et bâtir un secteur aérien africain plus connecté, plus compétitif et plus durable.',
-      speaker2Name: 'Ministre des Transports, Togo',
+      speaker2Name: 'Président de l\'AFCAC et Membre du Bureau',
       speaker2Org: 'État hôte — République togolaise',
       speaker2Quote:
         'Le Togo est fier d\'accueillir cet événement majeur à Lomé. Notre aéroport international et nos infrastructures hôtelières sont prêts à recevoir les leaders de l\'aviation africaine dans les meilleures conditions.',
@@ -642,8 +642,8 @@ export const translations = {
     },
     hero: {
       badge: 'AFCAC EXPO 2026 — LOMÉ, TOGO',
-      title1: 'African Air Transport',
-      title2: 'Convention & Expo 2026',
+      title1: 'Transporte Aéreo Africano',
+      title2: 'Convenção & Expo 2026',
       subtitle:
         'Ancorada nos princípios do SAATM e da Agenda 2063 da União Africana, a Expo promoverá o diálogo estratégico, apresentará inovações e catalisará investimentos destinados a colmatar as lacunas de infraestrutura e a construir um ecossistema de aviação africana resiliente, sustentável e competitivo.',
       location: 'Lomé, TOGO : 15 –19 de junho de 2026',
@@ -706,7 +706,7 @@ export const translations = {
       speaker1Org: 'Comissão Africana de Aviação Civil',
       speaker1Quote:
         'A African Air Transport Convention & Expo 2026 é a plataforma continental de referência para acelerar a implementação do SAATM e construir um setor de aviação africano mais conectado, mais competitivo e mais sustentável.',
-      speaker2Name: 'Ministro dos Transportes, Togo',
+      speaker2Name: 'Presidente da AFCAC e Membro do Bureau',
       speaker2Org: 'País Anfitrião — República do Togo',
       speaker2Quote:
         'O Togo tem orgulho em acolher este grande evento em Lomé. O nosso aeroporto internacional e as nossas infraestruturas hoteleiras estão prontos para receber os líderes da aviação africana nas melhores condições.',
