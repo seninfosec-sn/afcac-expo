@@ -12,6 +12,12 @@ export default function Speakers() {
         <div className="section-header" style={{ marginBottom: '24px' }}>
           <h2 className="section-title">{s.highPatronage}</h2>
           <div className="section-divider" />
+          <p style={{ fontWeight: 700, fontSize: '1.25rem', letterSpacing: '0.04em', color: 'var(--primary)', marginTop: '16px', lineHeight: 1.4, textAlign: 'center' }}>
+            {s.semprtName}
+          </p>
+          <p style={{ fontWeight: 600, fontSize: '0.95rem', letterSpacing: '0.06em', color: 'var(--text)', textAlign: 'center', marginTop: '4px' }}>
+            {s.semprtFullTitle}
+          </p>
         </div>
         <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '48px' }}>
           <div className="speaker-card" style={{ maxWidth: '220px' }}>

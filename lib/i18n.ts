@@ -186,6 +186,8 @@ export const translations = {
       sectionDesc:
         'Policymakers, regulators, airline executives and international experts take the floor at this convention.',
       highPatronage: 'Under the High Patronage',
+      semprtName: 'SEM FAURE ESSOZIMNA GNASSINGBÉ',
+      semprtFullTitle: 'PRESIDENT OF THE COUNCIL OF THE REPUBLIC OF TOGO',
       semprtTitle: 'President of the Council of the Togolese Republic',
       list: [
         { name: 'Secretary General, AFCAC', role: 'Secretariat General', org: 'AFCAC', photo: '/SG.png' },
@@ -498,6 +500,8 @@ export const translations = {
       sectionDesc:
         'Des décideurs, régulateurs, dirigeants de compagnies aériennes et experts internationaux prennent la parole lors de cette convention.',
       highPatronage: 'Sous le Haut Patronage',
+      semprtName: 'SEM FAURE ESSOZIMNA GNASSINGBÉ',
+      semprtFullTitle: 'PRÉSIDENT DU CONSEIL DE LA RÉPUBLIQUE TOGOLAISE',
       semprtTitle: 'Président du Conseil de la République Togolaise',
       list: [
         { name: 'Secrétaire Général AFCAC', role: 'Secrétariat général', org: 'AFCAC', photo: '/SG.png' },
@@ -810,6 +814,8 @@ export const translations = {
       sectionDesc:
         'Decisores políticos, reguladores, gestores de companhias aéreas e especialistas internacionais tomam a palavra nesta convenção.',
       highPatronage: 'Sob o Alto Patrocínio',
+      semprtName: 'SEM FAURE ESSOZIMNA GNASSINGBÉ',
+      semprtFullTitle: 'PRESIDENTE DO CONSELHO DA REPÚBLICA DO TOGO',
       semprtTitle: 'Presidente do Conselho da República Togolesa',
       list: [
         { name: 'Secretário-Geral da AFCAC', role: 'Secretariado Geral', org: 'AFCAC', photo: '/SG.png' },
