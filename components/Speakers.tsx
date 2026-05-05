@@ -9,13 +9,17 @@ export default function Speakers() {
   return (
     <section className="speakers section" id="speakers">
       <div className="container">
-        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '32px' }}>
+        <div className="section-header" style={{ marginBottom: '24px' }}>
+          <h2 className="section-title">{s.highPatronage}</h2>
+          <div className="section-divider" />
+        </div>
+        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '48px' }}>
           <div className="speaker-card" style={{ maxWidth: '220px' }}>
             <div style={{ width: '180px', height: '180px', borderRadius: '50%', overflow: 'hidden', margin: '0 auto 16px', flexShrink: 0 }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="/SEMPRT.png" alt="Président du Conseil de la République Togolaise" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 15%', display: 'block' }} />
             </div>
-            <h4>Président du Conseil de la République Togolaise</h4>
+            <h4>{s.semprtTitle}</h4>
           </div>
         </div>
 

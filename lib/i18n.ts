@@ -185,6 +185,8 @@ export const translations = {
       sectionTitle: 'Speakers & Moderators',
       sectionDesc:
         'Policymakers, regulators, airline executives and international experts take the floor at this convention.',
+      highPatronage: 'Under the High Patronage',
+      semprtTitle: 'President of the Council of the Togolese Republic',
       list: [
         { name: 'Secretary General, AFCAC', role: 'Secretariat General', org: 'AFCAC', photo: '/SG.png' },
         { name: 'Minister of Transport', role: 'Host Government', org: 'Republic of Togo', photo: '/MTRT.png' },
@@ -495,6 +497,8 @@ export const translations = {
       sectionTitle: 'Speakers & Modérateurs',
       sectionDesc:
         'Des décideurs, régulateurs, dirigeants de compagnies aériennes et experts internationaux prennent la parole lors de cette convention.',
+      highPatronage: 'Sous le Haut Patronage',
+      semprtTitle: 'Président du Conseil de la République Togolaise',
       list: [
         { name: 'Secrétaire Général AFCAC', role: 'Secrétariat général', org: 'AFCAC', photo: '/SG.png' },
         { name: 'Ministre des Transports', role: 'Gouvernement hôte', org: 'République du Togo', photo: '/MTRT.png' },
@@ -805,6 +809,8 @@ export const translations = {
       sectionTitle: 'Oradores & Moderadores',
       sectionDesc:
         'Decisores políticos, reguladores, gestores de companhias aéreas e especialistas internacionais tomam a palavra nesta convenção.',
+      highPatronage: 'Sob o Alto Patrocínio',
+      semprtTitle: 'Presidente do Conselho da República Togolesa',
       list: [
         { name: 'Secretário-Geral da AFCAC', role: 'Secretariado Geral', org: 'AFCAC', photo: '/SG.png' },
         { name: 'Ministro dos Transportes', role: 'Governo Anfitrião', org: 'República do Togo', photo: '/MTRT.png' },
