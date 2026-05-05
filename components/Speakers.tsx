@@ -9,13 +9,7 @@ export default function Speakers() {
   return (
     <section className="speakers section" id="speakers">
       <div className="container">
-        <div className="section-header">
-          <h2 className="section-title">{s.sectionTitle}</h2>
-          <div className="section-divider" />
-          <p className="section-desc">{s.sectionDesc}</p>
-        </div>
-
-        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '40px' }}>
+        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '32px' }}>
           <div className="speaker-card" style={{ maxWidth: '220px' }}>
             <div style={{ width: '180px', height: '180px', borderRadius: '50%', overflow: 'hidden', margin: '0 auto 16px', flexShrink: 0 }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -23,6 +17,12 @@ export default function Speakers() {
             </div>
             <h4>Président du Conseil de la République Togolaise</h4>
           </div>
+        </div>
+
+        <div className="section-header">
+          <h2 className="section-title">{s.sectionTitle}</h2>
+          <div className="section-divider" />
+          <p className="section-desc">{s.sectionDesc}</p>
         </div>
 
         <div className="speakers-grid">
