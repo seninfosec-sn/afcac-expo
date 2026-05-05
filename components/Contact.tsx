@@ -46,13 +46,13 @@ export default function Contact() {
             </div>
           </div>
           <div className="contact-socials">
-            <a href="https://www.afcac.org" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.afcac.org/" target="_blank" rel="noopener noreferrer" aria-label="AFCAC website">
               <i className="fas fa-globe" />
             </a>
-            <a href="#"><i className="fab fa-facebook-f" /></a>
-            <a href="#"><i className="fab fa-x-twitter" /></a>
-            <a href="#"><i className="fab fa-linkedin-in" /></a>
-            <a href="#"><i className="fab fa-youtube" /></a>
+            <a href="https://www.facebook.com/afcac.org/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i className="fab fa-facebook-f" /></a>
+            <a href="https://x.com/afcac_cafac?s=21&t=gsgmO8Cc86tO1O5L55CqRA" target="_blank" rel="noopener noreferrer" aria-label="Twitter/X"><i className="fab fa-x-twitter" /></a>
+            <a href="https://www.linkedin.com/company/afcac/posts/?feedView=all" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i className="fab fa-linkedin-in" /></a>
+            <a href="https://www.youtube.com/watch?v=DaTS_W3QaRc" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i className="fab fa-youtube" /></a>
           </div>
         </div>
       </div>
