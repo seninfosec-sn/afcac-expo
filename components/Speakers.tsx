@@ -19,14 +19,30 @@ export default function Speakers() {
             {s.semprtFullTitle}
           </p>
         </div>
-        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '48px' }}>
+        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '32px' }}>
           <div className="speaker-card" style={{ maxWidth: '220px' }}>
             <div style={{ width: '180px', height: '180px', borderRadius: '50%', overflow: 'hidden', margin: '0 auto 16px', flexShrink: 0 }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/SEMPRT.png" alt="Président du Conseil de la République Togolaise" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 15%', display: 'block' }} />
+              <img src="/SEMPRT.png" alt={s.semprtTitle} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 15%', display: 'block' }} />
             </div>
             <h4>{s.semprtTitle}</h4>
           </div>
+        </div>
+
+        <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '24px', marginBottom: '48px' }}>
+          {[
+            { photo: '/IE AU HA.png', title: s.ieAuTitle },
+            { photo: '/H. E WAMKELE MENE.png', title: s.wamkeleTitle },
+            { photo: '/AUDA NEPAD HA.png', title: s.audaNepadTitle },
+          ].map((p) => (
+            <div key={p.title} className="speaker-card" style={{ maxWidth: '220px' }}>
+              <div style={{ width: '180px', height: '180px', borderRadius: '50%', overflow: 'hidden', margin: '0 auto 16px', flexShrink: 0 }}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={p.photo} alt={p.title} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 15%', display: 'block' }} />
+              </div>
+              <h4 style={{ whiteSpace: 'pre-line' }}>{p.title}</h4>
+            </div>
+          ))}
         </div>
 
         <div className="section-header">

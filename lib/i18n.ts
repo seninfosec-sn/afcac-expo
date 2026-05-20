@@ -189,6 +189,9 @@ export const translations = {
       semprtName: 'SEM FAURE ESSOZIMNA GNASSINGBÉ',
       semprtFullTitle: 'PRESIDENT OF THE COUNCIL OF THE REPUBLIC OF TOGO',
       semprtTitle: 'President of the Council of the Togolese Republic',
+      ieAuTitle: 'H.E. MS LERATO DOROTHY MATABOGE\nCOMMISSIONER FOR INFRASTRUCTURE AND ENERGY (I&E)\nAFRICAN UNION COMMISSION',
+      wamkeleTitle: 'H.E. WAMKELE MENE\nSECRETARY GENERAL OF THE AFRICAN CONTINENTAL FREE TRADE AREA (AfCFTA)',
+      audaNepadTitle: 'H.E. NARDOS BEKELE-THOMAS\nCHIEF EXECUTIVE OFFICER\nAFRICAN UNION DEVELOPMENT AGENCY-NEPAD',
       list: [
         { name: 'Secretary General, AFCAC', role: 'Secretariat General', org: 'AFCAC', photo: '/SG.png' },
         { name: 'Minister of Transport', role: 'Host Government', org: 'Republic of Togo', photo: '/MTRT.png' },
@@ -503,6 +506,9 @@ export const translations = {
       semprtName: 'SEM FAURE ESSOZIMNA GNASSINGBÉ',
       semprtFullTitle: 'PRÉSIDENT DU CONSEIL DE LA RÉPUBLIQUE TOGOLAISE',
       semprtTitle: 'Président du Conseil de la République Togolaise',
+      ieAuTitle: 'S.E. MME LERATO DOROTHY MATABOGE\nCOMMISSAIRE AUX INFRASTRUCTURES ET À L\'ÉNERGIE (I&E)\nCOMMISSION DE L\'UNION AFRICAINE',
+      wamkeleTitle: 'S.E. WAMKELE MENE\nSECRÉTAIRE GÉNÉRAL DE LA ZONE DE LIBRE-ÉCHANGE CONTINENTALE AFRICAINE (ZLECAF)',
+      audaNepadTitle: 'S.E. NARDOS BEKELE-THOMAS\nDIRECTRICE GÉNÉRALE\nAGENCE DE DÉVELOPPEMENT DE L\'UNION AFRICAINE-NEPAD',
       list: [
         { name: 'Secrétaire Général AFCAC', role: 'Secrétariat général', org: 'AFCAC', photo: '/SG.png' },
         { name: 'Ministre des Transports', role: 'Gouvernement hôte', org: 'République du Togo', photo: '/MTRT.png' },
@@ -817,6 +823,9 @@ export const translations = {
       semprtName: 'SEM FAURE ESSOZIMNA GNASSINGBÉ',
       semprtFullTitle: 'PRESIDENTE DO CONSELHO DA REPÚBLICA DO TOGO',
       semprtTitle: 'Presidente do Conselho da República Togolesa',
+      ieAuTitle: 'S.E. SRA LERATO DOROTHY MATABOGE\nCOMISSÁRIA PARA INFRAESTRUTURAS E ENERGIA (I&E)\nCOMISSÃO DA UNIÃO AFRICANA',
+      wamkeleTitle: 'S.E. WAMKELE MENE\nSECRETÁRIO-GERAL DA ÁREA DE LIVRE COMÉRCIO CONTINENTAL AFRICANA (AfCFTA)',
+      audaNepadTitle: 'S.E. NARDOS BEKELE-THOMAS\nDIRETORA EXECUTIVA\nAGÊNCIA DE DESENVOLVIMENTO DA UNIÃO AFRICANA-NEPAD',
       list: [
         { name: 'Secretário-Geral da AFCAC', role: 'Secretariado Geral', org: 'AFCAC', photo: '/SG.png' },
         { name: 'Ministro dos Transportes', role: 'Governo Anfitrião', org: 'República do Togo', photo: '/MTRT.png' },
