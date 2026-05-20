@@ -3,6 +3,7 @@ import Header from '@/components/Header'
 import Hero from '@/components/Hero'
 import Stats from '@/components/Stats'
 import About from '@/components/About'
+import Outcomes from '@/components/Outcomes'
 import Remarks from '@/components/Remarks'
 import Programme from '@/components/Programme'
 import Speakers from '@/components/Speakers'
@@ -25,12 +26,13 @@ export default function Home() {
         <Hero />
         <Stats />
         <About />
+        <Travel />
+        <Outcomes />
         <Remarks />
         <Programme />
         <Speakers />
         <Sponsors />
         <Venue />
-        <Travel />
         <Accommodation />
         <RegisterCTA />
         <Contact />
