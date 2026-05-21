@@ -17,6 +17,11 @@ export default function Speakers() {
   const { t } = useLanguage()
   const s = t.speakers
   const [galleryOpen, setGalleryOpen] = useState(false)
+  const [currentSlide, setCurrentSlide] = useState(0)
+
+  const openGallery = () => { setCurrentSlide(0); setGalleryOpen(true) }
+  const prev = () => setCurrentSlide((i) => (i - 1 + galleryPhotos.length) % galleryPhotos.length)
+  const next = () => setCurrentSlide((i) => (i + 1) % galleryPhotos.length)
 
   type SpeakerItem = { name: string; role: string; org: string; photo?: string; gallery?: boolean }
   const list = s.list as unknown as SpeakerItem[]
@@ -90,7 +95,7 @@ export default function Speakers() {
             <div
               className="speaker-card"
               style={{ cursor: 'pointer', maxWidth: '220px', textAlign: 'center' }}
-              onClick={() => setGalleryOpen(true)}
+              onClick={openGallery}
             >
               <div className="speaker-photo" style={{ fontSize: '2.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <i className="fas fa-images" />
@@ -107,49 +112,98 @@ export default function Speakers() {
           onClick={() => setGalleryOpen(false)}
           style={{
             position: 'fixed', inset: 0, zIndex: 9999,
-            background: 'rgba(0,0,0,0.85)',
+            background: 'rgba(0,0,0,0.92)',
             display: 'flex', alignItems: 'center', justifyContent: 'center',
-            padding: '24px',
           }}
         >
           <div
             onClick={(e) => e.stopPropagation()}
             style={{
-              background: '#fff',
-              borderRadius: '16px',
-              padding: '32px',
-              maxWidth: '900px',
-              width: '100%',
-              maxHeight: '85vh',
-              overflowY: 'auto',
               position: 'relative',
+              width: '90vw',
+              maxWidth: '960px',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              gap: '16px',
             }}
           >
+            {/* Close */}
             <button
               onClick={() => setGalleryOpen(false)}
               style={{
-                position: 'sticky', top: 0, float: 'right',
+                position: 'absolute', top: '-48px', right: 0,
                 background: 'var(--primary)', color: '#fff',
                 border: 'none', borderRadius: '50%',
                 width: '36px', height: '36px',
-                fontSize: '1.25rem', cursor: 'pointer',
+                fontSize: '1.4rem', cursor: 'pointer',
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
-                marginBottom: '16px',
               }}
-            >
-              ×
-            </button>
-            <h3 style={{ textAlign: 'center', marginBottom: '24px', color: 'var(--primary)' }}>
-              {galleryEntry?.name}
-            </h3>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '32px', clear: 'both' }}>
-              {galleryPhotos.map((src, i) => (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
-                  key={src}
-                  src={src}
-                  alt={`Speaker ${i + 1}`}
-                  style={{ width: '100%', height: 'auto', borderRadius: '10px', display: 'block' }}
+            >×</button>
+
+            {/* Counter */}
+            <p style={{ color: '#fff', fontSize: '0.9rem', margin: 0 }}>
+              {currentSlide + 1} / {galleryPhotos.length}
+            </p>
+
+            {/* Image + nav */}
+            <div style={{ display: 'flex', alignItems: 'center', gap: '16px', width: '100%' }}>
+              <button
+                onClick={prev}
+                style={{
+                  flexShrink: 0,
+                  background: 'rgba(255,255,255,0.15)', color: '#fff',
+                  border: 'none', borderRadius: '50%',
+                  width: '48px', height: '48px',
+                  fontSize: '1.5rem', cursor: 'pointer',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                }}
+              >&#8249;</button>
+
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={galleryPhotos[currentSlide]}
+                alt={`Photo ${currentSlide + 1}`}
+                style={{
+                  flex: 1,
+                  width: '100%',
+                  height: 'auto',
+                  maxHeight: '75vh',
+                  objectFit: 'contain',
+                  borderRadius: '12px',
+                  display: 'block',
+                }}
+              />
+
+              <button
+                onClick={next}
+                style={{
+                  flexShrink: 0,
+                  background: 'rgba(255,255,255,0.15)', color: '#fff',
+                  border: 'none', borderRadius: '50%',
+                  width: '48px', height: '48px',
+                  fontSize: '1.5rem', cursor: 'pointer',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                }}
+              >&#8250;</button>
+            </div>
+
+            {/* Dots */}
+            <div style={{ display: 'flex', gap: '8px' }}>
+              {galleryPhotos.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => setCurrentSlide(i)}
+                  style={{
+                    width: i === currentSlide ? '24px' : '10px',
+                    height: '10px',
+                    borderRadius: '5px',
+                    border: 'none',
+                    background: i === currentSlide ? 'var(--primary)' : 'rgba(255,255,255,0.4)',
+                    cursor: 'pointer',
+                    transition: 'all 0.3s',
+                    padding: 0,
+                  }}
                 />
               ))}
             </div>
