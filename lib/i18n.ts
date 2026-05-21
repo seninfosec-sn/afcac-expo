@@ -198,7 +198,7 @@ export const translations = {
         { name: 'ICAO Representative', role: 'Civil Aviation Organisation', org: 'ICAO', photo: '/ICAO ESAF.png' },
         { name: 'ACI Africa President', role: 'Airports Council International', org: 'ACI Africa', photo: '/Ali.png' },
         { name: 'IATA Representative', role: 'International Association', org: 'IATA', photo: '/KAMIL.png' },
-        { name: 'Many More', role: 'To Be Announced', org: 'Stay Tuned' },
+        { name: 'Many More', role: 'To Be Announced', org: 'Stay Tuned', gallery: true },
       ],
     },
     sponsors: {
@@ -515,7 +515,7 @@ export const translations = {
         { name: 'Représentant OACI', role: 'Organisation de l\'aviation civile', org: 'OACI / ICAO', photo: '/ICAO ESAF.png' },
         { name: 'Président ACI Africa', role: 'Conseil international des aéroports', org: 'ACI Afrique', photo: '/Ali.png' },
         { name: 'Représentant IATA', role: 'Association internationale', org: 'IATA', photo: '/KAMIL.png' },
-        { name: 'Et bien d\'autres', role: 'À annoncer prochainement', org: 'Restez informé' },
+        { name: 'Et bien d\'autres', role: 'À annoncer prochainement', org: 'Restez informé', gallery: true },
       ],
     },
     sponsors: {
