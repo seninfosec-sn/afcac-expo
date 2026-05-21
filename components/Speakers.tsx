@@ -142,19 +142,14 @@ export default function Speakers() {
             <h3 style={{ textAlign: 'center', marginBottom: '24px', color: 'var(--primary)' }}>
               {galleryEntry?.name}
             </h3>
-            <div style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))',
-              gap: '16px',
-              clear: 'both',
-            }}>
-              {galleryPhotos.map((src) => (
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '32px', clear: 'both' }}>
+              {galleryPhotos.map((src, i) => (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
                   key={src}
                   src={src}
-                  alt=""
-                  style={{ width: '100%', borderRadius: '10px', objectFit: 'cover', aspectRatio: '1', display: 'block' }}
+                  alt={`Speaker ${i + 1}`}
+                  style={{ width: '100%', height: 'auto', borderRadius: '10px', display: 'block' }}
                 />
               ))}
             </div>
