@@ -195,7 +195,7 @@ export const translations = {
       list: [
         { name: 'Secretary General, AFCAC', role: 'Secretariat General', org: 'AFCAC', photo: '/SG.png' },
         { name: 'Minister of Transport', role: 'Host Government', org: 'Republic of Togo', photo: '/MTRT.png' },
-        { name: 'ICAO Representative', role: 'Civil Aviation Organisation', org: 'ICAO' },
+        { name: 'ICAO Representative', role: 'Civil Aviation Organisation', org: 'ICAO', photo: '/ICAO ESAF.png' },
         { name: 'ACI Africa President', role: 'Airports Council International', org: 'ACI Africa', photo: '/Ali.png' },
         { name: 'IATA Representative', role: 'International Association', org: 'IATA', photo: '/KAMIL.png' },
         { name: 'Many More', role: 'To Be Announced', org: 'Stay Tuned' },
@@ -512,7 +512,7 @@ export const translations = {
       list: [
         { name: 'Secrétaire Général AFCAC', role: 'Secrétariat général', org: 'AFCAC', photo: '/SG.png' },
         { name: 'Ministre des Transports', role: 'Gouvernement hôte', org: 'République du Togo', photo: '/MTRT.png' },
-        { name: 'Représentant OACI', role: 'Organisation de l\'aviation civile', org: 'OACI / ICAO' },
+        { name: 'Représentant OACI', role: 'Organisation de l\'aviation civile', org: 'OACI / ICAO', photo: '/ICAO ESAF.png' },
         { name: 'Président ACI Africa', role: 'Conseil international des aéroports', org: 'ACI Afrique', photo: '/Ali.png' },
         { name: 'Représentant IATA', role: 'Association internationale', org: 'IATA', photo: '/KAMIL.png' },
         { name: 'Et bien d\'autres', role: 'À annoncer prochainement', org: 'Restez informé' },
