@@ -237,7 +237,7 @@ export const translations = {
       sectionTag: 'Practical Information',
       sectionTitle: 'Travel Tips',
       cards: [
-        { icon: 'fas fa-boxes', title: 'Logistic Details', desc: '' },
+        { icon: 'fas fa-boxes', title: 'Logistic Details', desc: '', link: 'https://www.afcac.org/expo-logistic/', linkLabel: 'Logistic' },
         { icon: 'fas fa-plane', title: 'By Air', desc: 'Lomé\'s Gnassingbé Eyadema International Airport is just 4 km from the city centre. It serves numerous African and international destinations via direct and connecting flights.' },
         { icon: 'fas fa-passport', title: 'Visas', accentTitle: true, desc: 'Nationals of many African countries enjoy facilitated access to Togo. International delegates should check entry requirements at their nearest Togolese embassy or via the e-visa portal.', link: 'https://voyage.gouv.tg/', linkLabel: 'E-VISA' },
         { icon: 'fas fa-coins', title: 'Currency', desc: 'The official currency is the CFA Franc (XOF). Hotels and convention venues accept international payment cards. ATMs and currency exchange offices are available.' },
@@ -555,7 +555,7 @@ export const translations = {
       sectionTag: 'Informations pratiques',
       sectionTitle: 'Conseils de voyage',
       cards: [
-        { icon: 'fas fa-boxes', title: 'Détails logistiques', desc: '' },
+        { icon: 'fas fa-boxes', title: 'Détails logistiques', desc: '', link: 'https://www.afcac.org/expo-logistic/', linkLabel: 'Logistic' },
         { icon: 'fas fa-plane', title: 'Par avion', desc: 'L\'aéroport international Gnassingbé Eyadema de Lomé est situé à seulement 4 km du centre-ville. Il dessert de nombreuses destinations africaines et internationales.' },
         { icon: 'fas fa-passport', title: 'Visas', accentTitle: true, desc: 'Les ressortissants de nombreux pays africains bénéficient d\'une facilité d\'accès au Togo. Les délégués internationaux doivent vérifier les conditions d\'entrée auprès de l\'ambassade togolaise.', link: 'https://voyage.gouv.tg/', linkLabel: 'E-VISA' },
         { icon: 'fas fa-coins', title: 'Monnaie', desc: 'La monnaie officielle est le Franc CFA (XOF). Les hôtels et sites de la convention acceptent les cartes de paiement internationales. Des DAB et bureaux de change sont disponibles.' },
