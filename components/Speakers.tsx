@@ -160,20 +160,33 @@ export default function Speakers() {
                 }}
               >&#8249;</button>
 
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={galleryPhotos[currentSlide]}
-                alt={`Photo ${currentSlide + 1}`}
-                style={{
-                  flex: 1,
-                  width: '100%',
-                  height: 'auto',
-                  maxHeight: '75vh',
-                  objectFit: 'contain',
-                  borderRadius: '12px',
-                  display: 'block',
-                }}
-              />
+              {/* Slider track */}
+              <div style={{ flex: 1, overflow: 'hidden', borderRadius: '12px' }}>
+                <div
+                  style={{
+                    display: 'flex',
+                    transform: `translateX(-${currentSlide * 100}%)`,
+                    transition: 'transform 0.45s ease',
+                  }}
+                >
+                  {galleryPhotos.map((src, i) => (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      key={src}
+                      src={src}
+                      alt={`Photo ${i + 1}`}
+                      style={{
+                        flex: '0 0 100%',
+                        width: '100%',
+                        height: 'auto',
+                        maxHeight: '70vh',
+                        objectFit: 'contain',
+                        display: 'block',
+                      }}
+                    />
+                  ))}
+                </div>
+              </div>
 
               <button
                 onClick={next}
