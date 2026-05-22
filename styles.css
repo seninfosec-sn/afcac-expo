@@ -1078,7 +1078,7 @@ button { cursor: pointer; font-family: var(--font-body); }
 
 .travel-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 24px;
   align-items: stretch;
 }
@@ -1488,7 +1488,7 @@ button { cursor: pointer; font-family: var(--font-body); }
 @media (max-width: 1024px) {
   .about-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
-  .travel-grid { grid-template-columns: repeat(4, 1fr); }
+  .travel-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   .hotels-grid { grid-template-columns: 1fr 1fr; }
   .featured-hotel { grid-column: 1 / -1; }
   .venue-grid { gap: 40px; }

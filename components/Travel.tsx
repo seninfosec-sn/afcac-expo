@@ -26,7 +26,7 @@ export default function Travel() {
           </div>
         </div>
 
-        <div className="travel-grid">
+        <div className="travel-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, minmax(0, 1fr))', gap: '24px', alignItems: 'stretch' }}>
           {tr.cards.map((c) => (
             <div key={c.title} className="travel-card">
               <div className="travel-icon"><i className={c.icon} /></div>
