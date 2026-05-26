@@ -213,7 +213,7 @@ export const translations = {
       ctaBtn: 'Become a Partner',
       platinumLogos: [],
       goldLogos: [],
-      silverLogos: ['Aerovault'],
+      silverLogos: ['Aerovault', 'ATNS'],
     },
     venue: {
       sectionTag: 'Location',
@@ -531,7 +531,7 @@ export const translations = {
       ctaBtn: 'Devenir partenaire',
       platinumLogos: [],
       goldLogos: [],
-      silverLogos: ['Aerovault'],
+      silverLogos: ['Aerovault', 'ATNS'],
     },
     venue: {
       sectionTag: 'Lieu',
@@ -849,7 +849,7 @@ export const translations = {
       ctaBtn: 'Tornar-se parceiro',
       platinumLogos: [],
       goldLogos: [],
-      silverLogos: ['Aerovault'],
+      silverLogos: ['Aerovault', 'ATNS'],
     },
     venue: {
       sectionTag: 'Local',
