@@ -873,6 +873,7 @@ export const translations = {
       sectionTag: 'Informações Práticas',
       sectionTitle: 'Dicas de Viagem',
       cards: [
+        { icon: 'fas fa-boxes', title: 'Detalhes Logísticos', desc: '', link: 'https://www.afcac.org/expo-logistic/', linkLabel: 'Logistic' },
         { icon: 'fas fa-plane', title: 'De Avião', desc: 'O Aeroporto Internacional Gnassingbé Eyadema de Lomé está situado a apenas 4 km do centro da cidade, com ligações para numerosos destinos africanos e internacionais.' },
         { icon: 'fas fa-passport', title: 'Vistos', accentTitle: true, desc: 'Os cidadãos de muitos países africanos beneficiam de acesso facilitado ao Togo. Os delegados internacionais devem verificar os requisitos de entrada na embaixada togolesa ou através do portal de e-visto.', link: 'https://voyage.gouv.tg/', linkLabel: 'E-VISA' },
         { icon: 'fas fa-coins', title: 'Moeda', desc: 'A moeda oficial é o Franco CFA (XOF). Os hotéis e os locais da convenção aceitam cartões de pagamento internacionais. Há caixas multibanco e casas de câmbio disponíveis.' },
