@@ -206,8 +206,8 @@ export const translations = {
       sectionTitle: 'Sponsors & Exhibitors',
       sectionDesc:
         'Join leading airlines, airports, financial institutions and international organisations showcasing their innovations at AFCAC Expo 2026.',
-      platinum: 'Platinum Partners',
-      gold: 'Gold Partners',
+      platinum: 'Platinum Sponsor',
+      gold: 'Gold Sponsor',
       silver: 'Silver Sponsor',
       ctaText: 'Interested in becoming a sponsor or exhibitor?',
       ctaBtn: 'Become a Partner',
@@ -524,8 +524,8 @@ export const translations = {
       sectionTitle: 'Sponsors & Exposants',
       sectionDesc:
         'Rejoignez les grandes compagnies aériennes, aéroports, institutions financières et organisations internationales qui exposent leurs innovations à l\'AFCAC Expo 2026.',
-      platinum: 'Partenaires Platine',
-      gold: 'Partenaires Or',
+      platinum: 'Platinum Sponsor',
+      gold: 'Gold Sponsor',
       silver: 'Silver Sponsor',
       ctaText: 'Vous souhaitez devenir sponsor ou exposant ?',
       ctaBtn: 'Devenir partenaire',
@@ -842,8 +842,8 @@ export const translations = {
       sectionTitle: 'Patrocinadores & Expositores',
       sectionDesc:
         'Junte-se às principais companhias aéreas, aeroportos, instituições financeiras e organizações internacionais que apresentam as suas inovações na AFCAC Expo 2026.',
-      platinum: 'Parceiros Platina',
-      gold: 'Parceiros Ouro',
+      platinum: 'Platinum Sponsor',
+      gold: 'Gold Sponsor',
       silver: 'Silver Sponsor',
       ctaText: 'Interessado em ser patrocinador ou expositor?',
       ctaBtn: 'Tornar-se parceiro',
