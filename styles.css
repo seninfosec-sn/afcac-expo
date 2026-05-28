@@ -930,6 +930,7 @@ button { cursor: pointer; font-family: var(--font-body); }
 .tier-title.platinum { color: var(--green); }
 .tier-title.gold { color: var(--gold-dark); }
 .tier-title.silver { color: var(--text-muted); }
+.tier-title.bronze { color: #cd7f32; }
 
 .sponsor-logos {
   display: flex;
