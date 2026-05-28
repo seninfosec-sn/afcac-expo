@@ -1,10 +1,46 @@
 'use client'
 
+import { useState, useEffect, useCallback } from 'react'
 import { useLanguage } from '@/contexts/LanguageContext'
+
+const EXHIBITORS = [
+  'CAA Togo',
+  'More than 20 Togo companies',
+  'AU',
+  'AFCAC',
+  'AfCFTA',
+  'AUDA-NEPAD',
+  'COMESA Competition & Consumer Commission',
+  'Starburst',
+  'EMPIC',
+  'NIRO Company',
+  'Aviason',
+  'Gobi Absorbs',
+  'Aeroclass',
+  'ATNS',
+  'ACSA',
+  'FB Airports',
+  'Singapore CAA',
+]
+
+const VISIBLE = 4
 
 export default function Sponsors() {
   const { t } = useLanguage()
   const s = t.sponsors
+  const [index, setIndex] = useState(0)
+
+  const total = Math.ceil(EXHIBITORS.length / VISIBLE)
+
+  const next = useCallback(() => setIndex((i) => (i + 1) % total), [total])
+  const prev = () => setIndex((i) => (i - 1 + total) % total)
+
+  useEffect(() => {
+    const timer = setInterval(next, 3000)
+    return () => clearInterval(timer)
+  }, [next])
+
+  const visible = EXHIBITORS.slice(index * VISIBLE, index * VISIBLE + VISIBLE)
 
   return (
     <section className="sponsors" id="sponsors">
@@ -52,40 +88,107 @@ export default function Sponsors() {
             </div>
           </div>
 
-          {/* Exhibitors ticker */}
+          {/* Exhibitors carousel */}
           <div style={{ marginBottom: '40px' }}>
-            <h3 style={{ textAlign: 'center', fontFamily: 'var(--font-head)', color: 'var(--green-dark)', fontSize: '1.1rem', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '16px' }}>
+            <h3 style={{
+              textAlign: 'center',
+              fontFamily: 'var(--font-head)',
+              color: 'var(--green-dark)',
+              fontSize: '1.1rem',
+              fontWeight: 700,
+              letterSpacing: '0.08em',
+              textTransform: 'uppercase',
+              marginBottom: '20px',
+            }}>
               Exhibitors
             </h3>
-            <div style={{ overflow: 'hidden', background: 'var(--off-white)', borderRadius: '8px', border: '1px solid var(--border)', padding: '12px 0' }}>
+
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+              {/* Prev */}
+              <button
+                onClick={prev}
+                style={{
+                  flexShrink: 0,
+                  width: '40px', height: '40px',
+                  borderRadius: '50%',
+                  border: '2px solid var(--green)',
+                  background: 'transparent',
+                  color: 'var(--green)',
+                  fontSize: '1.2rem',
+                  cursor: 'pointer',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  transition: 'all 0.2s',
+                }}
+              >&#8249;</button>
+
+              {/* Cards */}
               <div style={{
-                display: 'flex',
-                gap: '0',
-                animation: 'tickerScroll 30s linear infinite',
-                width: 'max-content',
+                flex: 1,
+                display: 'grid',
+                gridTemplateColumns: 'repeat(4, 1fr)',
+                gap: '12px',
               }}>
-                {[
-                  'CAA Togo', 'More than 20 Togo companies', 'AU', 'AFCAC', 'AfCFTA',
-                  'AUDA-NEPAD', 'COMESA Competition & Consumer Commission', 'Starburst',
-                  'EMPIC', 'NIRO Company', 'Aviason', 'Gobi Absorbs', 'Aeroclass',
-                  'ATNS', 'ACSA', 'FB Airports', 'Singapore CAA',
-                  'CAA Togo', 'More than 20 Togo companies', 'AU', 'AFCAC', 'AfCFTA',
-                  'AUDA-NEPAD', 'COMESA Competition & Consumer Commission', 'Starburst',
-                  'EMPIC', 'NIRO Company', 'Aviason', 'Gobi Absorbs', 'Aeroclass',
-                  'ATNS', 'ACSA', 'FB Airports', 'Singapore CAA',
-                ].map((name, i) => (
-                  <span key={i} style={{
-                    padding: '0 24px',
-                    fontSize: '0.9rem',
+                {visible.map((name, i) => (
+                  <div key={i} style={{
+                    background: 'var(--off-white)',
+                    border: '1px solid var(--border)',
+                    borderTop: '3px solid var(--gold)',
+                    borderRadius: '8px',
+                    padding: '16px 12px',
+                    textAlign: 'center',
+                    fontSize: '0.85rem',
                     fontWeight: 600,
-                    color: 'var(--green)',
-                    whiteSpace: 'nowrap',
-                    borderRight: '2px solid var(--gold)',
+                    color: 'var(--green-dark)',
+                    minHeight: '64px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
                   }}>
                     {name}
-                  </span>
+                  </div>
+                ))}
+                {/* Fill empty slots */}
+                {Array.from({ length: VISIBLE - visible.length }).map((_, i) => (
+                  <div key={`empty-${i}`} style={{ visibility: 'hidden' }} />
                 ))}
               </div>
+
+              {/* Next */}
+              <button
+                onClick={next}
+                style={{
+                  flexShrink: 0,
+                  width: '40px', height: '40px',
+                  borderRadius: '50%',
+                  border: '2px solid var(--green)',
+                  background: 'transparent',
+                  color: 'var(--green)',
+                  fontSize: '1.2rem',
+                  cursor: 'pointer',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  transition: 'all 0.2s',
+                }}
+              >&#8250;</button>
+            </div>
+
+            {/* Dots */}
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '8px', marginTop: '16px' }}>
+              {Array.from({ length: total }).map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => setIndex(i)}
+                  style={{
+                    width: i === index ? '24px' : '10px',
+                    height: '10px',
+                    borderRadius: '5px',
+                    border: 'none',
+                    background: i === index ? 'var(--gold)' : 'var(--border)',
+                    cursor: 'pointer',
+                    transition: 'all 0.3s',
+                    padding: 0,
+                  }}
+                />
+              ))}
             </div>
           </div>
 
