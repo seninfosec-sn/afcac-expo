@@ -52,6 +52,43 @@ export default function Sponsors() {
             </div>
           </div>
 
+          {/* Exhibitors ticker */}
+          <div style={{ marginBottom: '40px' }}>
+            <h3 style={{ textAlign: 'center', fontFamily: 'var(--font-head)', color: 'var(--green-dark)', fontSize: '1.1rem', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '16px' }}>
+              Exhibitors
+            </h3>
+            <div style={{ overflow: 'hidden', background: 'var(--off-white)', borderRadius: '8px', border: '1px solid var(--border)', padding: '12px 0' }}>
+              <div style={{
+                display: 'flex',
+                gap: '0',
+                animation: 'tickerScroll 30s linear infinite',
+                width: 'max-content',
+              }}>
+                {[
+                  'CAA Togo', 'More than 20 Togo companies', 'AU', 'AFCAC', 'AfCFTA',
+                  'AUDA-NEPAD', 'COMESA Competition & Consumer Commission', 'Starburst',
+                  'EMPIC', 'NIRO Company', 'Aviason', 'Gobi Absorbs', 'Aeroclass',
+                  'ATNS', 'ACSA', 'FB Airports', 'Singapore CAA',
+                  'CAA Togo', 'More than 20 Togo companies', 'AU', 'AFCAC', 'AfCFTA',
+                  'AUDA-NEPAD', 'COMESA Competition & Consumer Commission', 'Starburst',
+                  'EMPIC', 'NIRO Company', 'Aviason', 'Gobi Absorbs', 'Aeroclass',
+                  'ATNS', 'ACSA', 'FB Airports', 'Singapore CAA',
+                ].map((name, i) => (
+                  <span key={i} style={{
+                    padding: '0 24px',
+                    fontSize: '0.9rem',
+                    fontWeight: 600,
+                    color: 'var(--green)',
+                    whiteSpace: 'nowrap',
+                    borderRight: '2px solid var(--gold)',
+                  }}>
+                    {name}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+
           <div className="sponsor-cta">
             <p>{s.ctaText}</p>
             <a href="#register" className="btn btn-primary">{s.ctaBtn}</a>

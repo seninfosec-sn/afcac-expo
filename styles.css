@@ -1072,6 +1072,11 @@ button { cursor: pointer; font-family: var(--font-body); }
   50% { transform: translateY(-8px); }
 }
 
+@keyframes tickerScroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
 /* =====================================================
    TRAVEL
 ===================================================== */
