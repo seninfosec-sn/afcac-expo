@@ -43,9 +43,9 @@ export default function Sponsors() {
               </div>
             </div>
             <div className="tier">
-              <h3 className="tier-title bronze">{(s as Record<string, unknown>).bronze as string}</h3>
+              <h3 className="tier-title bronze">{s.bronze}</h3>
               <div className="sponsor-logos">
-                {((s as Record<string, unknown>).bronzeLogos as string[]).map((logo) => (
+                {s.bronzeLogos.map((logo) => (
                   <div key={logo} className="sponsor-logo-box xs">{logo}</div>
                 ))}
               </div>
