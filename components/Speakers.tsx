@@ -65,8 +65,8 @@ export default function Speakers() {
                   <img src={p.photo} alt={name} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 15%', display: 'block' }} />
                 </div>
                 <div style={{ textAlign: 'center' }}>
-                  <p style={{ fontWeight: 400, fontSize: '0.9rem', color: 'var(--text)', marginBottom: '6px' }}>{name}</p>
-                  <h4 style={{ whiteSpace: 'pre-line', fontSize: '0.82rem' }}>{rest.join('\n')}</h4>
+                  <p style={{ fontWeight: 400, fontSize: '0.9rem', color: 'var(--text)', margin: '0 0 6px', lineHeight: 1.3 }}>{name}</p>
+                  <h4 style={{ whiteSpace: 'pre-line', fontSize: '0.82rem', margin: 0 }}>{rest.join('\n')}</h4>
                 </div>
               </div>
             )
