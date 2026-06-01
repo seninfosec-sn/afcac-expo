@@ -192,7 +192,7 @@ export const translations = {
       semprtTitle: 'President of the Council of the Togolese Republic',
       ministersTitle: 'Ministers',
       ministers: [
-        { name: 'Minister 1', title: 'Title', org: 'Organisation', photo: '' },
+        { name: 'Minister of Transport', title: 'Host Government', org: 'Republic of Togo', photo: '/MTRT.png' },
         { name: 'Minister 2', title: 'Title', org: 'Organisation', photo: '' },
         { name: 'Minister 3', title: 'Title', org: 'Organisation', photo: '' },
         { name: 'Minister 4', title: 'Title', org: 'Organisation', photo: '' },
@@ -525,7 +525,7 @@ export const translations = {
       semprtTitle: 'Président du Conseil de la République Togolaise',
       ministersTitle: 'Ministres',
       ministers: [
-        { name: 'Ministre 1', title: 'Titre', org: 'Organisation', photo: '' },
+        { name: 'Ministre des Transports', title: 'Gouvernement hôte', org: 'République du Togo', photo: '/MTRT.png' },
         { name: 'Ministre 2', title: 'Titre', org: 'Organisation', photo: '' },
         { name: 'Ministre 3', title: 'Titre', org: 'Organisation', photo: '' },
         { name: 'Ministre 4', title: 'Titre', org: 'Organisation', photo: '' },
@@ -858,7 +858,7 @@ export const translations = {
       semprtTitle: 'Presidente do Conselho da República Togolesa',
       ministersTitle: 'Ministros',
       ministers: [
-        { name: 'Ministro 1', title: 'Título', org: 'Organização', photo: '' },
+        { name: 'Ministro dos Transportes', title: 'Governo Anfitrião', org: 'República do Togo', photo: '/MTRT.png' },
         { name: 'Ministro 2', title: 'Título', org: 'Organização', photo: '' },
         { name: 'Ministro 3', title: 'Título', org: 'Organização', photo: '' },
         { name: 'Ministro 4', title: 'Título', org: 'Organização', photo: '' },
