@@ -3,24 +3,25 @@
 import { useState, useEffect, useCallback } from 'react'
 import { useLanguage } from '@/contexts/LanguageContext'
 
-const EXHIBITORS = [
-  'CAA Togo',
-  'More than 20 Togo companies',
-  'AU',
-  'AFCAC',
-  'AfCFTA',
-  'AUDA-NEPAD',
-  'COMESA Competition & Consumer Commission',
-  'Starburst',
-  'EMPIC',
-  'NIRO Company',
-  'Aviason',
-  'Gobi Absorbs',
-  'Aeroclass',
-  'ATNS',
-  'ACSA',
-  'FB Airports',
-  'Singapore CAA',
+type Exhibitor = { name: string; logo: string | null }
+const EXHIBITORS: Exhibitor[] = [
+  { name: 'CAA Togo',                                    logo: '/TOGO.png' },
+  { name: 'More than 20 Togo companies',                 logo: '/TOGO.png' },
+  { name: 'AU',                                          logo: '/african-union.png' },
+  { name: 'AFCAC',                                       logo: '/afcac_logo.png' },
+  { name: 'AfCFTA',                                      logo: '/AfCFTA.png' },
+  { name: 'AUDA-NEPAD',                                  logo: '/AUDA- NEPAD.png' },
+  { name: 'COMESA Competition & Consumer Commission',    logo: '/COMESA.webp' },
+  { name: 'Starburst',                                   logo: null },
+  { name: 'EMPIC',                                       logo: null },
+  { name: 'NIRO Company',                                logo: null },
+  { name: 'Aviason',                                     logo: '/aviason.png' },
+  { name: 'Gobi Absorbs',                                logo: null },
+  { name: 'Aeroclass',                                   logo: null },
+  { name: 'ATNS',                                        logo: '/ATNS.png' },
+  { name: 'ACSA',                                        logo: null },
+  { name: 'FB Airports',                                 logo: null },
+  { name: 'Singapore CAA',                               logo: '/CAAS.avif' },
 ]
 
 const VISIBLE = 4
@@ -128,23 +129,31 @@ export default function Sponsors() {
                 gridTemplateColumns: 'repeat(4, 1fr)',
                 gap: '12px',
               }}>
-                {visible.map((name, i) => (
+                {visible.map((item, i) => (
                   <div key={i} style={{
                     background: 'var(--off-white)',
                     border: '1px solid var(--border)',
                     borderTop: '3px solid var(--gold)',
                     borderRadius: '8px',
-                    padding: '16px 12px',
+                    padding: '12px 10px',
                     textAlign: 'center',
-                    fontSize: '0.85rem',
+                    fontSize: '0.82rem',
                     fontWeight: 600,
                     color: 'var(--green-dark)',
-                    minHeight: '64px',
+                    minHeight: '80px',
                     display: 'flex',
+                    flexDirection: 'column',
                     alignItems: 'center',
                     justifyContent: 'center',
+                    gap: '8px',
                   }}>
-                    {name}
+                    {item.logo ? (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img src={item.logo} alt={item.name} style={{ height: '32px', width: 'auto', maxWidth: '80px', objectFit: 'contain', display: 'block' }} />
+                    ) : (
+                      <i className="fas fa-building" style={{ fontSize: '1.4rem', color: 'var(--gold)' }} />
+                    )}
+                    <span>{item.name}</span>
                   </div>
                 ))}
                 {/* Fill empty slots */}
