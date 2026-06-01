@@ -79,19 +79,21 @@ export default function Speakers() {
           <h3 style={{ textAlign: 'center', fontFamily: 'var(--font-head)', color: 'var(--green-dark)', fontSize: '1.3rem', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '28px' }}>
             {s.coOrganizerTitle}
           </h3>
-          <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '24px' }}>
+          <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '32px' }}>
             {(s.coOrganizers as unknown as { name: string; title: string; org: string; photo: string }[]).map((c) => (
-              <div key={c.name} className="speaker-card" style={{ maxWidth: '200px' }}>
-                <div style={{ width: '160px', height: '160px', borderRadius: '50%', overflow: 'hidden', margin: '0 auto 14px', flexShrink: 0, background: 'var(--off-white)', border: '2px solid var(--border)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <div key={c.name} className="speaker-card" style={{ maxWidth: '220px', textAlign: 'center' }}>
+                <div style={{ width: '180px', height: '180px', borderRadius: '50%', overflow: 'hidden', margin: '0 auto 16px', flexShrink: 0 }}>
                   {c.photo ? (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img src={c.photo} alt={c.name} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 15%', display: 'block' }} />
                   ) : (
-                    <i className="fas fa-user" style={{ fontSize: '3rem', color: 'var(--text-muted)' }} />
+                    <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'var(--off-white)' }}>
+                      <i className="fas fa-user" style={{ fontSize: '3.5rem', color: 'var(--text-muted)' }} />
+                    </div>
                   )}
                 </div>
-                <h4 style={{ fontSize: '0.9rem' }}>{c.name}</h4>
-                <p style={{ fontSize: '0.8rem', margin: 0 }}>{c.title}<br /><span>{c.org}</span></p>
+                <p style={{ fontWeight: 400, fontSize: '0.9rem', color: 'var(--text)', margin: '0 0 6px', lineHeight: 1.3 }}>{c.name}</p>
+                <h4 style={{ whiteSpace: 'pre-line', fontSize: '0.82rem', margin: 0 }}>{c.title}</h4>
               </div>
             ))}
           </div>
