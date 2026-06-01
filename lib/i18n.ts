@@ -194,7 +194,7 @@ export const translations = {
       ministers: [
         { name: 'Minister of Transport', title: 'Host Government', org: 'Republic of Togo', photo: '/MTRT.png' },
         { name: 'Minister 2', title: 'Title', org: 'Organisation', photo: '/RICARDO DANIEL.png' },
-        { name: 'Minister 3', title: 'Title', org: 'Organisation', photo: '' },
+        { name: 'Minister 3', title: 'Title', org: 'Organisation', photo: '/KEYAMO.png' },
         { name: 'Minister 4', title: 'Title', org: 'Organisation', photo: '' },
       ],
       coOrganizerTitle: 'Co-Organizer',
@@ -528,7 +528,7 @@ export const translations = {
       ministers: [
         { name: 'Ministre des Transports', title: 'Gouvernement hôte', org: 'République du Togo', photo: '/MTRT.png' },
         { name: 'Ministre 2', title: 'Titre', org: 'Organisation', photo: '/RICARDO DANIEL.png' },
-        { name: 'Ministre 3', title: 'Titre', org: 'Organisation', photo: '' },
+        { name: 'Ministre 3', title: 'Titre', org: 'Organisation', photo: '/KEYAMO.png' },
         { name: 'Ministre 4', title: 'Titre', org: 'Organisation', photo: '' },
       ],
       coOrganizerTitle: 'Co-Organisateur',
@@ -862,7 +862,7 @@ export const translations = {
       ministers: [
         { name: 'Ministro dos Transportes', title: 'Governo Anfitrião', org: 'República do Togo', photo: '/MTRT.png' },
         { name: 'Ministro 2', title: 'Título', org: 'Organização', photo: '/RICARDO DANIEL.png' },
-        { name: 'Ministro 3', title: 'Título', org: 'Organização', photo: '' },
+        { name: 'Ministro 3', title: 'Título', org: 'Organização', photo: '/KEYAMO.png' },
         { name: 'Ministro 4', title: 'Título', org: 'Organização', photo: '' },
       ],
       coOrganizerTitle: 'Co-Organizador',
