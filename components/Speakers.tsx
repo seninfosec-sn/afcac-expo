@@ -79,7 +79,7 @@ export default function Speakers() {
           <h3 style={{ textAlign: 'center', fontFamily: 'var(--font-head)', color: 'var(--green-dark)', fontSize: '1.3rem', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '28px' }}>
             {s.coOrganizerTitle}
           </h3>
-          <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '32px' }}>
+          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-start', flexWrap: 'nowrap', gap: '32px' }}>
             {(s.coOrganizers as unknown as { name: string; title: string; org: string; photo: string }[]).map((c) => (
               <div key={c.name} className="speaker-card" style={{ maxWidth: '220px', textAlign: 'center' }}>
                 <div style={{ width: '180px', height: '180px', borderRadius: '50%', overflow: 'hidden', margin: '0 auto 16px', flexShrink: 0 }}>
