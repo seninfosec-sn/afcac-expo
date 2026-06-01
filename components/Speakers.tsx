@@ -100,8 +100,6 @@ export default function Speakers() {
         <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '24px', marginBottom: '48px' }}>
           {[
             { photo: '/IE AU HA.png', title: s.ieAuTitle },
-            { photo: '/H. E WAMKELE MENE.png', title: s.wamkeleTitle },
-            { photo: '/AUDA NEPAD HA.png', title: s.audaNepadTitle },
           ].map((p) => {
             const [name, ...rest] = p.title.split('\n')
             return (
