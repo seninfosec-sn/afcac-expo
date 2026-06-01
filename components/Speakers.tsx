@@ -42,12 +42,12 @@ export default function Speakers() {
           </p>
         </div>
         <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '32px' }}>
-          <div className="speaker-card" style={{ maxWidth: '220px' }}>
-            <div style={{ width: '180px', height: '180px', borderRadius: '50%', overflow: 'hidden', margin: '0 auto 16px', flexShrink: 0 }}>
+          <div className="speaker-card" style={{ maxWidth: '280px' }}>
+            <div style={{ width: '230px', height: '230px', borderRadius: '50%', overflow: 'hidden', margin: '0 auto 16px', flexShrink: 0, boxShadow: '0 4px 24px rgba(0,0,0,0.15)', border: '4px solid var(--gold)' }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="/SEMPRT.png" alt={s.semprtTitle} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 15%', display: 'block' }} />
             </div>
-            <h4>{s.semprtTitle}</h4>
+            <h4 style={{ fontSize: '1rem' }}>{s.semprtTitle}</h4>
           </div>
         </div>
 
