@@ -82,9 +82,24 @@ export default function Sponsors() {
             <div className="tier">
               <h3 className="tier-title bronze">{s.bronze}</h3>
               <div className="sponsor-logos">
-                {s.bronzeLogos.map((logo) => (
-                  <div key={logo} className="sponsor-logo-box xs">{logo}</div>
-                ))}
+                {s.bronzeLogos.map((name) => {
+                  const logoMap: Record<string, string> = {
+                    'ATNS': '/ATNS.png',
+                    'Aerovault': '/Aerovault.png',
+                  }
+                  const src = logoMap[name]
+                  return (
+                    <div key={name} className="sponsor-logo-box xs" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '6px' }}>
+                      {src ? (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img src={src} alt={name} style={{ height: '36px', width: 'auto', maxWidth: '100px', objectFit: 'contain' }} />
+                      ) : (
+                        <i className="fas fa-building" style={{ fontSize: '1.4rem', color: '#cd7f32' }} />
+                      )}
+                      <span>{name}</span>
+                    </div>
+                  )
+                })}
               </div>
             </div>
           </div>
