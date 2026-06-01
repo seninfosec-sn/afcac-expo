@@ -149,7 +149,7 @@ export default function Sponsors() {
                   }}>
                     {item.logo ? (
                       // eslint-disable-next-line @next/next/no-img-element
-                      <img src={item.logo} alt={item.name} style={{ height: '32px', width: 'auto', maxWidth: '80px', objectFit: 'contain', display: 'block' }} />
+                      <img src={item.logo} alt={item.name} style={{ height: '36px', width: 'auto', maxWidth: '90px', objectFit: 'contain', display: 'block' }} />
                     ) : (
                       <i className="fas fa-building" style={{ fontSize: '1.4rem', color: 'var(--gold)' }} />
                     )}
