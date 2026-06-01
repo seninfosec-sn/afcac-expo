@@ -56,6 +56,14 @@ export default function Sponsors() {
 
           <div className="sponsor-tiers">
             <div className="tier">
+              <h3 className="tier-title gold" style={{ animation: 'goldBlink 1.4s ease-in-out infinite' }}>{s.gold}</h3>
+              <div className="sponsor-logos">
+                {s.goldLogos.map((logo) => (
+                  <div key={logo} className="sponsor-logo-box sm">{logo}</div>
+                ))}
+              </div>
+            </div>
+            <div className="tier">
               <h3 className="tier-title silver">{s.silver}</h3>
               <div className="sponsor-logos">
                 {s.silverLogos.map((logo) => (

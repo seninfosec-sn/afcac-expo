@@ -1077,6 +1077,11 @@ button { cursor: pointer; font-family: var(--font-body); }
   100% { transform: translateX(-50%); }
 }
 
+@keyframes goldBlink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.25; }
+}
+
 /* =====================================================
    TRAVEL
 ===================================================== */
