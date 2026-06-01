@@ -56,22 +56,6 @@ export default function Sponsors() {
 
           <div className="sponsor-tiers">
             <div className="tier">
-              <h3 className="tier-title platinum">{s.platinum}</h3>
-              <div className="sponsor-logos">
-                {s.platinumLogos.map((logo) => (
-                  <div key={logo} className="sponsor-logo-box">{logo}</div>
-                ))}
-              </div>
-            </div>
-            <div className="tier">
-              <h3 className="tier-title gold">{s.gold}</h3>
-              <div className="sponsor-logos">
-                {s.goldLogos.map((logo) => (
-                  <div key={logo} className="sponsor-logo-box sm">{logo}</div>
-                ))}
-              </div>
-            </div>
-            <div className="tier">
               <h3 className="tier-title silver">{s.silver}</h3>
               <div className="sponsor-logos">
                 {s.silverLogos.map((logo) => (
@@ -85,7 +69,7 @@ export default function Sponsors() {
                 {s.bronzeLogos.map((name) => {
                   const logoMap: Record<string, string> = {
                     'ATNS': '/ATNS.png',
-                    'Aerovault': '/Aerovault.png',
+                    'Aerovault': '/AEROVAULT.png',
                   }
                   const src = logoMap[name]
                   return (
