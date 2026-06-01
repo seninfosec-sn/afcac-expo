@@ -74,6 +74,29 @@ export default function Speakers() {
           </div>
         </div>
 
+        {/* Co-Organizer section */}
+        <div style={{ marginBottom: '48px' }}>
+          <h3 style={{ textAlign: 'center', fontFamily: 'var(--font-head)', color: 'var(--green-dark)', fontSize: '1.3rem', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '28px' }}>
+            {s.coOrganizerTitle}
+          </h3>
+          <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '24px' }}>
+            {(s.coOrganizers as unknown as { name: string; title: string; org: string; photo: string }[]).map((c) => (
+              <div key={c.name} className="speaker-card" style={{ maxWidth: '200px' }}>
+                <div style={{ width: '160px', height: '160px', borderRadius: '50%', overflow: 'hidden', margin: '0 auto 14px', flexShrink: 0, background: 'var(--off-white)', border: '2px solid var(--border)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  {c.photo ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img src={c.photo} alt={c.name} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 15%', display: 'block' }} />
+                  ) : (
+                    <i className="fas fa-user" style={{ fontSize: '3rem', color: 'var(--text-muted)' }} />
+                  )}
+                </div>
+                <h4 style={{ fontSize: '0.9rem' }}>{c.name}</h4>
+                <p style={{ fontSize: '0.8rem', margin: 0 }}>{c.title}<br /><span>{c.org}</span></p>
+              </div>
+            ))}
+          </div>
+        </div>
+
         <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '24px', marginBottom: '48px' }}>
           {[
             { photo: '/IE AU HA.png', title: s.ieAuTitle },
