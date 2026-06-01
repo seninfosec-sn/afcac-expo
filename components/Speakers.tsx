@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 const galleryPhotos = [
@@ -18,10 +18,25 @@ export default function Speakers() {
   const s = t.speakers
   const [galleryOpen, setGalleryOpen] = useState(false)
   const [currentSlide, setCurrentSlide] = useState(0)
+  const [ministerIndex, setMinisterIndex] = useState(0)
 
   const openGallery = () => { setCurrentSlide(0); setGalleryOpen(true) }
   const prev = () => setCurrentSlide((i) => (i - 1 + galleryPhotos.length) % galleryPhotos.length)
   const next = () => setCurrentSlide((i) => (i + 1) % galleryPhotos.length)
+
+  const MINISTERS_VISIBLE = 4
+  type MinisterItem = { name: string; title: string; org: string; photo: string }
+  const ministers = s.ministers as unknown as MinisterItem[]
+  const ministerPages = Math.ceil(ministers.length / MINISTERS_VISIBLE)
+  const visibleMinisters = ministers.slice(ministerIndex * MINISTERS_VISIBLE, ministerIndex * MINISTERS_VISIBLE + MINISTERS_VISIBLE)
+
+  const ministerNext = useCallback(() => setMinisterIndex((i) => (i + 1) % ministerPages), [ministerPages])
+  const ministerPrev = () => setMinisterIndex((i) => (i - 1 + ministerPages) % ministerPages)
+
+  useEffect(() => {
+    const timer = setInterval(ministerNext, 3500)
+    return () => clearInterval(timer)
+  }, [ministerNext])
 
   type SpeakerItem = { name: string; role: string; org: string; photo?: string; gallery?: boolean }
   const list = s.list as unknown as SpeakerItem[]
@@ -52,26 +67,54 @@ export default function Speakers() {
         </div>
 
         {/* Ministers section */}
+        {/* Ministers carousel */}
         <div style={{ marginBottom: '48px' }}>
-          <h3 style={{ textAlign: 'center', fontFamily: 'var(--font-head)', color: 'var(--green-dark)', fontSize: '1.3rem', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '28px' }}>
+          <h3 style={{ textAlign: 'center', fontFamily: 'var(--font-head)', color: 'var(--green-dark)', fontSize: '1.3rem', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '24px' }}>
             {s.ministersTitle}
           </h3>
-          <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '24px' }}>
-            {(s.ministers as unknown as { name: string; title: string; org: string; photo: string }[]).map((m) => (
-              <div key={m.name} className="speaker-card" style={{ maxWidth: '200px' }}>
-                <div style={{ width: '160px', height: '160px', borderRadius: '50%', overflow: 'hidden', margin: '0 auto 14px', flexShrink: 0, background: 'var(--off-white)', border: '2px solid var(--border)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  {m.photo ? (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img src={m.photo} alt={m.name} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 15%', display: 'block' }} />
-                  ) : (
-                    <i className="fas fa-user" style={{ fontSize: '3rem', color: 'var(--text-muted)' }} />
-                  )}
+
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+            {/* Prev */}
+            <button onClick={ministerPrev} style={{ flexShrink: 0, width: '40px', height: '40px', borderRadius: '50%', border: '2px solid var(--green)', background: 'transparent', color: 'var(--green)', fontSize: '1.2rem', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              &#8249;
+            </button>
+
+            {/* Cards */}
+            <div style={{ flex: 1, display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '20px' }}>
+              {visibleMinisters.map((m, i) => (
+                <div key={i} className="speaker-card" style={{ textAlign: 'center' }}>
+                  <div style={{ width: '140px', height: '140px', borderRadius: '50%', overflow: 'hidden', margin: '0 auto 12px', flexShrink: 0, background: 'var(--off-white)', border: '2px solid var(--border)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    {m.photo ? (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img src={m.photo} alt={m.name} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 15%', display: 'block' }} />
+                    ) : (
+                      <i className="fas fa-user" style={{ fontSize: '3rem', color: 'var(--text-muted)' }} />
+                    )}
+                  </div>
+                  <p style={{ fontWeight: 400, fontSize: '0.85rem', color: 'var(--text)', margin: '0 0 4px', lineHeight: 1.3 }}>{m.name}</p>
+                  <h4 style={{ fontSize: '0.78rem', margin: 0, whiteSpace: 'pre-line' }}>{m.title}</h4>
                 </div>
-                <h4 style={{ fontSize: '0.9rem' }}>{m.name}</h4>
-                <p style={{ fontSize: '0.8rem', margin: 0 }}>{m.title}<br /><span>{m.org}</span></p>
-              </div>
-            ))}
+              ))}
+              {/* Empty slots */}
+              {Array.from({ length: MINISTERS_VISIBLE - visibleMinisters.length }).map((_, i) => (
+                <div key={`empty-${i}`} style={{ visibility: 'hidden' }} />
+              ))}
+            </div>
+
+            {/* Next */}
+            <button onClick={ministerNext} style={{ flexShrink: 0, width: '40px', height: '40px', borderRadius: '50%', border: '2px solid var(--green)', background: 'transparent', color: 'var(--green)', fontSize: '1.2rem', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              &#8250;
+            </button>
           </div>
+
+          {/* Dots */}
+          {ministerPages > 1 && (
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '8px', marginTop: '16px' }}>
+              {Array.from({ length: ministerPages }).map((_, i) => (
+                <button key={i} onClick={() => setMinisterIndex(i)} style={{ width: i === ministerIndex ? '24px' : '10px', height: '10px', borderRadius: '5px', border: 'none', background: i === ministerIndex ? 'var(--gold)' : 'var(--border)', cursor: 'pointer', transition: 'all 0.3s', padding: 0 }} />
+              ))}
+            </div>
+          )}
         </div>
 
         {/* Co-Organizer section */}
