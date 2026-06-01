@@ -199,7 +199,7 @@ export const translations = {
       ],
       coOrganizerTitle: 'Co-Organizer',
       coOrganizers: [
-        { name: 'H.E Adefunke ADEYEMI', title: 'Secretary General, AFCAC', org: 'AFCAC', photo: '/SG.png' },
+        { name: 'H.E Adefunke ADEYEMI', title: 'Secretary General, AFCAC\nAFRICAN COMMISSION FOR CIVIL AVIATION', org: 'AFCAC', photo: '/SG.png' },
         { name: 'H.E. MS LERATO DOROTHY MATABOGE', title: 'COMMISSIONER FOR INFRASTRUCTURE AND ENERGY (I&E)\nAFRICAN UNION COMMISSION', org: 'African Union Commission', photo: '/IE AU HA.png' },
         { name: 'H.E. WAMKELE MENE', title: 'SECRETARY GENERAL OF THE AFRICAN CONTINENTAL FREE TRADE AREA (AfCFTA)', org: 'AfCFTA', photo: '/H. E WAMKELE MENE.png' },
         { name: 'H.E. NARDOS BEKELE-THOMAS', title: 'CHIEF EXECUTIVE OFFICER\nAFRICAN UNION DEVELOPMENT AGENCY-NEPAD', org: 'AUDA-NEPAD', photo: '/AUDA NEPAD HA.png' },
@@ -533,7 +533,7 @@ export const translations = {
       ],
       coOrganizerTitle: 'Co-Organisateur',
       coOrganizers: [
-        { name: 'H.E Adefunke ADEYEMI', title: 'Secrétaire Général AFCAC', org: 'AFCAC', photo: '/SG.png' },
+        { name: 'H.E Adefunke ADEYEMI', title: 'Secrétaire Général AFCAC\nAFRICAN COMMISSION FOR CIVIL AVIATION', org: 'AFCAC', photo: '/SG.png' },
         { name: 'S.E. MME LERATO DOROTHY MATABOGE', title: 'COMMISSAIRE AUX INFRASTRUCTURES ET À L\'ÉNERGIE (I&E)\nCOMMISSION DE L\'UNION AFRICAINE', org: 'Commission de l\'Union Africaine', photo: '/IE AU HA.png' },
         { name: 'S.E. WAMKELE MENE', title: 'SECRÉTAIRE GÉNÉRAL DE LA ZONE DE LIBRE-ÉCHANGE CONTINENTALE AFRICAINE (ZLECAF)', org: 'ZLECAf', photo: '/H. E WAMKELE MENE.png' },
         { name: 'S.E. NARDOS BEKELE-THOMAS', title: 'DIRECTRICE GÉNÉRALE\nAGENCE DE DÉVELOPPEMENT DE L\'UNION AFRICAINE-NEPAD', org: 'AUDA-NEPAD', photo: '/AUDA NEPAD HA.png' },
@@ -867,7 +867,7 @@ export const translations = {
       ],
       coOrganizerTitle: 'Co-Organizador',
       coOrganizers: [
-        { name: 'H.E Adefunke ADEYEMI', title: 'Secretário-Geral da AFCAC', org: 'AFCAC', photo: '/SG.png' },
+        { name: 'H.E Adefunke ADEYEMI', title: 'Secretário-Geral da AFCAC\nAFRICAN COMMISSION FOR CIVIL AVIATION', org: 'AFCAC', photo: '/SG.png' },
         { name: 'S.E. SRA LERATO DOROTHY MATABOGE', title: 'COMISSÁRIA PARA INFRAESTRUTURAS E ENERGIA (I&E)\nCOMISSÃO DA UNIÃO AFRICANA', org: 'Comissão da União Africana', photo: '/IE AU HA.png' },
         { name: 'S.E. WAMKELE MENE', title: 'SECRETÁRIO-GERAL DA ÁREA DE LIVRE COMÉRCIO CONTINENTAL AFRICANA (AfCFTA)', org: 'AfCFTA', photo: '/H. E WAMKELE MENE.png' },
         { name: 'S.E. NARDOS BEKELE-THOMAS', title: 'DIRETORA EXECUTIVA\nAGÊNCIA DE DESENVOLVIMENTO DA UNIÃO AFRICANA-NEPAD', org: 'AUDA-NEPAD', photo: '/AUDA NEPAD HA.png' },
