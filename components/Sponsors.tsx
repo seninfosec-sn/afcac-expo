@@ -72,14 +72,20 @@ export default function Sponsors() {
                   }
                   const src = silverLogoMap[name]
                   return (
-                    <div key={name} className="sponsor-logo-box xs" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '6px' }}>
+                    <div key={name} style={{
+                      display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
+                      gap: '8px', padding: '16px 20px',
+                      background: 'var(--off-white)', border: '1px solid var(--border)',
+                      borderRadius: 'var(--radius)', minWidth: '180px', textAlign: 'center',
+                      transition: 'var(--transition)',
+                    }}>
                       {src ? (
                         // eslint-disable-next-line @next/next/no-img-element
-                        <img src={src} alt={name} style={{ height: '36px', width: 'auto', maxWidth: '120px', objectFit: 'contain' }} />
+                        <img src={src} alt={name} style={{ height: '44px', width: 'auto', maxWidth: '160px', objectFit: 'contain', display: 'block' }} />
                       ) : (
-                        <i className="fas fa-building" style={{ fontSize: '1.4rem', color: 'var(--text-muted)' }} />
+                        <i className="fas fa-building" style={{ fontSize: '1.6rem', color: 'var(--text-muted)' }} />
                       )}
-                      <span>{name}</span>
+                      <span style={{ fontSize: '0.78rem', fontWeight: 700, color: 'var(--text-muted)', lineHeight: 1.3 }}>{name}</span>
                     </div>
                   )
                 })}
