@@ -148,7 +148,7 @@ export default function Speakers() {
           <p className="section-desc">{s.sectionDesc}</p>
         </div>
 
-        <div className="speakers-grid">
+        <div className="speakers-grid" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '24px' }}>
           {regularSpeakers.map((sp) => (
             <div key={sp.name} className="speaker-card" style={{ maxWidth: '200px', flex: '0 0 auto' }}>
               {sp.photo ? (

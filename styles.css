@@ -1554,7 +1554,7 @@ button { cursor: pointer; font-family: var(--font-body); }
   .about-grid { grid-template-columns: 1fr; }
   .travel-grid { grid-template-columns: repeat(2, 1fr); }
   .hotels-grid { grid-template-columns: 1fr; }
-  .speakers-grid { grid-template-columns: repeat(2, 1fr); }
+  .speakers-grid { justify-content: center; }
   .footer-grid { grid-template-columns: 1fr; gap: 32px; }
   .contact-form .form-row { grid-template-columns: 1fr; gap: 0; }
   .prog-item { grid-template-columns: 1fr; gap: 8px; }
@@ -1580,5 +1580,5 @@ button { cursor: pointer; font-family: var(--font-body); }
   .countdown { gap: 4px; }
   .countdown-item { min-width: 62px; padding: 10px 12px; }
   .count-num { font-size: 1.5rem; }
-  .speakers-grid { grid-template-columns: 1fr; }
+  .speakers-grid { justify-content: center; }
 }
