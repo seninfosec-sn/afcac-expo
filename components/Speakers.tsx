@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useCallback } from 'react'
+import { useState } from 'react'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 const galleryPhotos = [
@@ -30,13 +30,9 @@ export default function Speakers() {
   const ministerPages = Math.ceil(ministers.length / MINISTERS_VISIBLE)
   const visibleMinisters = ministers.slice(ministerIndex * MINISTERS_VISIBLE, ministerIndex * MINISTERS_VISIBLE + MINISTERS_VISIBLE)
 
-  const ministerNext = useCallback(() => setMinisterIndex((i) => (i + 1) % ministerPages), [ministerPages])
+  const ministerNext = () => setMinisterIndex((i) => (i + 1) % ministerPages)
   const ministerPrev = () => setMinisterIndex((i) => (i - 1 + ministerPages) % ministerPages)
 
-  useEffect(() => {
-    const timer = setInterval(ministerNext, 3500)
-    return () => clearInterval(timer)
-  }, [ministerNext])
 
   type SpeakerItem = { name: string; role: string; org: string; photo?: string; gallery?: boolean }
   const list = s.list as unknown as SpeakerItem[]
