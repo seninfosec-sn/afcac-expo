@@ -150,7 +150,7 @@ export default function Speakers() {
 
         <div className="speakers-grid">
           {regularSpeakers.map((sp) => (
-            <div key={sp.name} className="speaker-card">
+            <div key={sp.name} className="speaker-card" style={{ maxWidth: '200px', flex: '0 0 auto' }}>
               {sp.photo ? (
                 <div style={{ width: '180px', height: '180px', borderRadius: '50%', overflow: 'hidden', margin: '0 auto 16px', flexShrink: 0 }}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}

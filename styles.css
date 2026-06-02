@@ -873,8 +873,9 @@ button { cursor: pointer; font-family: var(--font-body); }
 .speakers { background: var(--off-white); }
 
 .speakers-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 24px;
 }
 .speaker-card {
