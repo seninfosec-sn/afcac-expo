@@ -206,6 +206,8 @@ export const translations = {
         { name: 'Minister 12', title: 'Title', org: 'Organisation', photo: '' },
         { name: 'Minister 13', title: 'Title', org: 'Organisation', photo: '' },
         { name: 'Minister 14', title: 'Title', org: 'Organisation', photo: '' },
+        { name: 'Minister 15', title: 'Title', org: 'Organisation', photo: '' },
+        { name: 'Minister 16', title: 'Title', org: 'Organisation', photo: '' },
       ],
       coOrganizerTitle: 'Co-Organizer',
       coOrganizers: [
@@ -549,6 +551,8 @@ export const translations = {
         { name: 'Ministre 12', title: 'Titre', org: 'Organisation', photo: '' },
         { name: 'Ministre 13', title: 'Titre', org: 'Organisation', photo: '' },
         { name: 'Ministre 14', title: 'Titre', org: 'Organisation', photo: '' },
+        { name: 'Ministre 15', title: 'Titre', org: 'Organisation', photo: '' },
+        { name: 'Ministre 16', title: 'Titre', org: 'Organisation', photo: '' },
       ],
       coOrganizerTitle: 'Co-Organisateur',
       coOrganizers: [
@@ -892,6 +896,8 @@ export const translations = {
         { name: 'Ministro 12', title: 'Título', org: 'Organização', photo: '' },
         { name: 'Ministro 13', title: 'Título', org: 'Organização', photo: '' },
         { name: 'Ministro 14', title: 'Título', org: 'Organização', photo: '' },
+        { name: 'Ministro 15', title: 'Título', org: 'Organização', photo: '' },
+        { name: 'Ministro 16', title: 'Título', org: 'Organização', photo: '' },
       ],
       coOrganizerTitle: 'Co-Organizador',
       coOrganizers: [
