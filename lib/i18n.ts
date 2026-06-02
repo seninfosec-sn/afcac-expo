@@ -218,7 +218,6 @@ export const translations = {
       wamkeleTitle: 'H.E. WAMKELE MENE\nSECRETARY GENERAL OF THE AFRICAN CONTINENTAL FREE TRADE AREA (AfCFTA)',
       audaNepadTitle: 'H.E. NARDOS BEKELE-THOMAS\nCHIEF EXECUTIVE OFFICER\nAFRICAN UNION DEVELOPMENT AGENCY-NEPAD',
       list: [
-        { name: 'Minister of Transport', role: 'Host Government', org: 'Republic of Togo', photo: '/MTRT.png' },
         { name: 'ICAO Representative', role: 'Civil Aviation Organisation', org: 'ICAO', photo: '/ICAO ESAF.png' },
         { name: 'ACI Africa President', role: 'Airports Council International', org: 'ACI Africa', photo: '/Ali.png' },
         { name: 'IATA Representative', role: 'International Association', org: 'IATA', photo: '/KAMIL.png' },
@@ -562,7 +561,6 @@ export const translations = {
       wamkeleTitle: 'S.E. WAMKELE MENE\nSECRÉTAIRE GÉNÉRAL DE LA ZONE DE LIBRE-ÉCHANGE CONTINENTALE AFRICAINE (ZLECAF)',
       audaNepadTitle: 'S.E. NARDOS BEKELE-THOMAS\nDIRECTRICE GÉNÉRALE\nAGENCE DE DÉVELOPPEMENT DE L\'UNION AFRICAINE-NEPAD',
       list: [
-        { name: 'Ministre des Transports', role: 'Gouvernement hôte', org: 'République du Togo', photo: '/MTRT.png' },
         { name: 'Représentant OACI', role: 'Organisation de l\'aviation civile', org: 'OACI / ICAO', photo: '/ICAO ESAF.png' },
         { name: 'Président ACI Africa', role: 'Conseil international des aéroports', org: 'ACI Afrique', photo: '/Ali.png' },
         { name: 'Représentant IATA', role: 'Association internationale', org: 'IATA', photo: '/KAMIL.png' },
@@ -906,7 +904,6 @@ export const translations = {
       wamkeleTitle: 'S.E. WAMKELE MENE\nSECRETÁRIO-GERAL DA ÁREA DE LIVRE COMÉRCIO CONTINENTAL AFRICANA (AfCFTA)',
       audaNepadTitle: 'S.E. NARDOS BEKELE-THOMAS\nDIRETORA EXECUTIVA\nAGÊNCIA DE DESENVOLVIMENTO DA UNIÃO AFRICANA-NEPAD',
       list: [
-        { name: 'Ministro dos Transportes', role: 'Governo Anfitrião', org: 'República do Togo', photo: '/MTRT.png' },
         { name: 'Representante da ICAO', role: 'Organização da Aviação Civil', org: 'ICAO' },
         { name: 'Presidente da ACI África', role: 'Conselho Internacional de Aeroportos', org: 'ACI África' },
         { name: 'Representante da IATA', role: 'Associação Internacional', org: 'IATA' },
