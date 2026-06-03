@@ -221,6 +221,7 @@ export const translations = {
       audaNepadTitle: 'H.E. NARDOS BEKELE-THOMAS\nCHIEF EXECUTIVE OFFICER\nAFRICAN UNION DEVELOPMENT AGENCY-NEPAD',
       list: [
         { name: 'ICAO Representative', role: 'Civil Aviation Organisation', org: 'ICAO', photo: '/ICAO ESAF.png' },
+        { name: 'ICAO Representative', role: 'Civil Aviation Organisation', org: 'ICAO WACAF', photo: '/Ekoto.png' },
         { name: 'ACI Africa President', role: 'Airports Council International', org: 'ACI Africa', photo: '/Ali.png' },
         { name: 'IATA Representative', role: 'International Association', org: 'IATA', photo: '/KAMIL.png' },
         { name: 'Many More', role: 'To Be Announced', org: 'Stay Tuned', gallery: true },
@@ -566,6 +567,7 @@ export const translations = {
       audaNepadTitle: 'S.E. NARDOS BEKELE-THOMAS\nDIRECTRICE GÉNÉRALE\nAGENCE DE DÉVELOPPEMENT DE L\'UNION AFRICAINE-NEPAD',
       list: [
         { name: 'Représentant OACI', role: 'Organisation de l\'aviation civile', org: 'OACI / ICAO', photo: '/ICAO ESAF.png' },
+        { name: 'Représentant OACI', role: 'Organisation de l\'aviation civile', org: 'ICAO WACAF', photo: '/Ekoto.png' },
         { name: 'Président ACI Africa', role: 'Conseil international des aéroports', org: 'ACI Afrique', photo: '/Ali.png' },
         { name: 'Représentant IATA', role: 'Association internationale', org: 'IATA', photo: '/KAMIL.png' },
         { name: 'Et bien d\'autres', role: 'À annoncer prochainement', org: 'Restez informé', gallery: true },
@@ -911,6 +913,7 @@ export const translations = {
       audaNepadTitle: 'S.E. NARDOS BEKELE-THOMAS\nDIRETORA EXECUTIVA\nAGÊNCIA DE DESENVOLVIMENTO DA UNIÃO AFRICANA-NEPAD',
       list: [
         { name: 'Representante da ICAO', role: 'Organização da Aviação Civil', org: 'ICAO' },
+        { name: 'Representante da ICAO', role: 'Organização da Aviação Civil', org: 'ICAO WACAF', photo: '/Ekoto.png' },
         { name: 'Presidente da ACI África', role: 'Conselho Internacional de Aeroportos', org: 'ACI África' },
         { name: 'Representante da IATA', role: 'Associação Internacional', org: 'IATA' },
         { name: 'E muitos outros', role: 'A anunciar em breve', org: 'Fique atento' },
