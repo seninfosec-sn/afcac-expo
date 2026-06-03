@@ -155,8 +155,8 @@ export default function Speakers() {
               ) : (
                 <div className="speaker-photo"><i className="fas fa-user" /></div>
               )}
-              <h4>{sp.name}</h4>
-              <p>{sp.role}<br /><span>{sp.org}</span></p>
+              <h4 style={{ textAlign: 'center', width: '100%' }}>{sp.name}</h4>
+              <p style={{ textAlign: 'center', width: '100%' }}>{sp.role}<br /><span>{sp.org}</span></p>
             </div>
           ))}
         </div>
