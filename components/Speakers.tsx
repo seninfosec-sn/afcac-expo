@@ -87,8 +87,8 @@ export default function Speakers() {
                       <i className="fas fa-user" style={{ fontSize: '3rem', color: 'var(--text-muted)' }} />
                     )}
                   </div>
-                  <p style={{ fontWeight: 400, fontSize: '0.85rem', color: 'var(--text)', margin: '0 0 4px', lineHeight: 1.3 }}>{m.name}</p>
-                  <h4 style={{ fontSize: '0.78rem', margin: 0, whiteSpace: 'pre-line' }}>{m.title}</h4>
+                  <p style={{ fontWeight: 400, fontSize: '0.85rem', color: 'var(--text)', margin: '0 0 4px', lineHeight: 1.3, textAlign: 'center', width: '100%' }}>{m.name}</p>
+                  <h4 style={{ fontSize: '0.78rem', margin: 0, whiteSpace: 'pre-line', textAlign: 'center', width: '100%' }}>{m.title}</h4>
                 </div>
               ))}
               {/* Empty slots */}
@@ -131,8 +131,8 @@ export default function Speakers() {
                     </div>
                   )}
                 </div>
-                <p style={{ fontWeight: 400, fontSize: '0.9rem', color: 'var(--text)', margin: '0 0 6px', lineHeight: 1.3 }}>{c.name}</p>
-                <h4 style={{ whiteSpace: 'pre-line', fontSize: '0.82rem', margin: 0 }}>{c.title}</h4>
+                <p style={{ fontWeight: 400, fontSize: '0.9rem', color: 'var(--text)', margin: '0 0 6px', lineHeight: 1.3, textAlign: 'center', width: '100%' }}>{c.name}</p>
+                <h4 style={{ whiteSpace: 'pre-line', fontSize: '0.82rem', margin: 0, textAlign: 'center', width: '100%' }}>{c.title}</h4>
               </div>
             ))}
           </div>

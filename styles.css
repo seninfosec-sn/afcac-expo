@@ -908,8 +908,10 @@ button { cursor: pointer; font-family: var(--font-body); }
   font-size: 0.9rem;
   color: var(--green-dark);
   margin-bottom: 6px;
+  text-align: center;
+  width: 100%;
 }
-.speaker-card p { font-size: 0.8rem; color: var(--text-muted); line-height: 1.5; }
+.speaker-card p { font-size: 0.8rem; color: var(--text-muted); line-height: 1.5; text-align: center; width: 100%; }
 .speaker-card p span { color: var(--gold-dark); font-weight: 600; }
 
 /* =====================================================
