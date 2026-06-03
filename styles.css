@@ -1098,8 +1098,8 @@ button { cursor: pointer; font-family: var(--font-body); }
   text-align: center;
   padding: 36px 24px;
   border-radius: var(--radius-lg);
-  border: 1px solid var(--green);
-  background: var(--green);
+  border: 1px solid #145847;
+  background: #145847 !important;
   transition: var(--transition);
   display: flex;
   flex-direction: column;
