@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useCallback } from 'react'
+import { useState } from 'react'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 type Exhibitor = { name: string; logo: string | null }
@@ -33,13 +33,8 @@ export default function Sponsors() {
 
   const total = Math.ceil(EXHIBITORS.length / VISIBLE)
 
-  const next = useCallback(() => setIndex((i) => (i + 1) % total), [total])
+  const next = () => setIndex((i) => (i + 1) % total)
   const prev = () => setIndex((i) => (i - 1 + total) % total)
-
-  useEffect(() => {
-    const timer = setInterval(next, 3000)
-    return () => clearInterval(timer)
-  }, [next])
 
   const visible = EXHIBITORS.slice(index * VISIBLE, index * VISIBLE + VISIBLE)
 
