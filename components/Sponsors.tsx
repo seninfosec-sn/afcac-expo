@@ -58,9 +58,23 @@ export default function Sponsors() {
             <div className="tier">
               <h3 className="tier-title gold" style={{ animation: 'goldBlink 1.4s ease-in-out infinite' }}>{s.gold}</h3>
               <div className="sponsor-logos">
-                {s.goldLogos.map((logo) => (
-                  <div key={logo} className="sponsor-logo-box sm">{logo}</div>
-                ))}
+                {s.goldLogos.map((name) => {
+                  const goldLogoMap: Record<string, string> = {
+                    'Ethiopian Airlines': '/Ethiopian_Airlines.png',
+                  }
+                  const src = goldLogoMap[name]
+                  return (
+                    <div key={name} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '6px', padding: '16px 20px', background: 'var(--off-white)', border: '1px solid var(--border)', borderRadius: 'var(--radius)', minWidth: '180px', textAlign: 'center' }}>
+                      {src ? (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img src={src} alt={name} style={{ height: '44px', width: 'auto', maxWidth: '160px', objectFit: 'contain', display: 'block' }} />
+                      ) : (
+                        <i className="fas fa-building" style={{ fontSize: '1.6rem', color: 'var(--gold-dark)' }} />
+                      )}
+                      <span style={{ fontSize: '0.78rem', fontWeight: 700, color: 'var(--text-muted)', lineHeight: 1.3 }}>{name}</span>
+                    </div>
+                  )
+                })}
               </div>
             </div>
             <div className="tier">
