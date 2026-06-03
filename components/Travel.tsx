@@ -28,10 +28,10 @@ export default function Travel() {
 
         <div className="travel-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, minmax(0, 1fr))', gap: '24px', alignItems: 'stretch' }}>
           {tr.cards.map((c) => (
-            <div key={c.title} className="travel-card" style={'accentTitle' in c && c.accentTitle ? { background: '#145847', border: '1px solid #145847' } : undefined}>
+            <div key={c.title} className="travel-card" style={'accentTitle' in c && c.accentTitle ? { background: '#145847', border: '1px solid #145847', color: '#fff' } : undefined}>
               <div className="travel-icon"><i className={c.icon} /></div>
-              <h4 style={{ color: '#fff' }}>{c.title}</h4>
-              <p>{c.desc}</p>
+              <h4 style={'accentTitle' in c && c.accentTitle ? { color: '#fff' } : undefined}>{c.title}</h4>
+              <p style={'accentTitle' in c && c.accentTitle ? { color: 'rgba(255,255,255,0.9)' } : undefined}>{c.desc}</p>
               {'link' in c && c.link && (
                 <a href={c.link} target="_blank" rel="noopener noreferrer" className="btn btn-primary travel-evisa-btn">
                   {c.linkLabel}
