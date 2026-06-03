@@ -30,7 +30,7 @@ export default function Travel() {
           {tr.cards.map((c) => (
             <div key={c.title} className="travel-card">
               <div className="travel-icon"><i className={c.icon} /></div>
-              <h4 style={'accentTitle' in c && c.accentTitle ? { color: '#e53e3e' } : undefined}>{c.title}</h4>
+              <h4 style={{ color: '#fff' }}>{c.title}</h4>
               <p>{c.desc}</p>
               {'link' in c && c.link && (
                 <a href={c.link} target="_blank" rel="noopener noreferrer" className="btn btn-primary travel-evisa-btn">
