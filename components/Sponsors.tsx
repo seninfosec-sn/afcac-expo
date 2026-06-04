@@ -78,6 +78,7 @@ export default function Sponsors() {
                 {s.silverLogos.map((name) => {
                   const silverLogoMap: Record<string, string> = {
                     'Airports Company South Africa': '/ACSA.png',
+                    'WIETC': '/WIETC.png',
                   }
                   const src = silverLogoMap[name]
                   return (

@@ -241,7 +241,7 @@ export const translations = {
       ctaBtn: 'Become a Partner',
       platinumLogos: [],
       goldLogos: ['Ethiopian Airlines'],
-      silverLogos: ['Airports Company South Africa'],
+      silverLogos: ['Airports Company South Africa', 'WIETC'],
       bronzeLogos: ['ATNS', 'Aerovault'],
     },
     venue: {
@@ -588,7 +588,7 @@ export const translations = {
       ctaBtn: 'Devenir partenaire',
       platinumLogos: [],
       goldLogos: ['Ethiopian Airlines'],
-      silverLogos: ['Airports Company South Africa'],
+      silverLogos: ['Airports Company South Africa', 'WIETC'],
       bronzeLogos: ['ATNS', 'Aerovault'],
     },
     venue: {
@@ -935,7 +935,7 @@ export const translations = {
       ctaBtn: 'Tornar-se parceiro',
       platinumLogos: [],
       goldLogos: ['Ethiopian Airlines'],
-      silverLogos: ['Airports Company South Africa'],
+      silverLogos: ['Airports Company South Africa', 'WIETC'],
       bronzeLogos: ['ATNS', 'Aerovault'],
     },
     venue: {
