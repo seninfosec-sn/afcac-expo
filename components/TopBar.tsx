@@ -15,9 +15,15 @@ export default function TopBar() {
   return (
     <div className="topbar">
       <div className="container topbar-inner">
-        <span>
-          <i className="fas fa-envelope" /> {t.topbar.email}
-        </span>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '16px', flexWrap: 'wrap' }}>
+          <span><i className="fas fa-envelope" /> {t.topbar.email}</span>
+          <span style={{ color: 'rgba(255,255,255,0.4)' }}>|</span>
+          <span><i className="fas fa-shield-alt" /> Assistance Sécurité : +228 90 80 56 41</span>
+          <span style={{ color: 'rgba(255,255,255,0.4)' }}>|</span>
+          <span><i className="fas fa-id-badge" /> Service Protocole : +228 90 80 53 31</span>
+          <span style={{ color: 'rgba(255,255,255,0.4)' }}>|</span>
+          <span><i className="fas fa-heartbeat" /> Équipe médicale : +228 71 56 09 31</span>
+        </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
           <div className="lang-switcher">
             {LANGS.map((l) => (
