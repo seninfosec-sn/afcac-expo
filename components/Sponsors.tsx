@@ -24,6 +24,8 @@ const EXHIBITORS: Exhibitor[] = [
   { name: 'FB Airports',                                 logo: null },
   { name: 'FB Group',                                    logo: '/FB Group.png' },
   { name: 'Singapore CAA',                               logo: '/CAAS.avif' },
+  { name: 'INKAS',                                       logo: '/INKAS.png' },
+  { name: 'ASECNA',                                      logo: null },
 ]
 
 const VISIBLE = 4
