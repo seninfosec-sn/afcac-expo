@@ -15,7 +15,7 @@ const EXHIBITORS: Exhibitor[] = [
   { name: 'Starburst',                                   logo: null },
   { name: 'Seabury',                                     logo: '/Seabury.png' },
   { name: 'EMPIC',                                       logo: '/EMPIC.png' },
-  { name: 'NIRO Company',                                logo: null },
+  { name: 'NIro Company Limited',                        logo: '/NIRO.png' },
   { name: 'Aviason',                                     logo: '/aviason.png' },
   { name: 'Absorbs Liquids',                             logo: '/gobi.jpeg' },
   { name: 'Aeroclass',                                   logo: null },
