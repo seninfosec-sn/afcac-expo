@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { useLanguage } from '@/contexts/LanguageContext'
 
-type Exhibitor = { name: string; logo: string | null; subtitle?: string }
+type Exhibitor = { name: string; logo: string | null; subtitle?: string; logoStyle?: React.CSSProperties }
 const EXHIBITORS: Exhibitor[] = [
   { name: 'CAA Togo',                                    logo: '/TOGO.png' },
   { name: 'More than 20 Togo companies',                 logo: '/TOGO.png' },
@@ -18,7 +18,7 @@ const EXHIBITORS: Exhibitor[] = [
   { name: 'NIro Company Limited',                        logo: '/NIRO.png' },
   { name: 'Aviason',                                     logo: '/aviason.png' },
   { name: 'Absorbs Liquids',                             logo: '/gobi.jpeg' },
-  { name: 'Aeroclass',                                   logo: '/Aeroclass.png' },
+  { name: 'Aeroclass',                                   logo: '/Aeroclass.png', logoStyle: { height: '52px', maxWidth: '130px' } },
   { name: 'ATNS',                                        logo: '/ATNS.png' },
   { name: 'ACSA',                                        logo: null },
   { name: 'FB Group',                                    logo: '/FB Group.png' },
@@ -189,7 +189,7 @@ export default function Sponsors() {
                   }}>
                     {item.logo ? (
                       // eslint-disable-next-line @next/next/no-img-element
-                      <img src={item.logo} alt={item.name} style={{ height: '36px', width: 'auto', maxWidth: '90px', objectFit: 'contain', display: 'block' }} />
+                      <img src={item.logo} alt={item.name} style={{ height: '36px', width: 'auto', maxWidth: '90px', objectFit: 'contain', display: 'block', ...item.logoStyle }} />
                     ) : (
                       <i className="fas fa-building" style={{ fontSize: '1.4rem', color: 'var(--gold)' }} />
                     )}
