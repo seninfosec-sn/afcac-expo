@@ -13,6 +13,7 @@ const EXHIBITORS: Exhibitor[] = [
   { name: 'AUDA-NEPAD',                                  logo: '/AUDA- NEPAD.png' },
   { name: 'COMESA Competition & Consumer Commission',    logo: '/COMESA 1.jpg' },
   { name: 'Starburst',                                   logo: null },
+  { name: 'Seabury',                                     logo: '/Seabury.png' },
   { name: 'EMPIC',                                       logo: '/EMPIC.png' },
   { name: 'NIRO Company',                                logo: null },
   { name: 'Aviason',                                     logo: '/aviason.png' },
