@@ -25,7 +25,7 @@ const EXHIBITORS: Exhibitor[] = [
   { name: 'FB Group',                                    logo: '/FB Group.png' },
   { name: 'Singapore CAA',                               logo: '/CAAS.avif' },
   { name: 'INKAS',                                       logo: '/INKAS.png' },
-  { name: 'ASECNA',                                      logo: null },
+  { name: 'ASECNA',                                      logo: '/ASECNA.png' },
 ]
 
 const VISIBLE = 4
