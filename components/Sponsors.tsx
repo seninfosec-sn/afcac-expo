@@ -21,7 +21,6 @@ const EXHIBITORS: Exhibitor[] = [
   { name: 'Aeroclass',                                   logo: null },
   { name: 'ATNS',                                        logo: '/ATNS.png' },
   { name: 'ACSA',                                        logo: null },
-  { name: 'FB Airports',                                 logo: null },
   { name: 'FB Group',                                    logo: '/FB Group.png' },
   { name: 'Singapore CAA',                               logo: '/CAAS.avif' },
   { name: 'INKAS',                                       logo: '/INKAS.png' },
