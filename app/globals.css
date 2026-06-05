@@ -1040,6 +1040,34 @@ button { cursor: pointer; font-family: var(--font-body); }
   color: #fff;
 }
 
+.programme-download-btns {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+.prog-dl-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 28px;
+  border-radius: var(--radius-sm);
+  background: var(--green);
+  color: var(--white);
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  border: 2px solid var(--green);
+  transition: var(--transition);
+}
+.prog-dl-btn:hover {
+  background: transparent;
+  color: var(--green);
+}
+
 .programme-tabs {
   display: flex;
   gap: 8px;
