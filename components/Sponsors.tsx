@@ -11,7 +11,7 @@ const EXHIBITORS: Exhibitor[] = [
   { name: 'AFCAC',                                       logo: '/afcac_logo.png' },
   { name: 'AfCFTA',                                      logo: '/AfCFTA.png' },
   { name: 'AUDA-NEPAD',                                  logo: '/AUDA- NEPAD.png' },
-  { name: 'COMESA Competition & Consumer Commission',    logo: '/COMESA.webp' },
+  { name: 'COMESA Competition & Consumer Commission',    logo: '/COMESA 1.jpg' },
   { name: 'Starburst',                                   logo: null },
   { name: 'EMPIC',                                       logo: null },
   { name: 'NIRO Company',                                logo: null },
