@@ -1040,6 +1040,16 @@ button { cursor: pointer; font-family: var(--font-body); }
   color: #fff;
 }
 
+.programme-download-title {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text-dark);
+  text-align: center;
+  margin-top: 24px;
+  margin-bottom: 4px;
+  letter-spacing: 0.02em;
+}
 .programme-download-btns {
   display: flex;
   gap: 12px;

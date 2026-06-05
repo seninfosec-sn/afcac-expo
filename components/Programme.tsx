@@ -16,6 +16,7 @@ export default function Programme() {
           <h2 className="section-title">{p.sectionTitle}</h2>
           <div className="section-divider" />
           <p className="section-desc">{p.sectionDesc}</p>
+          <p className="programme-download-title">Download the Agenda</p>
           <div className="programme-download-btns">
             <a
               href="/programme-en.pdf"
