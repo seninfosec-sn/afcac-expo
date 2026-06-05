@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { useLanguage } from '@/contexts/LanguageContext'
 
-type Exhibitor = { name: string; logo: string | null }
+type Exhibitor = { name: string; logo: string | null; subtitle?: string }
 const EXHIBITORS: Exhibitor[] = [
   { name: 'CAA Togo',                                    logo: '/TOGO.png' },
   { name: 'More than 20 Togo companies',                 logo: '/TOGO.png' },
@@ -13,7 +13,7 @@ const EXHIBITORS: Exhibitor[] = [
   { name: 'AUDA-NEPAD',                                  logo: '/AUDA- NEPAD.png' },
   { name: 'COMESA Competition & Consumer Commission',    logo: '/COMESA 1.jpg' },
   { name: 'Starburst',                                   logo: null },
-  { name: 'Seabury',                                     logo: '/Seabury.png' },
+  { name: 'Seabury',                                     logo: '/Seabury.png', subtitle: 'Global Scale. Global Reach' },
   { name: 'EMPIC',                                       logo: '/EMPIC.png' },
   { name: 'NIro Company Limited',                        logo: '/NIRO.png' },
   { name: 'Aviason',                                     logo: '/aviason.png' },
@@ -193,6 +193,7 @@ export default function Sponsors() {
                       <i className="fas fa-building" style={{ fontSize: '1.4rem', color: 'var(--gold)' }} />
                     )}
                     <span>{item.name}</span>
+                    {item.subtitle && <span style={{ fontSize: '0.72rem', color: 'var(--text-muted)', fontStyle: 'italic', display: 'block', marginTop: '2px' }}>{item.subtitle}</span>}
                   </div>
                 ))}
                 {/* Fill empty slots */}
