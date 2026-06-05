@@ -18,7 +18,7 @@ const EXHIBITORS: Exhibitor[] = [
   { name: 'NIro Company Limited',                        logo: '/NIRO.png' },
   { name: 'Aviason',                                     logo: '/aviason.png' },
   { name: 'Absorbs Liquids',                             logo: '/gobi.jpeg' },
-  { name: 'Aeroclass',                                   logo: '/Aeroclass.png', logoStyle: { height: '52px', maxWidth: '130px' } },
+  { name: 'Aeroclass',                                   logo: '/AeroClass.png', logoStyle: { height: '52px', maxWidth: '130px' } },
   { name: 'ATNS',                                        logo: '/ATNS.png' },
   { name: 'ACSA',                                        logo: null },
   { name: 'FB Group',                                    logo: '/FB Group.png' },
