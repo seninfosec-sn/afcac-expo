@@ -20,7 +20,7 @@ const EXHIBITORS: Exhibitor[] = [
   { name: 'Absorbs Liquids',                             logo: '/gobi.jpeg' },
   { name: 'Aeroclass',                                   logo: '/logo-aeroclass.jpg', logoStyle: { height: '52px', maxWidth: '130px' } },
   { name: 'ATNS',                                        logo: '/ATNS.png' },
-  { name: 'ACSA',                                        logo: null },
+  { name: 'ACSA',                                        logo: '/ACSA.png' },
   { name: 'FB Group',                                    logo: '/FB Group 1.png' },
   { name: 'Singapore CAA',                               logo: '/CAAS.avif' },
   { name: 'INKAS',                                       logo: '/INKAS.png' },
