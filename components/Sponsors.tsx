@@ -117,7 +117,7 @@ export default function Sponsors() {
                     <div key={name} className="sponsor-logo-box xs" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '6px' }}>
                       {src ? (
                         // eslint-disable-next-line @next/next/no-img-element
-                        <img src={src} alt={name} style={{ height: '64px', width: 'auto', maxWidth: '170px', objectFit: 'contain' }} />
+                        <img src={src} alt={name} style={{ height: '84px', width: 'auto', maxWidth: '210px', objectFit: 'contain' }} />
                       ) : (
                         <i className="fas fa-building" style={{ fontSize: '1.4rem', color: '#cd7f32' }} />
                       )}
