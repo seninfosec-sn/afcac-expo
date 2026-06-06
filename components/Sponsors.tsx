@@ -12,7 +12,7 @@ const EXHIBITORS: Exhibitor[] = [
   { name: 'AfCFTA',                                      logo: '/AfCFTA.png' },
   { name: 'AUDA-NEPAD',                                  logo: '/AUDA- NEPAD.png' },
   { name: 'COMESA Competition & Consumer Commission',    logo: '/COMESA 1.jpg' },
-  { name: 'Starburst',                                   logo: null },
+  { name: 'Starburst',                                   logo: '/STARTBURST.png' },
   { name: 'Seabury',                                     logo: '/Seabury.png', subtitle: 'Global Scale. Global Reach' },
   { name: 'EMPIC',                                       logo: '/EMPIC.png' },
   { name: 'NIro Company Limited',                        logo: '/NIRO.png' },
