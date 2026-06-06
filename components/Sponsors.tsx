@@ -18,7 +18,7 @@ const EXHIBITORS: Exhibitor[] = [
   { name: 'NIro Company Limited',                        logo: '/NIRO.png' },
   { name: 'Aviason',                                     logo: '/aviason.png' },
   { name: 'Absorbs Liquids',                             logo: '/gobi.jpeg' },
-  { name: 'Aeroclass',                                   logo: '/Logotype-Cold.png', logoStyle: { height: '68px', maxWidth: '160px' } },
+  { name: 'Aeroclass',                                   logo: '/Logotype-Cold.png', logoStyle: { height: '82px', maxWidth: '190px' } },
   { name: 'ATNS',                                        logo: '/ATNS.png' },
   { name: 'ACSA',                                        logo: '/ACSA.png' },
   { name: 'FB Group',                                    logo: '/FB Group 1.png' },
@@ -65,7 +65,7 @@ export default function Sponsors() {
                     <div key={name} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '6px', padding: '16px 20px', background: 'var(--off-white)', border: '1px solid var(--border)', borderRadius: 'var(--radius)', minWidth: '180px', textAlign: 'center' }}>
                       {src ? (
                         // eslint-disable-next-line @next/next/no-img-element
-                        <img src={src} alt={name} style={{ height: '64px', width: 'auto', maxWidth: '200px', objectFit: 'contain', display: 'block' }} />
+                        <img src={src} alt={name} style={{ height: '80px', width: 'auto', maxWidth: '240px', objectFit: 'contain', display: 'block' }} />
                       ) : (
                         <i className="fas fa-building" style={{ fontSize: '1.6rem', color: 'var(--gold-dark)' }} />
                       )}
@@ -94,7 +94,7 @@ export default function Sponsors() {
                     }}>
                       {src ? (
                         // eslint-disable-next-line @next/next/no-img-element
-                        <img src={src} alt={name} style={{ height: '58px', width: 'auto', maxWidth: '180px', objectFit: 'contain', display: 'block' }} />
+                        <img src={src} alt={name} style={{ height: '72px', width: 'auto', maxWidth: '220px', objectFit: 'contain', display: 'block' }} />
                       ) : (
                         <i className="fas fa-building" style={{ fontSize: '1.6rem', color: 'var(--text-muted)' }} />
                       )}
@@ -117,7 +117,7 @@ export default function Sponsors() {
                     <div key={name} className="sponsor-logo-box xs" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '6px' }}>
                       {src ? (
                         // eslint-disable-next-line @next/next/no-img-element
-                        <img src={src} alt={name} style={{ height: '50px', width: 'auto', maxWidth: '140px', objectFit: 'contain' }} />
+                        <img src={src} alt={name} style={{ height: '64px', width: 'auto', maxWidth: '170px', objectFit: 'contain' }} />
                       ) : (
                         <i className="fas fa-building" style={{ fontSize: '1.4rem', color: '#cd7f32' }} />
                       )}
@@ -180,7 +180,7 @@ export default function Sponsors() {
                     fontSize: '0.82rem',
                     fontWeight: 600,
                     color: 'var(--green-dark)',
-                    minHeight: '110px',
+                    minHeight: '130px',
                     display: 'flex',
                     flexDirection: 'column',
                     alignItems: 'center',
@@ -189,7 +189,7 @@ export default function Sponsors() {
                   }}>
                     {item.logo ? (
                       // eslint-disable-next-line @next/next/no-img-element
-                      <img src={item.logo} alt={item.name} style={{ height: '52px', width: 'auto', maxWidth: '120px', objectFit: 'contain', display: 'block', ...item.logoStyle }} />
+                      <img src={item.logo} alt={item.name} style={{ height: '64px', width: 'auto', maxWidth: '150px', objectFit: 'contain', display: 'block', ...item.logoStyle }} />
                     ) : (
                       <i className="fas fa-building" style={{ fontSize: '1.4rem', color: 'var(--gold)' }} />
                     )}
