@@ -88,7 +88,8 @@ export default function Speakers() {
                     )}
                   </div>
                   <p style={{ fontWeight: 400, fontSize: '0.85rem', color: 'var(--text)', margin: '0 0 4px', lineHeight: 1.3, textAlign: 'center', width: '100%' }}>{m.name}</p>
-                  <h4 style={{ fontSize: '0.78rem', margin: 0, whiteSpace: 'pre-line', textAlign: 'center', width: '100%' }}>{m.title}</h4>
+                  <h4 style={{ fontSize: '0.78rem', margin: '0 0 4px', whiteSpace: 'pre-line', textAlign: 'center', width: '100%' }}>{m.title}</h4>
+                  {m.org && <p style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--gold-dark)', margin: 0, textAlign: 'center', letterSpacing: '0.04em', textTransform: 'uppercase' }}>{m.org}</p>}
                 </div>
               ))}
               {/* Empty slots */}
