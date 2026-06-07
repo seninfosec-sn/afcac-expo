@@ -214,7 +214,7 @@ export const translations = {
         { name: 'DEMBÉLÉ MADINA SISSOKO', title: 'MINISTER OF TRANSPORT AND INFRASTRUCTURE', org: 'MALI', photo: '/MADINA.png' },
         { name: 'JOY PEDZISAYI MAKUMBE', title: 'PERMANENT SECRETARY IN THE MINISTRY OF TRANSPORT AND INFRASTRUCTURAL DEVELOPMENT', org: 'ZIMBABWE', photo: '/JOY.png' },
         { name: 'ZERBO', title: 'MINISTER OF STATE, MINISTER OF TERRITORIAL ADMINISTRATION AND MOBILITY', org: 'BURKINA FASO', photo: '/ZEBRO.png' },
-        { name: 'Minister 22', title: 'MINISTER', org: '', photo: '' },
+        { name: 'ALHAJI FANDAY TURAY', title: 'MINISTER OF TRANSPORT AND AVIATION', org: 'SIERRA LEONE', photo: '/FANDAY.png' },
       ],
       coOrganizerTitle: 'Co-Organizer',
       coOrganizers: [
@@ -567,7 +567,7 @@ export const translations = {
         { name: 'DEMBÉLÉ MADINA SISSOKO', title: 'MINISTRE DES TRANSPORTS ET DES INFRASTRUCTURES', org: 'MALI', photo: '/MADINA.png' },
         { name: 'JOY PEDZISAYI MAKUMBE', title: 'SECRÉTAIRE PERMANENT AU MINISTÈRE DES TRANSPORTS ET DU DÉVELOPPEMENT DES INFRASTRUCTURES', org: 'ZIMBABWE', photo: '/JOY.png' },
         { name: 'ZERBO', title: 'MINISTRE D\'ÉTAT, MINISTRE DE L\'ADMINISTRATION TERRITORIALE ET DE LA MOBILITÉ', org: 'BURKINA FASO', photo: '/ZEBRO.png' },
-        { name: 'Ministre 22', title: 'MINISTRE', org: '', photo: '' },
+        { name: 'ALHAJI FANDAY TURAY', title: 'MINISTRE DES TRANSPORTS ET DE L\'AVIATION', org: 'SIERRA LEONE', photo: '/FANDAY.png' },
       ],
       coOrganizerTitle: 'Co-Organisateur',
       coOrganizers: [
@@ -920,7 +920,7 @@ export const translations = {
         { name: 'DEMBÉLÉ MADINA SISSOKO', title: 'MINISTRA DOS TRANSPORTES E INFRAESTRUTURAS', org: 'MALI', photo: '/MADINA.png' },
         { name: 'JOY PEDZISAYI MAKUMBE', title: 'SECRETÁRIO PERMANENTE DO MINISTÉRIO DOS TRANSPORTES E DESENVOLVIMENTO DE INFRAESTRUTURAS', org: 'ZIMBABWE', photo: '/JOY.png' },
         { name: 'ZERBO', title: 'MINISTRO DE ESTADO, MINISTRO DA ADMINISTRAÇÃO TERRITORIAL E MOBILIDADE', org: 'BURKINA FASO', photo: '/ZEBRO.png' },
-        { name: 'Ministro 22', title: 'MINISTRO', org: '', photo: '' },
+        { name: 'ALHAJI FANDAY TURAY', title: 'MINISTRO DOS TRANSPORTES E AVIAÇÃO', org: 'SIERRA LEONE', photo: '/FANDAY.png' },
       ],
       coOrganizerTitle: 'Co-Organizador',
       coOrganizers: [
