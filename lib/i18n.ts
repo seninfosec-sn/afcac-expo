@@ -194,7 +194,7 @@ export const translations = {
       ministersTitle: 'Ministers',
       ministers: [
         { name: 'HON. MIN COMLA KADJE', title: 'MINISTER OF TRANSPORT, AND RURAL ROADS', org: 'TOGO', photo: '/MTRT.png' },
-        { name: 'HON. NELSON ROSA CARDOSO', title: 'MINISTER OF INFRASTRUCTURE AND NATURAL RESOURCES', org: 'SAO TOME AND PRINCIPE', photo: '/RICARDO DANIEL.png' },
+        { name: 'HON. NELSON ROSA CARDOSO', title: 'MINISTER OF INFRASTRUCTURE AND NATURAL RESOURCES', org: 'SAO TOME AND PRINCIPE', photo: '/ROSA.png' },
         { name: 'HON. FESTUS KEYAMO', title: 'MINISTER OF AVIATION AND AEROSPACE DEVELOPMENT', org: 'NIGERIA', photo: '/KEYAMO.png' },
         { name: 'HON. MOUSSA ALASSANE DIALLO', title: 'MINISTER OF INDUSTRY AND COMMERCE', org: 'MALI', photo: '/HON. MOUSSA.png' },
         { name: 'HONOURABLE CHIEF NDLALUHLAZA NDWANDWE', title: 'MINISTER OF PUBLIC WORKS & TRANSPORT', org: 'ESWATINI', photo: '/ESWATINI.png' },
