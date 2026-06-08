@@ -16,13 +16,26 @@ export default function Programme() {
           <h2 className="section-title">{p.sectionTitle}</h2>
           <div className="section-divider" />
           <p className="section-desc">{p.sectionDesc}</p>
-          <div className="prog-bulletin-bar" style={{ justifyContent: 'center', flexDirection: 'column', alignItems: 'center' }}>
-            <span className="btn btn-primary prog-bulletin-btn" style={{ cursor: 'default', pointerEvents: 'none' }}>
-              <i className="fas fa-file-alt" /> Download the Agenda
-            </span>
-            <div className="prog-bulletin-langs">
-              <a href="/programme-en.pdf" download className="prog-lang-btn">EN</a>
-              <a href="/programme-fr.pdf" download className="prog-lang-btn">FR</a>
+          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'flex-start', gap: '24px', marginTop: '8px' }}>
+            <div className="prog-bulletin-bar" style={{ justifyContent: 'center', flexDirection: 'column', alignItems: 'center', margin: 0 }}>
+              <span className="btn btn-primary prog-bulletin-btn" style={{ cursor: 'default', pointerEvents: 'none' }}>
+                <i className="fas fa-file-alt" /> Download the Agenda
+              </span>
+              <div className="prog-bulletin-langs">
+                <a href="/programme-en.pdf" download className="prog-lang-btn">EN</a>
+                <a href="/programme-fr.pdf" download className="prog-lang-btn">FR</a>
+              </div>
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+              <a
+                href="https://afcac-meet-main.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary prog-bulletin-btn"
+                style={{ whiteSpace: 'nowrap' }}
+              >
+                <i className="fas fa-calendar-check" /> Reserve your one-on-one meeting
+              </a>
             </div>
           </div>
         </div>
