@@ -15,6 +15,7 @@ export default function RegisterCTA() {
         <div className="cta-actions">
           <a href="https://www.afcac.org/expo-registration/" target="_blank" rel="noopener noreferrer" className="btn btn-gold">{r.btn}</a>
           <a href="https://www.afcac.org/exhibition-opp-and-sponsorship/" target="_blank" rel="noopener noreferrer" className="btn btn-outline-white">{r.exhibitorBtn}</a>
+          <a href="https://afcac-meet-main.vercel.app" target="_blank" rel="noopener noreferrer" className="btn btn-outline-white"><i className="fas fa-calendar-check" style={{ marginRight: '7px' }} />{r.meetingBtn}</a>
         </div>
       </div>
     </section>
