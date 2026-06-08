@@ -225,7 +225,7 @@ export const translations = {
       ],
       bureauTitle: 'Bureau Members',
       bureauMembers: [
-        { name: 'Bureau Member 1', title: '', org: '', photo: '' },
+        { name: 'Florent Serge DZOTA', title: 'PRESIDENT OF THE BUREAU\nDG CONGO CAA', org: '', photo: '/PR-CAFAC.png' },
         { name: 'Bureau Member 2', title: '', org: '', photo: '' },
         { name: 'Bureau Member 3', title: '', org: '', photo: '' },
         { name: 'Bureau Member 4', title: '', org: '', photo: '' },
@@ -587,7 +587,7 @@ export const translations = {
       ],
       bureauTitle: 'Membres du Bureau',
       bureauMembers: [
-        { name: 'Membre du Bureau 1', title: '', org: '', photo: '' },
+        { name: 'Florent Serge DZOTA', title: 'PRÉSIDENT DU BUREAU\nDG CONGO CAA', org: '', photo: '/PR-CAFAC.png' },
         { name: 'Membre du Bureau 2', title: '', org: '', photo: '' },
         { name: 'Membre du Bureau 3', title: '', org: '', photo: '' },
         { name: 'Membre du Bureau 4', title: '', org: '', photo: '' },
@@ -949,7 +949,7 @@ export const translations = {
       ],
       bureauTitle: 'Membros do Bureau',
       bureauMembers: [
-        { name: 'Membro do Bureau 1', title: '', org: '', photo: '' },
+        { name: 'Florent Serge DZOTA', title: 'PRESIDENTE DO BUREAU\nDG CONGO CAA', org: '', photo: '/PR-CAFAC.png' },
         { name: 'Membro do Bureau 2', title: '', org: '', photo: '' },
         { name: 'Membro do Bureau 3', title: '', org: '', photo: '' },
         { name: 'Membro do Bureau 4', title: '', org: '', photo: '' },
