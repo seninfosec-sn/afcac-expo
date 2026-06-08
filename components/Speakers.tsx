@@ -139,6 +139,30 @@ export default function Speakers() {
           </div>
         </div>
 
+        {/* Bureau Members section */}
+        <div style={{ marginBottom: '48px' }}>
+          <h3 style={{ textAlign: 'center', fontFamily: 'var(--font-head)', color: 'var(--green-dark)', fontSize: '1.3rem', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '28px' }}>
+            {s.bureauTitle}
+          </h3>
+          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-start', flexWrap: 'wrap', gap: '24px' }}>
+            {(s.bureauMembers as unknown as { name: string; title: string; org: string; photo: string }[]).map((b, i) => (
+              <div key={i} className="speaker-card" style={{ maxWidth: '180px', textAlign: 'center' }}>
+                <div style={{ width: '150px', height: '150px', borderRadius: '50%', overflow: 'hidden', margin: '0 auto 12px', flexShrink: 0, background: 'var(--off-white)', border: '2px solid var(--border)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  {b.photo ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img src={b.photo} alt={b.name} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 15%', display: 'block' }} />
+                  ) : (
+                    <i className="fas fa-user" style={{ fontSize: '3rem', color: 'var(--text-muted)' }} />
+                  )}
+                </div>
+                <p style={{ fontWeight: 600, fontSize: '0.85rem', color: 'var(--text)', margin: '0 0 4px', lineHeight: 1.3, textAlign: 'center', width: '100%' }}>{b.name}</p>
+                {b.title && <h4 style={{ fontSize: '0.78rem', margin: '0 0 4px', whiteSpace: 'pre-line', textAlign: 'center', width: '100%' }}>{b.title}</h4>}
+                {b.org && <p style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--gold-dark)', margin: 0, textAlign: 'center', letterSpacing: '0.04em', textTransform: 'uppercase' }}>{b.org}</p>}
+              </div>
+            ))}
+          </div>
+        </div>
+
         <div className="section-header">
           <h2 className="section-title">{s.sectionTitle}</h2>
           <div className="section-divider" />
