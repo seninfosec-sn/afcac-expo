@@ -10,7 +10,7 @@ const EXHIBITORS: Exhibitor[] = [
   { name: 'AU',                                          logo: '/african-union.png' },
   { name: 'AFCAC',                                       logo: '/afcac_logo.png' },
   { name: 'AfCFTA',                                      logo: '/AfCFTA.png' },
-  { name: 'AUDA-NEPAD',                                  logo: '/AUDA- NEPAD.png' },
+  { name: 'AUDA-NEPAD',                                  logo: '/AUDA NEPAD 25.png' },
   { name: 'COMESA Competition & Consumer Commission',    logo: '/COMESA 1.jpg' },
   { name: 'Starburst',                                   logo: '/STARTBURST.png' },
   { name: 'Seabury',                                     logo: '/Seabury.png', subtitle: 'Global Scale. Global Reach' },
