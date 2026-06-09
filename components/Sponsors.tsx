@@ -131,6 +131,46 @@ export default function Sponsors() {
             </div>
           </div>
 
+          {/* Supporting Airlines */}
+          <div style={{ marginBottom: '40px' }}>
+            <h3 style={{
+              textAlign: 'center',
+              fontFamily: 'var(--font-head)',
+              color: 'var(--green-dark)',
+              fontSize: '1.1rem',
+              fontWeight: 700,
+              letterSpacing: '0.08em',
+              textTransform: 'uppercase',
+              marginBottom: '20px',
+            }}>
+              Supporting Airlines
+            </h3>
+            <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '16px' }}>
+              <div style={{
+                background: 'var(--off-white)',
+                border: '1px solid var(--border)',
+                borderTop: '3px solid var(--gold)',
+                borderRadius: '8px',
+                padding: '16px 20px',
+                textAlign: 'center',
+                fontSize: '0.82rem',
+                fontWeight: 600,
+                color: 'var(--green-dark)',
+                minHeight: '130px',
+                minWidth: '160px',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '10px',
+              }}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/KQ 1.png" alt="Kenya Airways" style={{ height: '82px', width: 'auto', maxWidth: '190px', objectFit: 'contain', display: 'block' }} />
+                <span>KENYA AIRWAYS</span>
+              </div>
+            </div>
+          </div>
+
           {/* Exhibitors carousel */}
           <div style={{ marginBottom: '40px' }}>
             <h3 style={{
@@ -241,46 +281,6 @@ export default function Sponsors() {
                   }}
                 />
               ))}
-            </div>
-          </div>
-
-          {/* Supporting Airlines */}
-          <div style={{ marginBottom: '40px' }}>
-            <h3 style={{
-              textAlign: 'center',
-              fontFamily: 'var(--font-head)',
-              color: 'var(--green-dark)',
-              fontSize: '1.1rem',
-              fontWeight: 700,
-              letterSpacing: '0.08em',
-              textTransform: 'uppercase',
-              marginBottom: '20px',
-            }}>
-              Supporting Airlines
-            </h3>
-            <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '16px' }}>
-              <div style={{
-                background: 'var(--off-white)',
-                border: '1px solid var(--border)',
-                borderTop: '3px solid var(--gold)',
-                borderRadius: '8px',
-                padding: '16px 20px',
-                textAlign: 'center',
-                fontSize: '0.82rem',
-                fontWeight: 600,
-                color: 'var(--green-dark)',
-                minHeight: '130px',
-                minWidth: '160px',
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                justifyContent: 'center',
-                gap: '10px',
-              }}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/KQ 1.png" alt="Kenya Airways" style={{ height: '82px', width: 'auto', maxWidth: '190px', objectFit: 'contain', display: 'block' }} />
-                <span>KENYA AIRWAYS</span>
-              </div>
             </div>
           </div>
 
