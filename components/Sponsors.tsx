@@ -278,7 +278,7 @@ export default function Sponsors() {
                 gap: '10px',
               }}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/KQ 1.png" alt="Kenya Airways" style={{ height: '82px', width: 'auto', maxWidth: '190px', objectFit: 'contain', display: 'block' }} />
+                <img src="/KQ 1.png" alt="Kenya Airways" style={{ height: '56px', width: 'auto', maxWidth: '140px', objectFit: 'contain', display: 'block' }} />
                 <span>KENYA AIRWAYS</span>
               </div>
             </div>
