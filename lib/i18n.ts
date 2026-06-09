@@ -215,7 +215,7 @@ export const translations = {
         { name: 'ALHAJI FANDAY TURAY', title: 'MINISTER OF TRANSPORT AND AVIATION', org: 'SIERRA LEONE', photo: '/FANDAY.png' },
         { name: 'RICARDO VIEGAS D\'ABREU', title: 'MINISTER OF TRANSPORT', org: 'ANGOLA', photo: '/VIEGAS.png' },
       ],
-      coOrganizerTitle: 'Co-Organizer',
+      coOrganizerTitle: 'Co-Organizers',
       coOrganizers: [
         { name: 'Adefunke ADEYEMI', title: 'SECRETARY GENERAL\nOF AFRICAN CIVIL AVIATION COMMISSION (AFCAC)', org: 'AFCAC', photo: '/SG.png' },
         { name: 'H.E. MS LERATO DOROTHY MATABOGE', title: 'COMMISSIONER FOR INFRASTRUCTURE AND ENERGY (I&E)\nAFRICAN UNION COMMISSION', org: 'African Union Commission', photo: '/IE AU HA.png' },
@@ -577,7 +577,7 @@ export const translations = {
         { name: 'ALHAJI FANDAY TURAY', title: 'MINISTRE DES TRANSPORTS ET DE L\'AVIATION', org: 'SIERRA LEONE', photo: '/FANDAY.png' },
         { name: 'RICARDO VIEGAS D\'ABREU', title: 'MINISTRE DES TRANSPORTS', org: 'ANGOLA', photo: '/VIEGAS.png' },
       ],
-      coOrganizerTitle: 'Co-Organisateur',
+      coOrganizerTitle: 'Co-Organisateurs',
       coOrganizers: [
         { name: 'Adefunke ADEYEMI', title: 'SECRÉTAIRE GÉNÉRAL\nOF AFRICAN CIVIL AVIATION COMMISSION (AFCAC)', org: 'AFCAC', photo: '/SG.png' },
         { name: 'S.E. MME LERATO DOROTHY MATABOGE', title: 'COMMISSAIRE AUX INFRASTRUCTURES ET À L\'ÉNERGIE (I&E)\nCOMMISSION DE L\'UNION AFRICAINE', org: 'Commission de l\'Union Africaine', photo: '/IE AU HA.png' },
@@ -939,7 +939,7 @@ export const translations = {
         { name: 'ALHAJI FANDAY TURAY', title: 'MINISTRO DOS TRANSPORTES E AVIAÇÃO', org: 'SIERRA LEONE', photo: '/FANDAY.png' },
         { name: 'RICARDO VIEGAS D\'ABREU', title: 'MINISTRO DOS TRANSPORTES', org: 'ANGOLA', photo: '/VIEGAS.png' },
       ],
-      coOrganizerTitle: 'Co-Organizador',
+      coOrganizerTitle: 'Co-Organizadores',
       coOrganizers: [
         { name: 'Adefunke ADEYEMI', title: 'SECRETÁRIO-GERAL\nOF AFRICAN CIVIL AVIATION COMMISSION (AFCAC)', org: 'AFCAC', photo: '/SG.png' },
         { name: 'S.E. SRA LERATO DOROTHY MATABOGE', title: 'COMISSÁRIA PARA INFRAESTRUTURAS E ENERGIA (I&E)\nCOMISSÃO DA UNIÃO AFRICANA', org: 'Comissão da União Africana', photo: '/IE AU HA.png' },
