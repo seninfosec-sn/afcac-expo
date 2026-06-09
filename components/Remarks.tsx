@@ -16,6 +16,19 @@ export default function Remarks() {
           <div className="section-divider" />
         </div>
 
+        <h3 style={{
+          textAlign: 'center',
+          fontFamily: 'var(--font-head)',
+          color: 'var(--gold)',
+          fontSize: '1.2rem',
+          fontWeight: 700,
+          letterSpacing: '0.08em',
+          textTransform: 'uppercase',
+          marginBottom: '28px',
+        }}>
+          Promotional Videos
+        </h3>
+
         <div className="remarks-grid">
           {[
             { name: r.speaker1Name, org: r.speaker1Org, quote: r.speaker1Quote, videoId: 'DaTS_W3QaRc' },
