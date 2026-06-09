@@ -34,7 +34,7 @@ export default function Programme() {
                 className="btn btn-primary prog-bulletin-btn"
                 style={{ whiteSpace: 'nowrap' }}
               >
-                <i className="fas fa-calendar-check" /> Reserve your one-on-one meeting
+                <i className="fas fa-calendar-check" /> One to One Meeting
               </a>
             </div>
           </div>
