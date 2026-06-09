@@ -34,7 +34,7 @@ export default function Speakers() {
   const ministerPrev = () => setMinisterIndex((i) => (i - 1 + ministerPages) % ministerPages)
 
 
-  type SpeakerItem = { name: string; role: string; org: string; photo?: string; gallery?: boolean }
+  type SpeakerItem = { name: string; role: string; org: string; photo?: string; photoPosition?: string; gallery?: boolean }
   const list = s.list as unknown as SpeakerItem[]
   const regularSpeakers = list.filter((sp) => !sp.gallery)
   const galleryEntry = list.find((sp) => sp.gallery)
@@ -175,7 +175,7 @@ export default function Speakers() {
               {sp.photo ? (
                 <div style={{ width: '180px', height: '180px', borderRadius: '50%', overflow: 'hidden', margin: '0 auto 16px', flexShrink: 0 }}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={sp.photo} alt={sp.name} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 15%', display: 'block' }} />
+                  <img src={sp.photo} alt={sp.name} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: sp.photoPosition || 'center 15%', display: 'block' }} />
                 </div>
               ) : (
                 <div className="speaker-photo"><i className="fas fa-user" /></div>
