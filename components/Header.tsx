@@ -93,7 +93,7 @@ export default function Header() {
             </li>
             <li>
               <a href="https://afcac-meet-main.vercel.app" target="_blank" rel="noopener noreferrer" className="nav-link btn-register" style={{ background: 'var(--gold)', borderColor: 'var(--gold)', color: 'var(--green-dark)' }} onClick={closeMenu}>
-                <i className="fas fa-calendar-check" style={{ marginRight: '5px' }} />One to One Meeting
+                <i className="fas fa-calendar-check" style={{ marginRight: '5px' }} />Bilateral Meetings
               </a>
             </li>
           </ul>

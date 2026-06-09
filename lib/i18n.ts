@@ -311,7 +311,7 @@ export const translations = {
       desc: 'Participate in the African Air Transport Convention & Expo 2026 in Lomé, Togo. Registration is open — join Africa\'s aviation leaders.',
       btn: 'Register Now',
       exhibitorBtn: 'Become an Exhibitor',
-      meetingBtn: 'One to One Meeting',
+      meetingBtn: 'Bilateral Meetings',
     },
     contact: {
       sectionTag: 'Get in Touch',
@@ -674,7 +674,7 @@ export const translations = {
       desc: 'Participez à l\'African Air Transport Convention & Expo 2026 à Lomé, Togo. Les inscriptions sont ouvertes — rejoignez les leaders de l\'aviation africaine.',
       btn: 'S\'inscrire',
       exhibitorBtn: 'Devenir exposant',
-      meetingBtn: 'One to One Meeting',
+      meetingBtn: 'Bilateral Meetings',
     },
     contact: {
       sectionTag: 'Contactez-nous',
@@ -1037,7 +1037,7 @@ export const translations = {
       desc: 'Participe na African Air Transport Convention & Expo 2026 em Lomé, Togo. As inscrições estão abertas — junte-se aos líderes da aviação africana.',
       btn: 'Inscrever-se',
       exhibitorBtn: 'Tornar-se expositor',
-      meetingBtn: 'One to One Meeting',
+      meetingBtn: 'Bilateral Meetings',
     },
     contact: {
       sectionTag: 'Contacte-nos',
