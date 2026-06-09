@@ -169,19 +169,21 @@ export default function Speakers() {
           <p className="section-desc">{s.sectionDesc}</p>
         </div>
 
-        <div className="speakers-grid" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '24px' }}>
+        <div className="speakers-grid" style={{ display: 'flex', flexWrap: 'nowrap', justifyContent: 'center', gap: '12px', overflowX: 'auto' }}>
           {regularSpeakers.map((sp) => (
-            <div key={sp.name} className="speaker-card" style={{ maxWidth: '200px', flex: '0 0 auto' }}>
+            <div key={sp.name} className="speaker-card" style={{ flex: '0 0 auto', width: '130px', textAlign: 'center', padding: '12px 8px' }}>
               {sp.photo ? (
-                <div style={{ width: '180px', height: '180px', borderRadius: '50%', overflow: 'hidden', margin: '0 auto 16px', flexShrink: 0 }}>
+                <div style={{ width: '100px', height: '100px', borderRadius: '50%', overflow: 'hidden', margin: '0 auto 10px', flexShrink: 0, background: 'var(--off-white)', border: '2px solid var(--border)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src={sp.photo} alt={sp.name} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: sp.photoPosition || 'center 15%', display: 'block' }} />
                 </div>
               ) : (
-                <div className="speaker-photo"><i className="fas fa-user" /></div>
+                <div style={{ width: '100px', height: '100px', borderRadius: '50%', margin: '0 auto 10px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'var(--off-white)', border: '2px solid var(--border)' }}>
+                  <i className="fas fa-user" style={{ fontSize: '2.2rem', color: 'var(--text-muted)' }} />
+                </div>
               )}
-              <h4 style={{ textAlign: 'center', width: '100%' }}>{sp.name}</h4>
-              <p style={{ textAlign: 'center', width: '100%' }}>{sp.role}<br /><span>{sp.org}</span></p>
+              <h4 style={{ textAlign: 'center', width: '100%', fontSize: '0.75rem', margin: '0 0 3px' }}>{sp.name}</h4>
+              <p style={{ textAlign: 'center', width: '100%', fontSize: '0.68rem', margin: 0, lineHeight: 1.3 }}>{sp.role}<br /><span style={{ fontWeight: 700, color: 'var(--gold-dark)', fontSize: '0.65rem', textTransform: 'uppercase', letterSpacing: '0.04em' }}>{sp.org}</span></p>
             </div>
           ))}
         </div>
