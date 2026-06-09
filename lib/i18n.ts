@@ -237,7 +237,7 @@ export const translations = {
       list: [
         { name: 'ICAO Representative', role: 'Civil Aviation Organisation', org: 'ICAO WACAF', photo: '/Ekoto.png' },
         { name: 'ICAO Representative', role: 'Civil Aviation Organisation', org: 'ICAO ESAF', photo: '/ICAO ESAF.png' },
-        { name: 'ACI Africa President', role: 'Airports Council International', org: 'ACI Africa', photo: '/Ali.png' },
+        { name: 'ACI Secretary General', role: 'Airports Council International', org: 'ACI Africa', photo: '/Ali.png' },
         { name: 'IATA Representative', role: 'International Association', org: 'IATA', photo: '/KAMIL.png' },
         { name: 'Many More', role: 'To Be Announced', org: 'Stay Tuned', gallery: true },
       ],
