@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 type Exhibitor = { name: string; logo: string | null; subtitle?: string; logoStyle?: React.CSSProperties }
@@ -41,6 +41,11 @@ export default function Sponsors() {
   const prev = () => setIndex((i) => (i - 1 + total) % total)
 
   const visible = EXHIBITORS.slice(index * VISIBLE, index * VISIBLE + VISIBLE)
+
+  useEffect(() => {
+    const id = setInterval(() => setIndex((i) => (i + 1) % total), 3000)
+    return () => clearInterval(id)
+  }, [total])
 
   return (
     <section className="sponsors" id="sponsors">
