@@ -26,6 +26,7 @@ const EXHIBITORS: Exhibitor[] = [
   { name: 'INKAS',                                       logo: '/INKAS.png' },
   { name: 'ASECNA',                                      logo: '/ASECNA.png' },
   { name: 'AFRICAN AVIATION AND AEROSPACE UNIVERSITY',   logo: '/AAAU.png' },
+  { name: 'KENYA AIRWAYS',                               logo: '/KQ.png' },
 ]
 
 const VISIBLE = 4
