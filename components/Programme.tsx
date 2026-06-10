@@ -28,7 +28,7 @@ export default function Programme() {
             </div>
             <div style={{ display: 'flex', alignItems: 'center' }}>
               <a
-                href="https://afcac-meet-main.vercel.app"
+                href="https://meet.afcac.org/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-primary prog-bulletin-btn"
