@@ -36,7 +36,7 @@ const EXHIBITORS: Exhibitor[] = [
   { name: 'AGL',                                         logo: '/AGL.png' },
   { name: 'CACC',                                        logo: '/CACC.png' },
   { name: 'AEROTRANSPORT',                               logo: '/AEROTRANSPORT.png' },
-  { name: 'Flying Labs',                                 logo: '/Flying Labs.png' },
+  { name: 'Flying Labs',                                 logo: '/FlyingLabs.png' },
   { name: 'AgriBusiness',                                logo: '/AgriBusiness.png' },
   { name: 'ANAMET',                                      logo: '/ANAMET.png' },
   { name: 'BEGIT',                                       logo: '/BEGIT.png' },
