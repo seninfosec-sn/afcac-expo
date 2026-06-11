@@ -27,7 +27,7 @@ const EXHIBITORS: Exhibitor[] = [
   { name: 'ASECNA',                                      logo: '/ASECNA.png' },
   { name: 'AFRICAN AVIATION AND AEROSPACE UNIVERSITY',   logo: '/AAAU.png' },
   { name: 'SALT',                                        logo: '/SALT.png' },
-  { name: 'ASAIGE',                                      logo: '/ASAIGE.png' },
+  { name: 'ASAIGE-PAL',                                  logo: '/ASAIGE.png' },
   { name: 'HAP',                                         logo: '/HAP.png' },
   { name: 'ST HANDLING',                                 logo: '/ST HANDLING.png' },
   { name: 'AES TOGO',                                    logo: '/AES TOGO.png' },
@@ -81,7 +81,7 @@ export default function Sponsors() {
                     'Ethiopian Airlines': '/Ethiopian_Airlines.png',
                     'SALT': '/SALT.png',
                     'ASECNA': '/ASECNA.png',
-                    'ASAIGE': '/ASAIGE.png',
+                    'ASAIGE-PAL': '/ASAIGE.png',
                   }
                   const src = goldLogoMap[name]
                   return (
