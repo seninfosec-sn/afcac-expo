@@ -26,6 +26,20 @@ const EXHIBITORS: Exhibitor[] = [
   { name: 'INKAS',                                       logo: '/INKAS.png' },
   { name: 'ASECNA',                                      logo: '/ASECNA.png' },
   { name: 'AFRICAN AVIATION AND AEROSPACE UNIVERSITY',   logo: '/AAAU.png' },
+  { name: 'SALT',                                        logo: '/SALT.png' },
+  { name: 'ASAIGE',                                      logo: '/ASAIGE.png' },
+  { name: 'HAP',                                         logo: '/HAP.png' },
+  { name: 'ST HANDLING',                                 logo: '/ST HANDLING.png' },
+  { name: 'AES TOGO',                                    logo: null },
+  { name: 'ASKY',                                        logo: '/ASKY.png' },
+  { name: '2 FEVRIER',                                   logo: null },
+  { name: 'AGL',                                         logo: '/AGL.png' },
+  { name: 'CACC',                                        logo: '/CACC.png' },
+  { name: 'AEROTRANSPORT',                               logo: '/AEROTRANSPORT.png' },
+  { name: 'Flying Labs',                                 logo: null },
+  { name: 'AgriBusiness',                                logo: '/AgriBusiness.png' },
+  { name: 'ANAMET',                                      logo: null },
+  { name: 'BEGIT',                                       logo: '/BEGIT.png' },
 ]
 
 const VISIBLE = 4
