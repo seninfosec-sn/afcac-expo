@@ -42,7 +42,6 @@ const EXHIBITORS: Exhibitor[] = [
   { name: 'BEGIT',                                       logo: '/BEGIT.png' },
   { name: 'REPUBLIC OF MOZAMBIQUE',                      logo: '/ROFMOZ.png' },
   { name: 'SACAA',                                       logo: '/SACAA 2.png' },
-  { name: 'SACAA',                                       logo: '/SACAA.jpeg' },
 ]
 
 const VISIBLE = 4
