@@ -65,6 +65,9 @@ export default function Sponsors() {
                 {s.goldLogos.map((name) => {
                   const goldLogoMap: Record<string, string> = {
                     'Ethiopian Airlines': '/Ethiopian_Airlines.png',
+                    'SALT': '/SALT.png',
+                    'ASECNA': '/ASECNA.png',
+                    'ASAIGE': '/ASAIGE.png',
                   }
                   const src = goldLogoMap[name]
                   return (
