@@ -9,7 +9,7 @@ const EXHIBITORS: Exhibitor[] = [
   { name: 'More than 20 Togo companies',                 logo: '/TOGO.png' },
   { name: 'AU',                                          logo: '/african-union.png' },
   { name: 'AFCAC',                                       logo: '/afcac_logo.png' },
-  { name: 'AfCFTA',                                      logo: '/AfCFTA.png' },
+  { name: 'AfCFTA',                                      logo: '/AfCFTA 1.png' },
   { name: 'AUDA-NEPAD',                                  logo: '/AUDA NEPAD 25.png' },
   { name: 'COMESA Competition & Consumer Commission',    logo: '/COMESA 1.jpg' },
   { name: 'Starburst',                                   logo: '/STARTBURST.png' },
