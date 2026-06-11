@@ -41,6 +41,7 @@ const EXHIBITORS: Exhibitor[] = [
   { name: 'ANAMET',                                      logo: '/ANAMET.png' },
   { name: 'BEGIT',                                       logo: '/BEGIT.png' },
   { name: 'REPUBLIC OF MOZAMBIQUE',                      logo: '/ROFMOZ.png' },
+  { name: 'SACAA',                                       logo: '/SACAA 2.png' },
 ]
 
 const VISIBLE = 4
