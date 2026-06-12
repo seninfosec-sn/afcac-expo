@@ -22,7 +22,7 @@ export default function Programme() {
                 <i className="fas fa-file-alt" /> Download the Agenda
               </span>
               <div className="prog-bulletin-langs">
-                <a href="/programme-en.pdf" download className="prog-lang-btn">EN</a>
+                <a href="/Program 1.pdf" download className="prog-lang-btn">EN</a>
                 <a href="/programme-fr.pdf" download className="prog-lang-btn">FR</a>
               </div>
             </div>
