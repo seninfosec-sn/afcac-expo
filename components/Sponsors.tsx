@@ -46,22 +46,43 @@ const EXHIBITORS: Exhibitor[] = [
 
 const VISIBLE = 4
 
+const SILVER_LOGOS = [
+  { name: 'UNECA',                                                                logo: '/UNECA.png' },
+  { name: 'Airports Company South Africa (ACSA)',                                 logo: '/ACSA.png' },
+  { name: 'Weihai International Economic & Technical Cooperative Co. Ltd. (WIETC)', logo: '/WIETC.png' },
+  { name: 'AEROTRANSPORT',                                                        logo: '/AEROTRANSPORT.png' },
+  { name: 'ASAIGE-PAL',                                                           logo: '/ASAIGE.png' },
+  { name: 'Hôtel 2 Février',                                                      logo: '/2 FEVRIER.png' },
+  { name: 'ASKY Airlines',                                                        logo: '/ASKY.png' },
+  { name: 'ST HANDLING',                                                          logo: '/ST HANDLING.png' },
+]
+
+const SILVER_VISIBLE = 4
+
 export default function Sponsors() {
   const { t } = useLanguage()
   const s = t.sponsors
   const [index, setIndex] = useState(0)
+  const [silverIndex, setSilverIndex] = useState(0)
 
   const total = Math.ceil(EXHIBITORS.length / VISIBLE)
+  const silverTotal = Math.ceil(SILVER_LOGOS.length / SILVER_VISIBLE)
 
   const next = () => setIndex((i) => (i + 1) % total)
   const prev = () => setIndex((i) => (i - 1 + total) % total)
 
   const visible = EXHIBITORS.slice(index * VISIBLE, index * VISIBLE + VISIBLE)
+  const silverVisible = SILVER_LOGOS.slice(silverIndex * SILVER_VISIBLE, silverIndex * SILVER_VISIBLE + SILVER_VISIBLE)
 
   useEffect(() => {
     const id = setInterval(() => setIndex((i) => (i + 1) % total), 3000)
     return () => clearInterval(id)
   }, [total])
+
+  useEffect(() => {
+    const id = setInterval(() => setSilverIndex((i) => (i + 1) % silverTotal), 3000)
+    return () => clearInterval(id)
+  }, [silverTotal])
 
   return (
     <section className="sponsors" id="sponsors">
@@ -127,36 +148,30 @@ export default function Sponsors() {
             </div>
             <div className="tier">
               <h3 className="tier-title silver">{s.silver}</h3>
-              <div className="sponsor-logos" style={{ flexWrap: 'nowrap', overflowX: 'auto', justifyContent: 'center' }}>
-                {s.silverLogos.map((name) => {
-                  const silverLogoMap: Record<string, string> = {
-                    'UNECA': '/UNECA.png',
-                    'Airports Company South Africa (ACSA)': '/ACSA.png',
-                    'Weihai International Economic & Technical Cooperative Co. Ltd. (WIETC)': '/WIETC.png',
-                    'AEROTRANSPORT': '/AEROTRANSPORT.png',
-                    'ASAIGE-PAL': '/ASAIGE.png',
-                    'Hôtel 2 Février': '/2 FEVRIER.png',
-                    'ASKY Airlines': '/ASKY.png',
-                    'ST HANDLING': '/ST HANDLING.png',
-                  }
-                  const src = silverLogoMap[name]
-                  return (
-                    <div key={name} style={{
-                      display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
-                      gap: '4px', padding: '12px 10px',
-                      background: 'var(--off-white)', border: '1px solid var(--border)',
-                      borderRadius: 'var(--radius)', flex: '0 0 auto', width: '140px', textAlign: 'center',
-                    }}>
-                      {src ? (
+              <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                <button onClick={() => setSilverIndex((i) => (i - 1 + silverTotal) % silverTotal)} style={{ flexShrink: 0, width: '40px', height: '40px', borderRadius: '50%', border: '2px solid var(--green)', background: 'transparent', color: 'var(--green)', fontSize: '1.2rem', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>&#8249;</button>
+                <div style={{ flex: 1, display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '12px' }}>
+                  {silverVisible.map((item, i) => (
+                    <div key={i} style={{ background: 'var(--off-white)', border: '1px solid var(--border)', borderTop: '3px solid #C0C0C0', borderRadius: '8px', padding: '12px 10px', textAlign: 'center', minHeight: '120px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
+                      {item.logo ? (
                         // eslint-disable-next-line @next/next/no-img-element
-                        <img src={src} alt={name} style={{ height: '56px', width: 'auto', maxWidth: '120px', objectFit: 'contain', display: 'block' }} />
+                        <img src={item.logo} alt={item.name} style={{ height: '56px', width: 'auto', maxWidth: '120px', objectFit: 'contain', display: 'block' }} />
                       ) : (
                         <i className="fas fa-building" style={{ fontSize: '1.4rem', color: 'var(--text-muted)' }} />
                       )}
-                      <span style={{ fontSize: '0.72rem', fontWeight: 700, color: 'var(--text-muted)', lineHeight: 1.3 }}>{name}</span>
+                      <span style={{ fontSize: '0.72rem', fontWeight: 600, color: 'var(--green-dark)' }}>{item.name}</span>
                     </div>
-                  )
-                })}
+                  ))}
+                  {Array.from({ length: SILVER_VISIBLE - silverVisible.length }).map((_, i) => (
+                    <div key={`empty-${i}`} style={{ visibility: 'hidden' }} />
+                  ))}
+                </div>
+                <button onClick={() => setSilverIndex((i) => (i + 1) % silverTotal)} style={{ flexShrink: 0, width: '40px', height: '40px', borderRadius: '50%', border: '2px solid var(--green)', background: 'transparent', color: 'var(--green)', fontSize: '1.2rem', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>&#8250;</button>
+              </div>
+              <div style={{ display: 'flex', justifyContent: 'center', gap: '8px', marginTop: '12px' }}>
+                {Array.from({ length: silverTotal }).map((_, i) => (
+                  <button key={i} onClick={() => setSilverIndex(i)} style={{ width: i === silverIndex ? '24px' : '10px', height: '10px', borderRadius: '5px', border: 'none', background: i === silverIndex ? '#C0C0C0' : 'var(--border)', cursor: 'pointer', transition: 'all 0.3s', padding: 0 }} />
+                ))}
               </div>
             </div>
             <div className="tier">
