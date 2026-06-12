@@ -127,28 +127,33 @@ export default function Sponsors() {
             </div>
             <div className="tier">
               <h3 className="tier-title silver">{s.silver}</h3>
-              <div className="sponsor-logos">
+              <div className="sponsor-logos" style={{ flexWrap: 'nowrap', overflowX: 'auto', justifyContent: 'center' }}>
                 {s.silverLogos.map((name) => {
                   const silverLogoMap: Record<string, string> = {
-                    'Airports Company South Africa': '/ACSA.png',
-                    'Weihai International Economic & Technical Cooperative Co. Ltd': '/WIETC.png',
+                    'UNECA': '/UNECA.png',
+                    'Airports Company South Africa (ACSA)': '/ACSA.png',
+                    'Weihai International Economic & Technical Cooperative Co. Ltd. (WIETC)': '/WIETC.png',
+                    'AEROTRANSPORT': '/AEROTRANSPORT.png',
+                    'ASAIGE-PAL': '/ASAIGE.png',
+                    'Hôtel 2 Février': '/2 FEVRIER.png',
+                    'ASKY Airlines': '/ASKY.png',
+                    'ST HANDLING': '/ST HANDLING.png',
                   }
                   const src = silverLogoMap[name]
                   return (
                     <div key={name} style={{
                       display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
-                      gap: '8px', padding: '16px 20px',
+                      gap: '4px', padding: '12px 10px',
                       background: 'var(--off-white)', border: '1px solid var(--border)',
-                      borderRadius: 'var(--radius)', minWidth: '180px', textAlign: 'center',
-                      transition: 'var(--transition)',
+                      borderRadius: 'var(--radius)', flex: '0 0 auto', width: '140px', textAlign: 'center',
                     }}>
                       {src ? (
                         // eslint-disable-next-line @next/next/no-img-element
-                        <img src={src} alt={name} style={{ height: '72px', width: 'auto', maxWidth: '220px', objectFit: 'contain', display: 'block' }} />
+                        <img src={src} alt={name} style={{ height: '56px', width: 'auto', maxWidth: '120px', objectFit: 'contain', display: 'block' }} />
                       ) : (
-                        <i className="fas fa-building" style={{ fontSize: '1.6rem', color: 'var(--text-muted)' }} />
+                        <i className="fas fa-building" style={{ fontSize: '1.4rem', color: 'var(--text-muted)' }} />
                       )}
-                      <span style={{ fontSize: '0.78rem', fontWeight: 700, color: 'var(--text-muted)', lineHeight: 1.3 }}>{name}</span>
+                      <span style={{ fontSize: '0.72rem', fontWeight: 700, color: 'var(--text-muted)', lineHeight: 1.3 }}>{name}</span>
                     </div>
                   )
                 })}

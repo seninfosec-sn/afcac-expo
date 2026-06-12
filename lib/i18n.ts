@@ -259,7 +259,7 @@ export const translations = {
       diamondLogos: ['ASECNA', 'ANAC Togo'],
       platinumLogos: [],
       goldLogos: ['African Union', 'AfCFTA', 'AFREXIMBANK', 'AfDB', 'Ethiopian Airlines', 'SALT'],
-      silverLogos: ['Airports Company South Africa', 'Weihai International Economic & Technical Cooperative Co. Ltd'],
+      silverLogos: ['UNECA', 'Airports Company South Africa (ACSA)', 'Weihai International Economic & Technical Cooperative Co. Ltd. (WIETC)', 'AEROTRANSPORT', 'ASAIGE-PAL', 'Hôtel 2 Février', 'ASKY Airlines', 'ST HANDLING'],
       bronzeLogos: ['ATNS', 'Aerovault'],
     },
     venue: {
@@ -625,7 +625,7 @@ export const translations = {
       diamondLogos: ['ASECNA', 'ANAC Togo'],
       platinumLogos: [],
       goldLogos: ['African Union', 'AfCFTA', 'AFREXIMBANK', 'AfDB', 'Ethiopian Airlines', 'SALT'],
-      silverLogos: ['Airports Company South Africa', 'Weihai International Economic & Technical Cooperative Co. Ltd'],
+      silverLogos: ['UNECA', 'Airports Company South Africa (ACSA)', 'Weihai International Economic & Technical Cooperative Co. Ltd. (WIETC)', 'AEROTRANSPORT', 'ASAIGE-PAL', 'Hôtel 2 Février', 'ASKY Airlines', 'ST HANDLING'],
       bronzeLogos: ['ATNS', 'Aerovault'],
     },
     venue: {
@@ -991,7 +991,7 @@ export const translations = {
       diamondLogos: ['ASECNA', 'ANAC Togo'],
       platinumLogos: [],
       goldLogos: ['African Union', 'AfCFTA', 'AFREXIMBANK', 'AfDB', 'Ethiopian Airlines', 'SALT'],
-      silverLogos: ['Airports Company South Africa', 'Weihai International Economic & Technical Cooperative Co. Ltd'],
+      silverLogos: ['UNECA', 'Airports Company South Africa (ACSA)', 'Weihai International Economic & Technical Cooperative Co. Ltd. (WIETC)', 'AEROTRANSPORT', 'ASAIGE-PAL', 'Hôtel 2 Février', 'ASKY Airlines', 'ST HANDLING'],
       bronzeLogos: ['ATNS', 'Aerovault'],
     },
     venue: {
