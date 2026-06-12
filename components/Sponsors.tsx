@@ -15,7 +15,7 @@ const EXHIBITORS: Exhibitor[] = [
   { name: 'Starburst',                                   logo: '/STARTBURST.png' },
   { name: 'Seabury',                                     logo: '/Seabury.png', subtitle: 'Global Scale. Global Reach' },
   { name: 'EMPIC',                                       logo: '/EMPIC.png' },
-  { name: 'NIro Company Limited',                        logo: '/NIRO.png' },
+  { name: 'NIRO Company Limited',                        logo: '/NIRO.png' },
   { name: 'Aviason',                                     logo: '/aviason.png' },
   { name: 'Absorbs Liquids',                             logo: '/gobi.jpeg' },
   { name: 'Aeroclass',                                   logo: '/Logotype-Cold.png', logoStyle: { height: '82px', maxWidth: '190px' } },
