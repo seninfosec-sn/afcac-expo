@@ -80,7 +80,7 @@ export default function Sponsors() {
   }, [total])
 
   useEffect(() => {
-    const id = setInterval(() => setSilverIndex((i) => (i + 1) % silverTotal), 3000)
+    const id = setInterval(() => setSilverIndex((i) => (i + 1) % silverTotal), 5000)
     return () => clearInterval(id)
   }, [silverTotal])
 
