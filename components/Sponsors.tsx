@@ -81,6 +81,7 @@ export default function Sponsors() {
                 {s.diamondLogos.map((name) => {
                   const diamondLogoMap: Record<string, string> = {
                     'ASECNA': '/ASECNA.png',
+                    'ANAC Togo': '/ANACTOGO.png',
                   }
                   const src = diamondLogoMap[name]
                   return (
