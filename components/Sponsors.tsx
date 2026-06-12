@@ -100,7 +100,7 @@ export default function Sponsors() {
             </div>
             <div className="tier">
               <h3 className="tier-title gold" style={{ animation: 'goldBlink 1.4s ease-in-out infinite' }}>{s.gold}</h3>
-              <div className="sponsor-logos">
+              <div className="sponsor-logos" style={{ flexWrap: 'nowrap', overflowX: 'auto', justifyContent: 'center' }}>
                 {s.goldLogos.map((name) => {
                   const goldLogoMap: Record<string, string> = {
                     'African Union': '/african-union.png',
@@ -112,14 +112,14 @@ export default function Sponsors() {
                   }
                   const src = goldLogoMap[name]
                   return (
-                    <div key={name} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '6px', padding: '16px 20px', background: 'var(--off-white)', border: '1px solid var(--border)', borderRadius: 'var(--radius)', minWidth: '180px', textAlign: 'center' }}>
+                    <div key={name} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '4px', padding: '12px 10px', background: 'var(--off-white)', border: '1px solid var(--border)', borderRadius: 'var(--radius)', flex: '0 0 auto', width: '140px', textAlign: 'center' }}>
                       {src ? (
                         // eslint-disable-next-line @next/next/no-img-element
-                        <img src={src} alt={name} style={{ height: '80px', width: 'auto', maxWidth: '240px', objectFit: 'contain', display: 'block' }} />
+                        <img src={src} alt={name} style={{ height: '56px', width: 'auto', maxWidth: '120px', objectFit: 'contain', display: 'block' }} />
                       ) : (
-                        <i className="fas fa-building" style={{ fontSize: '1.6rem', color: 'var(--gold-dark)' }} />
+                        <i className="fas fa-building" style={{ fontSize: '1.4rem', color: 'var(--gold-dark)' }} />
                       )}
-                      <span style={{ fontSize: '0.78rem', fontWeight: 700, color: 'var(--text-muted)', lineHeight: 1.3 }}>{name}</span>
+                      <span style={{ fontSize: '0.72rem', fontWeight: 700, color: 'var(--text-muted)', lineHeight: 1.3 }}>{name}</span>
                     </div>
                   )
                 })}
