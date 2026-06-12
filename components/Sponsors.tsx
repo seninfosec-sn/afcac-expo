@@ -75,7 +75,7 @@ export default function Sponsors() {
   const silverVisible = SILVER_LOGOS.slice(silverIndex * SILVER_VISIBLE, silverIndex * SILVER_VISIBLE + SILVER_VISIBLE)
 
   useEffect(() => {
-    const id = setInterval(() => setIndex((i) => (i + 1) % total), 3000)
+    const id = setInterval(() => setIndex((i) => (i + 1) % total), 5000)
     return () => clearInterval(id)
   }, [total])
 
