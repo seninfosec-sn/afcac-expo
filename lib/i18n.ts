@@ -141,7 +141,7 @@ export const translations = {
           theme: 'AVIATION INVESTMENT, INFRASTRUCTURE AND AIR TRANSPORT SUSTAINABILITY',
           rows: [
             { time: '08:00 – 18:00', room: 'Exhibition Hall', title: 'Exhibition Open', format: 'Exhibition / Networking', results: 'Continued engagement with exhibitors and partners' },
-            { time: '09:00 – 10:00', room: '', title: 'Ministerial Interventions (who were not in the program in the Day 1 and Day 2 panel discussions)', format: '', results: '' },
+            { time: '09:00 – 10:00', room: '', title: 'Ministerial / Partners Interventions (who were not in the program in the Day 1 and Day 2 panel discussions)', format: '', results: '' },
             { time: '10:00 – 11:30', room: 'Main Conference Room', title: 'SESSION 5A: Investment, infrastructure and project preparation', format: 'Panel Session on financing and bankability.', results: 'A shared understanding among States and stakeholders of what constitutes a bankable aviation project and the immediate next steps required to move projects toward financing\nIndicative aviation investment pipeline; project-readiness actions; financing follow-up priorities' },
             { time: '11:30 – 12:00', room: 'Networking Area', title: 'Health Break', format: 'Break / Networking', results: 'Informal engagement' },
             { time: '12:00 – 13:00', room: 'Main Conference Room', title: 'SESSION 5B: Making Aviation Projects Bankable', format: 'Moderated interactive plenary discussions on overcoming barriers to project bankability', results: 'Identification of critical project preparation gaps, constraints, and Solutions' },
