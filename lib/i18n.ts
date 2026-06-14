@@ -142,7 +142,7 @@ export const translations = {
           rows: [
             { time: '08:00 – 18:00', room: 'Exhibition Hall', title: 'Exhibition Open', format: 'Exhibition / Networking', results: 'Continued engagement with exhibitors and partners' },
             { time: '09:00 – 10:00', room: '', title: 'Ministerial / Partners Interventions (who were not in the program in the Day 1 and Day 2 panel discussions)', format: '', results: '' },
-            { time: '10:00 – 11:30', room: 'Main Conference Room', title: 'SESSION 5A: Investment, infrastructure and project preparation', format: 'Panel Session on financing and bankability.', results: 'A shared understanding among States and stakeholders of what constitutes a bankable aviation project and the immediate next steps required to move projects toward financing\nIndicative aviation investment pipeline; project-readiness actions; financing follow-up priorities' },
+            { time: '10:00 – 11:30', room: 'Main Conference Room', title: 'SESSION 5A: Investment, financing and infrastructure and project preparation', format: 'Panel Session on bankability.', results: 'A shared understanding among States and stakeholders of what constitutes a bankable aviation project and the immediate next steps required to move projects toward financing\nIndicative aviation investment pipeline; project-readiness actions; financing follow-up priorities' },
             { time: '11:30 – 12:00', room: 'Networking Area', title: 'Health Break', format: 'Break / Networking', results: 'Informal engagement' },
             { time: '12:00 – 13:00', room: 'Main Conference Room', title: 'SESSION 5B: Making Aviation Projects Bankable', format: 'Moderated interactive plenary discussions on overcoming barriers to project bankability', results: 'Identification of critical project preparation gaps, constraints, and Solutions' },
             { time: '12:00 – 13:00', room: 'Breakout Room A', title: 'State And Operator Project Presentations', format: 'Project pitching sessions', results: 'Priority projects for inclusion in the Pipeline' },
@@ -166,7 +166,7 @@ export const translations = {
             { time: '14:00 – 18:00', room: 'Breakout Room A', title: 'Innovation Provider Meetings', format: 'B2B Meetings', results: 'Technology partnerships explored' },
             { time: '14:00 – 18:00', room: 'Breakout Room B', title: 'Human Capital and Training Partnership Meetings', format: 'Partnership Meetings', results: 'Capacity-building and training cooperation advanced' },
             { time: '15:30 – 16:00', room: 'Networking Area', title: 'Health Break', format: 'Break / Networking', results: 'Informal exchange' },
-            { time: '19:00 – 22:00', room: 'Cocktail Dinner', title: 'Partnership Evening', format: 'Dinner', results: 'High-level networking and partner recognition' },
+            { time: '19:00 – 22:00', room: 'Cocktail Dinner', title: 'Partnership Evening Dinner', format: 'Dinner', results: 'High-level networking and partner recognition' },
           ],
         },
         {
@@ -508,7 +508,7 @@ export const translations = {
           rows: [
             { time: '08:00 – 18:00', room: 'Salle d\'exposition', title: 'Exposition ouverte', format: 'Exposition / Réseautage', results: 'Poursuite des consultations avec les exposants et les partenaires' },
             { time: '09:00 – 10:00', room: '', title: 'Interventions ministérielles (ministres absents des discussions en panel des Jours 1 et 2)', format: '', results: '' },
-            { time: '10:00 – 11:30', room: 'Grande salle de conférence', title: 'SESSION 5A : Investissement, infrastructures et préparation des projets', format: 'Séance en panel sur le financement et la bancabilité.', results: 'Vision commune parmi les États et parties prenantes sur ce qu\'est un projet aéronautique bancable et les prochaines étapes immédiates\nPipeline indicatif d\'investissements aéronautiques ; actions de préparation des projets ; priorités de suivi du financement' },
+            { time: '10:00 – 11:30', room: 'Grande salle de conférence', title: 'SESSION 5A : Investissement, financement et infrastructures et préparation des projets', format: 'Séance en panel sur la bancabilité.', results: 'Vision commune parmi les États et parties prenantes sur ce qu\'est un projet aéronautique bancable et les prochaines étapes immédiates\nPipeline indicatif d\'investissements aéronautiques ; actions de préparation des projets ; priorités de suivi du financement' },
             { time: '11:30 – 12:00', room: 'Espace de réseautage', title: 'Pause santé', format: 'Pause / Réseautage', results: 'Consultations informelles' },
             { time: '12:00 – 13:00', room: 'Grande salle de conférence', title: 'SESSION 5B : Rendre les projets aéronautiques bancables', format: 'Discussions plénières interactives animées sur le dépassement des obstacles à la bancabilité des projets', results: 'Identification des lacunes critiques dans la préparation des projets, contraintes et solutions' },
             { time: '12:00 – 13:00', room: 'Salle d\'atelier A', title: 'Présentations des projets par les États et les opérateurs', format: 'Séances de présentation de projets', results: 'Projets prioritaires à inclure dans le pipeline' },
@@ -532,7 +532,7 @@ export const translations = {
             { time: '14:00 – 18:00', room: 'Salle d\'atelier A', title: 'Réunions des acteurs de l\'innovation', format: 'Rencontres B2B', results: 'Exploration de partenariats technologiques' },
             { time: '14:00 – 18:00', room: 'Salle d\'atelier B', title: 'Réunions sur le partenariat dans le domaine des ressources humaines et de la formation', format: 'Réunions de partenariat', results: 'Coopération avancée en matière de renforcement des capacités et de formation' },
             { time: '15:30 – 16:00', room: 'Espace de réseautage', title: 'Pause santé', format: 'Pause / Réseautage', results: 'Échanges informels' },
-            { time: '19:00 – 22:00', room: 'Dîner-cocktail', title: 'Soirée partenariat', format: 'Dîner', results: 'Réseautage de haut niveau et reconnaissance des partenaires' },
+            { time: '19:00 – 22:00', room: 'Dîner-cocktail', title: 'Dîner de soirée partenariat', format: 'Dîner', results: 'Réseautage de haut niveau et reconnaissance des partenaires' },
           ],
         },
         {
@@ -874,7 +874,7 @@ export const translations = {
           rows: [
             { time: '08:00 – 18:00', room: 'Sala de Exposição', title: 'Exposição Aberta', format: 'Exposição / Networking', results: 'Continuação de consultas com expositores e parceiros' },
             { time: '09:00 – 10:00', room: '', title: 'Intervenções Ministeriais (ministros não incluídos nas discussões em painel dos Dias 1 e 2)', format: '', results: '' },
-            { time: '10:00 – 11:30', room: 'Grande Sala de Conferências', title: 'SESSÃO 5A: Investimento, infraestruturas e preparação de projetos', format: 'Sessão em painel sobre financiamento e bancabilidade.', results: 'Visão comum entre Estados e partes interessadas sobre o que constitui um projeto aeronáutico bancável e os próximos passos imediatos\nPipeline indicativo de investimento aeronáutico; ações de prontidão de projetos; prioridades de seguimento do financiamento' },
+            { time: '10:00 – 11:30', room: 'Grande Sala de Conferências', title: 'SESSÃO 5A: Investimento, financiamento e infraestruturas e preparação de projetos', format: 'Sessão em painel sobre bancabilidade.', results: 'Visão comum entre Estados e partes interessadas sobre o que constitui um projeto aeronáutico bancável e os próximos passos imediatos\nPipeline indicativo de investimento aeronáutico; ações de prontidão de projetos; prioridades de seguimento do financiamento' },
             { time: '11:30 – 12:00', room: 'Área de Networking', title: 'Pausa Saúde', format: 'Pausa / Networking', results: 'Consultas informais' },
             { time: '12:00 – 13:00', room: 'Grande Sala de Conferências', title: 'SESSÃO 5B: Tornar os Projetos de Aviação Bancáveis', format: 'Debates plenários interativos animados sobre como superar obstáculos à bancabilidade dos projetos', results: 'Identificação de lacunas críticas na preparação de projetos, constrangimentos e soluções' },
             { time: '12:00 – 13:00', room: 'Sala de Atelier A', title: 'Apresentações de Projetos pelos Estados e Operadores', format: 'Sessões de apresentação de projetos', results: 'Projetos prioritários a incluir no pipeline' },
@@ -898,7 +898,7 @@ export const translations = {
             { time: '14:00 – 18:00', room: 'Sala de Atelier A', title: 'Reuniões de Atores da Inovação', format: 'Encontros B2B', results: 'Exploração de parcerias tecnológicas' },
             { time: '14:00 – 18:00', room: 'Sala de Atelier B', title: 'Reuniões de Parceria em Recursos Humanos e Formação', format: 'Reuniões de Parceria', results: 'Cooperação avançada em matéria de reforço de capacidades e formação' },
             { time: '15:30 – 16:00', room: 'Área de Networking', title: 'Pausa Saúde', format: 'Pausa / Networking', results: 'Intercâmbios informais' },
-            { time: '19:00 – 22:00', room: 'Jantar-Cocktail', title: 'Noite de Parceria', format: 'Jantar', results: 'Networking de alto nível e reconhecimento de parceiros' },
+            { time: '19:00 – 22:00', room: 'Jantar-Cocktail', title: 'Jantar de Noite de Parceria', format: 'Jantar', results: 'Networking de alto nível e reconhecimento de parceiros' },
           ],
         },
         {
