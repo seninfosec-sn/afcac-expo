@@ -16,6 +16,72 @@ export default function Remarks() {
           <div className="section-divider" />
         </div>
 
+        {/* Live Stream Card */}
+        <div style={{
+          maxWidth: '760px',
+          margin: '0 auto 48px',
+          borderRadius: 'var(--radius)',
+          overflow: 'hidden',
+          border: '2px solid #e53935',
+          boxShadow: '0 4px 24px rgba(229,57,53,0.25)',
+        }}>
+          <div style={{
+            background: '#e53935',
+            padding: '10px 20px',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '10px',
+          }}>
+            <span style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '6px',
+              background: 'white',
+              color: '#e53935',
+              fontWeight: 800,
+              fontSize: '0.75rem',
+              letterSpacing: '0.12em',
+              borderRadius: '4px',
+              padding: '2px 8px',
+            }}>
+              <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#e53935', display: 'inline-block', animation: 'pulse 1.5s infinite' }} />
+              LIVE
+            </span>
+            <span style={{ color: 'white', fontWeight: 700, fontSize: '1rem', letterSpacing: '0.04em' }}>
+              AFCAC Expo 2026 — Live Stream
+            </span>
+            <a
+              href="https://www.youtube.com/watch?v=IkbJAhx7QW8"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                marginLeft: 'auto',
+                background: 'white',
+                color: '#e53935',
+                fontWeight: 700,
+                fontSize: '0.78rem',
+                borderRadius: '4px',
+                padding: '4px 12px',
+                textDecoration: 'none',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '6px',
+              }}
+            >
+              <i className="fab fa-youtube" /> Watch on YouTube
+            </a>
+          </div>
+          <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}>
+            <iframe
+              src="https://www.youtube.com/embed/IkbJAhx7QW8"
+              title="AFCAC Expo 2026 Live Stream"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 'none' }}
+            />
+          </div>
+        </div>
+
         <h3 style={{
           textAlign: 'center',
           fontFamily: 'var(--font-head)',
