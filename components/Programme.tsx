@@ -23,8 +23,8 @@ export default function Programme() {
               </span>
               <div className="prog-bulletin-langs">
                 <a href="/Program 4.pdf" download className="prog-lang-btn">EN</a>
-                <a href="/Program 2.pdf" download className="prog-lang-btn">FR</a>
-                <a href="/Program 3.pdf" download className="prog-lang-btn">PT</a>
+                <a href="/FR Program.pdf" download className="prog-lang-btn">FR</a>
+                <a href="/PT Program.pdf" download className="prog-lang-btn">PT</a>
               </div>
             </div>
             <div style={{ display: 'flex', alignItems: 'center' }}>
