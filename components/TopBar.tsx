@@ -15,7 +15,7 @@ export default function TopBar() {
   return (
     <div className="topbar">
       <div className="container topbar-inner">
-        <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'nowrap', fontSize: '0.72rem', whiteSpace: 'nowrap' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '6px', flexWrap: 'nowrap', fontSize: '0.62rem', whiteSpace: 'nowrap' }}>
           <span><i className="fas fa-envelope" /> {t.topbar.email}</span>
           <span style={{ color: 'rgba(255,255,255,0.4)' }}>|</span>
           <span><i className="fas fa-shield-alt" /> Assistance Sécurité : +228 90 80 56 41</span>
