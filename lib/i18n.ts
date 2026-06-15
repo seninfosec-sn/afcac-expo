@@ -80,7 +80,7 @@ export const translations = {
     },
     remarks: {
       sectionTag: 'Leadership',
-      sectionTitle: 'Welcome Remarks',
+      sectionTitle: 'Live Stream',
       watchMessage: 'Watch Message',
       speaker1Name: 'Secretary General, AFCAC',
       speaker1Org: 'African Civil Aviation Commission',
@@ -446,7 +446,7 @@ export const translations = {
     },
     remarks: {
       sectionTag: 'Leadership',
-      sectionTitle: 'Messages de bienvenue',
+      sectionTitle: 'Live Stream',
       watchMessage: 'Voir le message',
       speaker1Name: 'Secrétaire général de l\'AFCAC',
       speaker1Org: 'Commission africaine de l\'aviation civile',
@@ -812,7 +812,7 @@ export const translations = {
     },
     remarks: {
       sectionTag: 'Liderança',
-      sectionTitle: 'Mensagens de Boas-Vindas',
+      sectionTitle: 'Live Stream',
       watchMessage: 'Ver mensagem',
       speaker1Name: 'Secretário-Geral da AFCAC',
       speaker1Org: 'Comissão Africana de Aviação Civil',
