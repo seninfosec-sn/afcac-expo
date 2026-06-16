@@ -18,6 +18,7 @@ const PAYS = [
 interface FormData {
   prenom: string
   nom: string
+  titre: string
   email: string
   telephone: string
   organisation: string
@@ -28,7 +29,7 @@ interface FormData {
 }
 
 const EMPTY: FormData = {
-  prenom: '', nom: '', email: '', telephone: '',
+  prenom: '', nom: '', titre: '', email: '', telephone: '',
   organisation: '', pays: '',
   circuit: '', date: '2026-06-19', commentaires: '',
 }
@@ -262,6 +263,23 @@ export default function CircuitsPage() {
                   <div className="form-row">
                     {field('prenom', 'Prénom', 'text', true, 'Jean')}
                     {field('nom', 'Nom', 'text', true, 'DUPONT')}
+                  </div>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginTop: '4px' }}>
+                    <label style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--green-dark)' }}>Titre</label>
+                    <select
+                      value={form.titre}
+                      onChange={e => setForm(f => ({ ...f, titre: e.target.value }))}
+                    >
+                      <option value="">-- Sélectionnez --</option>
+                      <option>M.</option>
+                      <option>Mme.</option>
+                      <option>Dr.</option>
+                      <option>Prof.</option>
+                      <option>Col.</option>
+                      <option>Gén.</option>
+                      <option>Amb.</option>
+                      <option>S.E.</option>
+                    </select>
                   </div>
                 </div>
 
