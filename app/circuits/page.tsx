@@ -264,23 +264,7 @@ export default function CircuitsPage() {
                     {field('prenom', 'Prénom', 'text', true, 'Jean')}
                     {field('nom', 'Nom', 'text', true, 'DUPONT')}
                   </div>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginTop: '4px' }}>
-                    <label style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--green-dark)' }}>Titre</label>
-                    <select
-                      value={form.titre}
-                      onChange={e => setForm(f => ({ ...f, titre: e.target.value }))}
-                    >
-                      <option value="">-- Sélectionnez --</option>
-                      <option>M.</option>
-                      <option>Mme.</option>
-                      <option>Dr.</option>
-                      <option>Prof.</option>
-                      <option>Col.</option>
-                      <option>Gén.</option>
-                      <option>Amb.</option>
-                      <option>S.E.</option>
-                    </select>
-                  </div>
+                  {field('titre', 'Poste Occupé', 'text', false, 'Ex : Directeur Général, Ingénieur...')}
                 </div>
 
                 <div className="form-row">
