@@ -1,7 +1,8 @@
-import { kv } from '@vercel/kv'
 import { NextRequest, NextResponse } from 'next/server'
+import { getDb, initDb } from '@/lib/db'
 
 const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD ?? 'afcac2026'
+const MAX = 100
 
 export async function POST(req: NextRequest) {
   const { password } = await req.json()
@@ -10,21 +11,34 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Mot de passe incorrect' }, { status: 401 })
   }
 
-  const [c1, c2, raw1, raw2] = await Promise.all([
-    kv.get<number>('circuit1'),
-    kv.get<number>('circuit2'),
-    kv.lrange<string>('regs:circuit1', 0, -1),
-    kv.lrange<string>('regs:circuit2', 0, -1),
+  await initDb()
+  const sql = getDb()
+
+  const [rows, countRows] = await Promise.all([
+    sql`
+      SELECT id, prenom, nom, titre, email, telephone, organisation, pays,
+             circuit, circuit_key, commentaires,
+             registered_at AS "registeredAt"
+      FROM registrations
+      ORDER BY registered_at DESC
+    `,
+    sql`
+      SELECT circuit_key, COUNT(*)::int AS count
+      FROM registrations
+      GROUP BY circuit_key
+    `,
   ])
 
-  const parse = (list: string[] | null) =>
-    (list ?? []).map(r => (typeof r === 'string' ? JSON.parse(r) : r))
+  const counts = { circuit1: 0, circuit2: 0 }
+  for (const r of countRows) {
+    if (r.circuit_key === 'circuit1') counts.circuit1 = r.count
+    if (r.circuit_key === 'circuit2') counts.circuit2 = r.count
+  }
 
-  return NextResponse.json({
-    counts: { circuit1: c1 ?? 0, circuit2: c2 ?? 0 },
-    registrations: {
-      circuit1: parse(raw1),
-      circuit2: parse(raw2),
-    },
-  })
+  const registrations = {
+    circuit1: rows.filter(r => r.circuit_key === 'circuit1'),
+    circuit2: rows.filter(r => r.circuit_key === 'circuit2'),
+  }
+
+  return NextResponse.json({ counts, registrations, total: rows.length, max: MAX })
 }
