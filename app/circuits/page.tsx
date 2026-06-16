@@ -2,11 +2,117 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import { useLanguage } from '@/contexts/LanguageContext'
+import type { Lang } from '@/lib/i18n'
 
-const CIRCUITS = [
-  'CIRCUIT 1 : 100 Personnes maxi. (Circuit en bus)',
-  'CIRCUIT 2 : 100 Personnes maxi. (Ville de Lomé)',
-]
+// ── Translations ─────────────────────────────────────────────────────────────
+
+const T = {
+  en: {
+    back: 'Back to site',
+    badge: 'LOMÉ · TOGO',
+    title: 'Tourist Circuits',
+    subtitle: 'Discover Togo through our exclusive circuits organized alongside AFCAC Expo 2026. Register below.',
+    cap1: 'Circuit 1 — Bus', cap2: 'Circuit 2 — Lomé',
+    formTitle: 'Registration Form',
+    formRequired: 'Fields marked * are required.',
+    secPersonal: 'Personal Information',
+    secCircuit: 'Circuit Details',
+    lPrenom: 'First Name', lNom: 'Last Name', lPoste: 'Job Title',
+    lEmail: 'Email Address', lTel: 'Phone', lOrg: 'Organisation / Company',
+    lPays: 'Country', lCircuit: 'Preferred Circuit', lComment: 'Special Needs / Comments',
+    phPrenom: 'John', phNom: 'SMITH', phPoste: 'e.g. Director General, Engineer...',
+    phEmail: 'example@organisation.org', phTel: '+228 XX XX XX XX',
+    phOrg: 'Name of your organisation', phComment: 'Additional information, special requirements...',
+    selDefault: '-- Select --', selCircuit: '-- Choose a circuit --',
+    dateLabel: 'Circuit Date', dateValue: 'Friday 19 June 2026', dateTime: '2:00 PM – 6:00 PM',
+    submit: 'Submit my registration', submitting: 'Saving...',
+    privacy: 'Your data is confidential and will only be used for this event.',
+    successTitle: 'Registration confirmed!',
+    successMsg: (p: string, n: string, c: string, e: string) =>
+      `Thank you ${p} ${n}, your registration for ${c} has been received. A confirmation email will be sent to ${e}.`,
+    newReg: 'New registration', backSite: 'Back to site',
+    complet: 'FULL', completMsg: 'This circuit is full. Please choose the other circuit.',
+    errGeneral: 'An error occurred. Please try again.',
+    errConnection: 'Connection error. Please try again.',
+    errFull: 'This circuit just reached its maximum capacity (100 people). Please choose the other circuit.',
+    req: 'Required', invalidEmail: 'Invalid email',
+    c1desc: '100 people max. Guided bus circuit.',
+    c2desc: '100 people max. City of Lomé visit.',
+    circ1: 'CIRCUIT 1: 100 People max. (Bus circuit)',
+    circ2: 'CIRCUIT 2: 100 People max. (City of Lomé)',
+  },
+  fr: {
+    back: 'Retour au site',
+    badge: 'LOMÉ · TOGO',
+    title: 'Circuits Touristiques',
+    subtitle: 'Découvrez le Togo à travers nos circuits exclusifs organisés en marge de l\'AFCAC Expo 2026. Inscrivez-vous ci-dessous.',
+    cap1: 'Circuit 1 — Bus', cap2: 'Circuit 2 — Lomé',
+    formTitle: 'Formulaire d\'inscription',
+    formRequired: 'Les champs marqués * sont obligatoires.',
+    secPersonal: 'Informations personnelles',
+    secCircuit: 'Détails du circuit',
+    lPrenom: 'Prénom', lNom: 'Nom', lPoste: 'Poste Occupé',
+    lEmail: 'Adresse email', lTel: 'Téléphone', lOrg: 'Organisation / Entreprise',
+    lPays: 'Pays', lCircuit: 'Circuit souhaité', lComment: 'Besoins spéciaux / Commentaires',
+    phPrenom: 'Jean', phNom: 'DUPONT', phPoste: 'Ex : Directeur Général, Ingénieur...',
+    phEmail: 'exemple@organisation.org', phTel: '+228 XX XX XX XX',
+    phOrg: 'Nom de votre structure', phComment: 'Informations complémentaires, besoins particuliers...',
+    selDefault: '-- Sélectionnez --', selCircuit: '-- Choisissez un circuit --',
+    dateLabel: 'Date du circuit', dateValue: 'Vendredi 19 juin 2026', dateTime: '14h00 – 18h00',
+    submit: 'Soumettre mon inscription', submitting: 'Enregistrement...',
+    privacy: 'Vos données sont confidentielles et ne seront utilisées que dans le cadre de cet événement.',
+    successTitle: 'Inscription enregistrée !',
+    successMsg: (p: string, n: string, c: string, e: string) =>
+      `Merci ${p} ${n}, votre inscription au ${c} a bien été reçue. Un email de confirmation sera envoyé à ${e}.`,
+    newReg: 'Nouvelle inscription', backSite: 'Retour au site',
+    complet: 'COMPLET', completMsg: 'Ce circuit est complet. Veuillez choisir l\'autre circuit.',
+    errGeneral: 'Une erreur est survenue. Veuillez réessayer.',
+    errConnection: 'Erreur de connexion. Veuillez réessayer.',
+    errFull: 'Ce circuit vient d\'atteindre sa capacité maximale (100 personnes). Veuillez choisir l\'autre circuit.',
+    req: 'Requis', invalidEmail: 'Email invalide',
+    c1desc: '100 personnes maximum. Circuit en bus, découverte guidée.',
+    c2desc: '100 personnes maximum. Visite de la ville de Lomé.',
+    circ1: 'CIRCUIT 1 : 100 Personnes maxi. (Circuit en bus)',
+    circ2: 'CIRCUIT 2 : 100 Personnes maxi. (Ville de Lomé)',
+  },
+  pt: {
+    back: 'Voltar ao site',
+    badge: 'LOMÉ · TOGO',
+    title: 'Circuitos Turísticos',
+    subtitle: 'Descubra o Togo através dos nossos circuitos exclusivos organizados à margem da AFCAC Expo 2026. Inscreva-se abaixo.',
+    cap1: 'Circuito 1 — Autocarro', cap2: 'Circuito 2 — Lomé',
+    formTitle: 'Formulário de inscrição',
+    formRequired: 'Os campos marcados com * são obrigatórios.',
+    secPersonal: 'Informações pessoais',
+    secCircuit: 'Detalhes do circuito',
+    lPrenom: 'Primeiro Nome', lNom: 'Apelido', lPoste: 'Cargo',
+    lEmail: 'Endereço de email', lTel: 'Telefone', lOrg: 'Organização / Empresa',
+    lPays: 'País', lCircuit: 'Circuito pretendido', lComment: 'Necessidades especiais / Comentários',
+    phPrenom: 'João', phNom: 'SILVA', phPoste: 'Ex.: Diretor Geral, Engenheiro...',
+    phEmail: 'exemplo@organizacao.org', phTel: '+228 XX XX XX XX',
+    phOrg: 'Nome da sua organização', phComment: 'Informações adicionais, requisitos especiais...',
+    selDefault: '-- Selecione --', selCircuit: '-- Escolha um circuito --',
+    dateLabel: 'Data do circuito', dateValue: 'Sexta-feira, 19 de junho de 2026', dateTime: '14h00 – 18h00',
+    submit: 'Submeter a minha inscrição', submitting: 'A guardar...',
+    privacy: 'Os seus dados são confidenciais e serão utilizados apenas no âmbito deste evento.',
+    successTitle: 'Inscrição registada!',
+    successMsg: (p: string, n: string, c: string, e: string) =>
+      `Obrigado ${p} ${n}, a sua inscrição no ${c} foi recebida. Um email de confirmação será enviado para ${e}.`,
+    newReg: 'Nova inscrição', backSite: 'Voltar ao site',
+    complet: 'ESGOTADO', completMsg: 'Este circuito está esgotado. Por favor escolha o outro circuito.',
+    errGeneral: 'Ocorreu um erro. Por favor tente novamente.',
+    errConnection: 'Erro de ligação. Por favor tente novamente.',
+    errFull: 'Este circuito atingiu a capacidade máxima (100 pessoas). Por favor escolha o outro circuito.',
+    req: 'Obrigatório', invalidEmail: 'Email inválido',
+    c1desc: 'Máximo 100 pessoas. Circuito em autocarro, descoberta guiada.',
+    c2desc: 'Máximo 100 pessoas. Visita à cidade de Lomé.',
+    circ1: 'CIRCUITO 1: Máx. 100 Pessoas (Circuito de autocarro)',
+    circ2: 'CIRCUITO 2: Máx. 100 Pessoas (Cidade de Lomé)',
+  },
+}
+
+// ── Countries ────────────────────────────────────────────────────────────────
 
 const PAYS = [
   'Afghanistan', 'Afrique du Sud', 'Albanie', 'Algérie', 'Allemagne',
@@ -58,31 +164,38 @@ const PAYS = [
   'Zambie', 'Zimbabwe',
 ]
 
+// ── Types ─────────────────────────────────────────────────────────────────────
+
 interface FormData {
-  prenom: string
-  nom: string
-  titre: string
-  email: string
-  telephone: string
-  organisation: string
-  pays: string
-  circuit: string
-  date: string
-  commentaires: string
+  prenom: string; nom: string; titre: string
+  email: string; telephone: string
+  organisation: string; pays: string
+  circuit: string; date: string; commentaires: string
 }
 
 const EMPTY: FormData = {
   prenom: '', nom: '', titre: '', email: '', telephone: '',
-  organisation: '', pays: '',
-  circuit: '', date: '2026-06-19', commentaires: '',
+  organisation: '', pays: '', circuit: '', date: '2026-06-19', commentaires: '',
 }
 
-const CIRCUIT_KEYS: Record<string, 'circuit1' | 'circuit2'> = {
-  [CIRCUITS[0]]: 'circuit1',
-  [CIRCUITS[1]]: 'circuit2',
-}
+const MAX = 100
+const LANGS: { code: Lang; label: string }[] = [
+  { code: 'en', label: 'EN' },
+  { code: 'fr', label: 'FR' },
+  { code: 'pt', label: 'PT' },
+]
+
+// ── Component ─────────────────────────────────────────────────────────────────
 
 export default function CircuitsPage() {
+  const { lang, setLang } = useLanguage()
+  const t = T[lang]
+
+  const CIRCUITS = [t.circ1, t.circ2]
+  const CIRCUIT_KEYS: Record<string, 'circuit1' | 'circuit2'> = {
+    [t.circ1]: 'circuit1', [t.circ2]: 'circuit2',
+  }
+
   const [form, setForm] = useState<FormData>(EMPTY)
   const [submitted, setSubmitted] = useState(false)
   const [errors, setErrors] = useState<Partial<FormData>>({})
@@ -91,13 +204,8 @@ export default function CircuitsPage() {
   const [counts, setCounts] = useState<{ circuit1: number; circuit2: number }>({ circuit1: 0, circuit2: 0 })
 
   useEffect(() => {
-    fetch('/api/register')
-      .then(r => r.json())
-      .then(d => setCounts(d))
-      .catch(() => {})
+    fetch('/api/register').then(r => r.json()).then(d => setCounts(d)).catch(() => {})
   }, [])
-
-  const MAX = 100
 
   function isComplet(circuit: string) {
     const key = CIRCUIT_KEYS[circuit]
@@ -106,12 +214,12 @@ export default function CircuitsPage() {
 
   function validate() {
     const e: Partial<FormData> = {}
-    if (!form.prenom.trim()) e.prenom = 'Requis'
-    if (!form.nom.trim()) e.nom = 'Requis'
-    if (!form.email.trim() || !/\S+@\S+\.\S+/.test(form.email)) e.email = 'Email invalide'
-    if (!form.telephone.trim()) e.telephone = 'Requis'
-    if (!form.pays) e.pays = 'Requis'
-    if (!form.circuit) e.circuit = 'Requis'
+    if (!form.prenom.trim()) e.prenom = t.req
+    if (!form.nom.trim()) e.nom = t.req
+    if (!form.email.trim() || !/\S+@\S+\.\S+/.test(form.email)) e.email = t.invalidEmail
+    if (!form.telephone.trim()) e.telephone = t.req
+    if (!form.pays) e.pays = t.req
+    if (!form.circuit) e.circuit = t.req
     return e
   }
 
@@ -119,14 +227,8 @@ export default function CircuitsPage() {
     e.preventDefault()
     const e2 = validate()
     if (Object.keys(e2).length > 0) { setErrors(e2); return }
-
-    if (isComplet(form.circuit)) {
-      setSubmitError('Ce circuit est complet (100 personnes atteint).')
-      return
-    }
-
-    setSubmitting(true)
-    setSubmitError('')
+    if (isComplet(form.circuit)) { setSubmitError(t.completMsg); return }
+    setSubmitting(true); setSubmitError('')
     try {
       const res = await fetch('/api/register', {
         method: 'POST',
@@ -134,52 +236,31 @@ export default function CircuitsPage() {
         body: JSON.stringify(form),
       })
       if (res.status === 409) {
-        setSubmitError('Ce circuit vient d\'atteindre sa capacité maximale (100 personnes). Veuillez choisir l\'autre circuit.')
+        setSubmitError(t.errFull)
         const key = CIRCUIT_KEYS[form.circuit]
         if (key) setCounts(c => ({ ...c, [key]: MAX }))
       } else if (!res.ok) {
-        setSubmitError('Une erreur est survenue. Veuillez réessayer.')
+        setSubmitError(t.errGeneral)
       } else {
         const data = await res.json()
         const key = CIRCUIT_KEYS[form.circuit]
         if (key) setCounts(c => ({ ...c, [key]: data.count }))
         setSubmitted(true)
       }
-    } catch {
-      setSubmitError('Erreur de connexion. Veuillez réessayer.')
-    } finally {
-      setSubmitting(false)
-    }
+    } catch { setSubmitError(t.errConnection) }
+    finally { setSubmitting(false) }
   }
 
-  function field(
-    id: keyof FormData,
-    label: string,
-    type = 'text',
-    required = false,
-    placeholder = ''
-  ) {
+  function field(id: keyof FormData, label: string, required = false, type = 'text', placeholder = '') {
     return (
       <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
         <label htmlFor={id} style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--green-dark)' }}>
           {label}{required && <span style={{ color: '#e53935', marginLeft: '3px' }}>*</span>}
         </label>
         <input
-          id={id}
-          type={type}
-          value={form[id]}
-          placeholder={placeholder}
+          id={id} type={type} value={form[id]} placeholder={placeholder}
           onChange={ev => { setForm(f => ({ ...f, [id]: ev.target.value })); setErrors(er => ({ ...er, [id]: undefined })) }}
-          style={{
-            padding: '10px 14px',
-            border: `1.5px solid ${errors[id] ? '#e53935' : '#cdd5d0'}`,
-            borderRadius: '8px',
-            fontSize: '0.95rem',
-            outline: 'none',
-            background: 'white',
-            fontFamily: 'var(--font-body)',
-            transition: 'border-color 0.2s',
-          }}
+          style={{ padding: '10px 14px', border: `1.5px solid ${errors[id] ? '#e53935' : '#cdd5d0'}`, borderRadius: '8px', fontSize: '0.95rem', outline: 'none', background: 'white', fontFamily: 'var(--font-body)', transition: 'border-color 0.2s' }}
           onFocus={ev => { ev.currentTarget.style.borderColor = 'var(--green)' }}
           onBlur={ev => { ev.currentTarget.style.borderColor = errors[id] ? '#e53935' : '#cdd5d0' }}
         />
@@ -210,6 +291,9 @@ export default function CircuitsPage() {
         .success-icon { width: 72px; height: 72px; border-radius: 50%; background: rgba(1,119,100,0.12); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 2rem; color: var(--green); }
         .capacity-bar-bg { height: 8px; background: #e8ede9; border-radius: 4px; overflow: hidden; margin-top: 6px; }
         .capacity-bar-fill { height: 100%; border-radius: 4px; transition: width 0.5s; }
+        .c-lang-btn { background: transparent; border: 1px solid rgba(255,255,255,0.3); color: rgba(255,255,255,0.7); border-radius: 4px; padding: 3px 10px; font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s; font-family: var(--font-head); }
+        .c-lang-btn.active { background: var(--gold); border-color: var(--gold); color: var(--green-dark); }
+        .c-lang-btn:hover:not(.active) { border-color: white; color: white; }
       `}</style>
 
       <div className="circuits-page">
@@ -217,34 +301,38 @@ export default function CircuitsPage() {
         <div className="circuits-header">
           <div className="circuits-header-inner">
             <Link href="/" className="circuits-back">
-              <i className="fas fa-arrow-left" /> Retour au site
+              <i className="fas fa-arrow-left" /> {t.back}
             </Link>
             <span style={{ color: 'rgba(255,255,255,0.3)', fontSize: '0.8rem' }}>|</span>
             <span style={{ color: 'var(--gold)', fontWeight: 700, fontSize: '0.85rem', letterSpacing: '0.06em', fontFamily: 'var(--font-head)' }}>
               AFCAC EXPO 2026
             </span>
+            <div style={{ marginLeft: 'auto', display: 'flex', gap: '6px' }}>
+              {LANGS.map(l => (
+                <button key={l.code} className={`c-lang-btn${lang === l.code ? ' active' : ''}`} onClick={() => setLang(l.code)}>
+                  {l.label}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
 
-        {/* Hero banner */}
+        {/* Hero */}
         <div className="circuits-hero">
           <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: 'rgba(179,174,65,0.18)', border: '1px solid var(--gold)', borderRadius: '20px', padding: '4px 16px', marginBottom: '20px' }}>
             <i className="fas fa-map-marked-alt" style={{ color: 'var(--gold)', fontSize: '0.8rem' }} />
-            <span style={{ color: 'var(--gold)', fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.1em' }}>LOMÉ · TOGO</span>
+            <span style={{ color: 'var(--gold)', fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.1em' }}>{t.badge}</span>
           </div>
           <h1 style={{ fontFamily: 'var(--font-head)', color: 'white', fontSize: 'clamp(1.6rem, 4vw, 2.4rem)', fontWeight: 800, marginBottom: '12px' }}>
-            Circuits Touristiques
+            {t.title}
           </h1>
           <p style={{ color: 'rgba(255,255,255,0.78)', fontSize: '1rem', maxWidth: '560px', margin: '0 auto 28px' }}>
-            Découvrez le Togo à travers nos circuits exclusifs organisés en marge de l'AFCAC Expo 2026.
+            {t.subtitle}
           </p>
 
-          {/* Capacité en temps réel */}
+          {/* Capacity bars */}
           <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
-            {[
-              { label: 'Circuit 1 — Bus', key: 'circuit1' as const },
-              { label: 'Circuit 2 — Lomé', key: 'circuit2' as const },
-            ].map(c => {
+            {([{ label: t.cap1, key: 'circuit1' as const }, { label: t.cap2, key: 'circuit2' as const }]).map(c => {
               const n = counts[c.key]
               const pct = Math.min((n / MAX) * 100, 100)
               const full = n >= MAX
@@ -253,7 +341,7 @@ export default function CircuitsPage() {
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '6px' }}>
                     <span style={{ color: 'white', fontSize: '0.82rem', fontWeight: 600 }}>{c.label}</span>
                     {full
-                      ? <span style={{ background: '#e53935', color: 'white', fontSize: '0.7rem', fontWeight: 700, borderRadius: '4px', padding: '2px 7px' }}>COMPLET</span>
+                      ? <span style={{ background: '#e53935', color: 'white', fontSize: '0.7rem', fontWeight: 700, borderRadius: '4px', padding: '2px 7px' }}>{t.complet}</span>
                       : <span style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.78rem' }}>{n}/{MAX}</span>
                     }
                   </div>
@@ -271,96 +359,86 @@ export default function CircuitsPage() {
           <div className="circuits-card">
             {submitted ? (
               <div style={{ textAlign: 'center', padding: '32px 0' }}>
-                <div className="success-icon">
-                  <i className="fas fa-check" />
-                </div>
+                <div className="success-icon"><i className="fas fa-check" /></div>
                 <h2 style={{ fontFamily: 'var(--font-head)', color: 'var(--green-dark)', fontSize: '1.5rem', marginBottom: '12px' }}>
-                  Inscription enregistrée !
+                  {t.successTitle}
                 </h2>
-                <p style={{ color: '#555', maxWidth: '480px', margin: '0 auto 28px' }}>
-                  Merci <strong>{form.prenom} {form.nom}</strong>, votre inscription au <strong>{form.circuit.split(':')[0]}</strong> a bien été reçue.
-                  Un email de confirmation sera envoyé à <strong>{form.email}</strong>.
-                </p>
+                <p style={{ color: '#555', maxWidth: '480px', margin: '0 auto 28px' }}
+                  dangerouslySetInnerHTML={{ __html: t.successMsg(form.prenom, form.nom, `<strong>${form.circuit.split(':')[0]}</strong>`, `<strong>${form.email}</strong>`) }}
+                />
                 <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>
                   <button onClick={() => { setForm(EMPTY); setSubmitted(false) }} style={{ padding: '10px 24px', border: '1.5px solid var(--green)', borderRadius: '8px', background: 'white', color: 'var(--green-dark)', fontWeight: 700, cursor: 'pointer', fontSize: '0.9rem' }}>
-                    Nouvelle inscription
+                    {t.newReg}
                   </button>
                   <Link href="/" style={{ padding: '10px 24px', background: 'var(--green-dark)', borderRadius: '8px', color: 'white', fontWeight: 700, textDecoration: 'none', fontSize: '0.9rem' }}>
-                    Retour au site
+                    {t.backSite}
                   </Link>
                 </div>
               </div>
             ) : (
               <form onSubmit={handleSubmit} noValidate style={{ display: 'flex', flexDirection: 'column', gap: '22px' }}>
                 <div>
-                  <h2 style={{ fontFamily: 'var(--font-head)', color: 'var(--green-dark)', fontSize: '1.25rem', marginBottom: '4px' }}>
-                    Formulaire d'inscription
-                  </h2>
-                  <p style={{ color: '#777', fontSize: '0.85rem' }}>Les champs marqués <span style={{ color: '#e53935' }}>*</span> sont obligatoires.</p>
+                  <h2 style={{ fontFamily: 'var(--font-head)', color: 'var(--green-dark)', fontSize: '1.25rem', marginBottom: '4px' }}>{t.formTitle}</h2>
+                  <p style={{ color: '#777', fontSize: '0.85rem' }}>{t.formRequired}</p>
                 </div>
 
+                {/* Personal info */}
                 <div style={{ borderTop: '2px solid var(--gold)', paddingTop: '20px' }}>
                   <p style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--green)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '16px' }}>
-                    <i className="fas fa-user" style={{ marginRight: '6px' }} />Informations personnelles
+                    <i className="fas fa-user" style={{ marginRight: '6px' }} />{t.secPersonal}
                   </p>
                   <div className="form-row">
-                    {field('prenom', 'Prénom', 'text', true, 'Jean')}
-                    {field('nom', 'Nom', 'text', true, 'DUPONT')}
+                    {field('prenom', t.lPrenom, true, 'text', t.phPrenom)}
+                    {field('nom', t.lNom, true, 'text', t.phNom)}
                   </div>
-                  {field('titre', 'Poste Occupé', 'text', false, 'Ex : Directeur Général, Ingénieur...')}
+                  <div style={{ marginTop: '16px' }}>
+                    {field('titre', t.lPoste, false, 'text', t.phPoste)}
+                  </div>
                 </div>
 
                 <div className="form-row">
-                  {field('email', 'Adresse email', 'email', true, 'exemple@organisation.org')}
-                  {field('telephone', 'Téléphone', 'tel', true, '+228 XX XX XX XX')}
+                  {field('email', t.lEmail, true, 'email', t.phEmail)}
+                  {field('telephone', t.lTel, true, 'tel', t.phTel)}
                 </div>
 
                 <div className="form-row">
-                  {field('organisation', 'Organisation / Entreprise', 'text', false, 'Nom de votre structure')}
+                  {field('organisation', t.lOrg, false, 'text', t.phOrg)}
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
                     <label style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--green-dark)' }}>
-                      Pays <span style={{ color: '#e53935' }}>*</span>
+                      {t.lPays} <span style={{ color: '#e53935' }}>*</span>
                     </label>
-                    <select
-                      value={form.pays}
-                      onChange={e => { setForm(f => ({ ...f, pays: e.target.value })); setErrors(er => ({ ...er, pays: undefined })) }}
-                      style={{ border: `1.5px solid ${errors.pays ? '#e53935' : '#cdd5d0'}` }}
-                    >
-                      <option value="">-- Sélectionnez --</option>
+                    <select value={form.pays} onChange={e => { setForm(f => ({ ...f, pays: e.target.value })); setErrors(er => ({ ...er, pays: undefined })) }}
+                      style={{ border: `1.5px solid ${errors.pays ? '#e53935' : '#cdd5d0'}` }}>
+                      <option value="">{t.selDefault}</option>
                       {PAYS.map(p => <option key={p} value={p}>{p}</option>)}
                     </select>
                     {errors.pays && <span style={{ fontSize: '0.78rem', color: '#e53935' }}>{errors.pays}</span>}
                   </div>
                 </div>
 
+                {/* Circuit details */}
                 <div style={{ borderTop: '2px solid var(--gold)', paddingTop: '20px' }}>
                   <p style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--green)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '16px' }}>
-                    <i className="fas fa-route" style={{ marginRight: '6px' }} />Détails du circuit
+                    <i className="fas fa-route" style={{ marginRight: '6px' }} />{t.secCircuit}
                   </p>
 
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginBottom: '20px' }}>
                     <label style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--green-dark)' }}>
-                      Circuit souhaité <span style={{ color: '#e53935' }}>*</span>
+                      {t.lCircuit} <span style={{ color: '#e53935' }}>*</span>
                     </label>
-                    <select
-                      value={form.circuit}
+                    <select value={form.circuit}
                       onChange={e => { setForm(f => ({ ...f, circuit: e.target.value })); setErrors(er => ({ ...er, circuit: undefined })); setSubmitError('') }}
-                      style={{ border: `1.5px solid ${errors.circuit ? '#e53935' : '#cdd5d0'}` }}
-                    >
-                      <option value="">-- Choisissez un circuit --</option>
+                      style={{ border: `1.5px solid ${errors.circuit ? '#e53935' : '#cdd5d0'}` }}>
+                      <option value="">{t.selCircuit}</option>
                       {CIRCUITS.map(c => {
                         const full = isComplet(c)
-                        return (
-                          <option key={c} value={c} disabled={full}>
-                            {c}{full ? ' — COMPLET' : ''}
-                          </option>
-                        )
+                        return <option key={c} value={c} disabled={full}>{c}{full ? ` — ${t.complet}` : ''}</option>
                       })}
                     </select>
                     {errors.circuit && <span style={{ fontSize: '0.78rem', color: '#e53935' }}>{errors.circuit}</span>}
                     {form.circuit && isComplet(form.circuit) && (
                       <div style={{ background: '#ffeaea', border: '1px solid #e53935', borderRadius: '8px', padding: '10px 14px', fontSize: '0.85rem', color: '#c62828' }}>
-                        <i className="fas fa-ban" style={{ marginRight: '6px' }} />Ce circuit est complet. Veuillez choisir l'autre circuit.
+                        <i className="fas fa-ban" style={{ marginRight: '6px' }} />{t.completMsg}
                       </div>
                     )}
                   </div>
@@ -368,23 +446,17 @@ export default function CircuitsPage() {
                   <div style={{ display: 'flex', alignItems: 'center', gap: '12px', background: 'rgba(1,119,100,0.07)', border: '1.5px solid var(--green)', borderRadius: '10px', padding: '14px 18px' }}>
                     <i className="fas fa-calendar-alt" style={{ color: 'var(--green)', fontSize: '1.3rem', flexShrink: 0 }} />
                     <div>
-                      <p style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--green)', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '2px' }}>Date du circuit</p>
-                      <p style={{ fontSize: '1rem', fontWeight: 700, color: 'var(--green-dark)' }}>Vendredi 19 juin 2026</p>
-                      <p style={{ fontSize: '0.85rem', color: '#555' }}>14h00 – 18h00</p>
+                      <p style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--green)', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '2px' }}>{t.dateLabel}</p>
+                      <p style={{ fontSize: '1rem', fontWeight: 700, color: 'var(--green-dark)' }}>{t.dateValue}</p>
+                      <p style={{ fontSize: '0.85rem', color: '#555' }}>{t.dateTime}</p>
                     </div>
                   </div>
                 </div>
 
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
-                  <label style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--green-dark)' }}>
-                    Besoins spéciaux / Commentaires
-                  </label>
-                  <textarea
-                    rows={3}
-                    value={form.commentaires}
-                    placeholder="Informations complémentaires, besoins particuliers..."
-                    onChange={e => setForm(f => ({ ...f, commentaires: e.target.value }))}
-                  />
+                  <label style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--green-dark)' }}>{t.lComment}</label>
+                  <textarea rows={3} value={form.commentaires} placeholder={t.phComment}
+                    onChange={e => setForm(f => ({ ...f, commentaires: e.target.value }))} />
                 </div>
 
                 {submitError && (
@@ -395,25 +467,24 @@ export default function CircuitsPage() {
 
                 <button type="submit" className="submit-btn" disabled={submitting || (!!form.circuit && isComplet(form.circuit))}>
                   {submitting
-                    ? <><i className="fas fa-spinner fa-spin" style={{ marginRight: '8px' }} />Enregistrement...</>
-                    : <><i className="fas fa-paper-plane" style={{ marginRight: '8px' }} />Soumettre mon inscription</>
+                    ? <><i className="fas fa-spinner fa-spin" style={{ marginRight: '8px' }} />{t.submitting}</>
+                    : <><i className="fas fa-paper-plane" style={{ marginRight: '8px' }} />{t.submit}</>
                   }
                 </button>
 
                 <p style={{ textAlign: 'center', fontSize: '0.75rem', color: '#999', marginTop: '-6px' }}>
-                  <i className="fas fa-lock" style={{ marginRight: '4px' }} />
-                  Vos données sont confidentielles et ne seront utilisées que dans le cadre de cet événement.
+                  <i className="fas fa-lock" style={{ marginRight: '4px' }} />{t.privacy}
                 </p>
               </form>
             )}
           </div>
 
-          {/* Circuit info cards */}
+          {/* Info cards */}
           {!submitted && (
             <div style={{ maxWidth: '860px', margin: '32px auto 0', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '16px' }}>
               {[
-                { icon: 'fa-bus', title: 'Circuit 1 — Bus', desc: '100 personnes maximum. Circuit en bus, découverte guidée.' },
-                { icon: 'fa-city', title: 'Circuit 2 — Lomé', desc: '100 personnes maximum. Visite de la ville de Lomé.' },
+                { icon: 'fa-bus', title: t.cap1, desc: t.c1desc },
+                { icon: 'fa-city', title: t.cap2, desc: t.c2desc },
               ].map(c => (
                 <div key={c.title} style={{ background: 'white', borderRadius: '12px', padding: '20px', borderTop: '3px solid var(--gold)', boxShadow: '0 2px 12px rgba(0,0,0,0.06)', textAlign: 'center' }}>
                   <div style={{ width: '44px', height: '44px', borderRadius: '50%', background: 'rgba(1,119,100,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 12px', color: 'var(--green)' }}>
