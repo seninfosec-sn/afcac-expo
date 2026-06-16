@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 
 const CIRCUITS = [
@@ -22,7 +22,6 @@ interface FormData {
   telephone: string
   organisation: string
   pays: string
-  participants: string
   circuit: string
   date: string
   commentaires: string
@@ -30,14 +29,36 @@ interface FormData {
 
 const EMPTY: FormData = {
   prenom: '', nom: '', email: '', telephone: '',
-  organisation: '', pays: '', participants: '1',
+  organisation: '', pays: '',
   circuit: '', date: '2026-06-19', commentaires: '',
+}
+
+const CIRCUIT_KEYS: Record<string, 'circuit1' | 'circuit2'> = {
+  [CIRCUITS[0]]: 'circuit1',
+  [CIRCUITS[1]]: 'circuit2',
 }
 
 export default function CircuitsPage() {
   const [form, setForm] = useState<FormData>(EMPTY)
   const [submitted, setSubmitted] = useState(false)
   const [errors, setErrors] = useState<Partial<FormData>>({})
+  const [submitting, setSubmitting] = useState(false)
+  const [submitError, setSubmitError] = useState('')
+  const [counts, setCounts] = useState<{ circuit1: number; circuit2: number }>({ circuit1: 0, circuit2: 0 })
+
+  useEffect(() => {
+    fetch('/api/register')
+      .then(r => r.json())
+      .then(d => setCounts(d))
+      .catch(() => {})
+  }, [])
+
+  const MAX = 100
+
+  function isComplet(circuit: string) {
+    const key = CIRCUIT_KEYS[circuit]
+    return key ? counts[key] >= MAX : false
+  }
 
   function validate() {
     const e: Partial<FormData> = {}
@@ -50,11 +71,41 @@ export default function CircuitsPage() {
     return e
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
     const e2 = validate()
     if (Object.keys(e2).length > 0) { setErrors(e2); return }
-    setSubmitted(true)
+
+    if (isComplet(form.circuit)) {
+      setSubmitError('Ce circuit est complet (100 personnes atteint).')
+      return
+    }
+
+    setSubmitting(true)
+    setSubmitError('')
+    try {
+      const res = await fetch('/api/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      })
+      if (res.status === 409) {
+        setSubmitError('Ce circuit vient d\'atteindre sa capacité maximale (100 personnes). Veuillez choisir l\'autre circuit.')
+        const key = CIRCUIT_KEYS[form.circuit]
+        if (key) setCounts(c => ({ ...c, [key]: MAX }))
+      } else if (!res.ok) {
+        setSubmitError('Une erreur est survenue. Veuillez réessayer.')
+      } else {
+        const data = await res.json()
+        const key = CIRCUIT_KEYS[form.circuit]
+        if (key) setCounts(c => ({ ...c, [key]: data.count }))
+        setSubmitted(true)
+      }
+    } catch {
+      setSubmitError('Erreur de connexion. Veuillez réessayer.')
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   function field(
@@ -110,8 +161,11 @@ export default function CircuitsPage() {
         textarea { padding: 10px 14px; border: 1.5px solid #cdd5d0; border-radius: 8px; font-size: 0.95rem; font-family: var(--font-body); background: white; outline: none; resize: vertical; width: 100%; transition: border-color 0.2s; }
         textarea:focus { border-color: var(--green); }
         .submit-btn { width: 100%; padding: 14px; background: var(--green-dark); color: white; border: none; border-radius: 10px; font-size: 1rem; font-weight: 700; font-family: var(--font-head); letter-spacing: 0.06em; cursor: pointer; margin-top: 8px; transition: background 0.2s, transform 0.15s; }
-        .submit-btn:hover { background: var(--green); transform: translateY(-1px); }
+        .submit-btn:hover:not(:disabled) { background: var(--green); transform: translateY(-1px); }
+        .submit-btn:disabled { opacity: 0.6; cursor: not-allowed; }
         .success-icon { width: 72px; height: 72px; border-radius: 50%; background: rgba(1,119,100,0.12); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 2rem; color: var(--green); }
+        .capacity-bar-bg { height: 8px; background: #e8ede9; border-radius: 4px; overflow: hidden; margin-top: 6px; }
+        .capacity-bar-fill { height: 100%; border-radius: 4px; transition: width 0.5s; }
       `}</style>
 
       <div className="circuits-page">
@@ -137,9 +191,35 @@ export default function CircuitsPage() {
           <h1 style={{ fontFamily: 'var(--font-head)', color: 'white', fontSize: 'clamp(1.6rem, 4vw, 2.4rem)', fontWeight: 800, marginBottom: '12px' }}>
             Circuits Touristiques
           </h1>
-          <p style={{ color: 'rgba(255,255,255,0.78)', fontSize: '1rem', maxWidth: '560px', margin: '0 auto' }}>
-            Découvrez le Togo à travers nos circuits exclusifs organisés en marge de l'AFCAC Expo 2026. Inscrivez-vous ci-dessous.
+          <p style={{ color: 'rgba(255,255,255,0.78)', fontSize: '1rem', maxWidth: '560px', margin: '0 auto 28px' }}>
+            Découvrez le Togo à travers nos circuits exclusifs organisés en marge de l'AFCAC Expo 2026.
           </p>
+
+          {/* Capacité en temps réel */}
+          <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
+            {[
+              { label: 'Circuit 1 — Bus', key: 'circuit1' as const },
+              { label: 'Circuit 2 — Lomé', key: 'circuit2' as const },
+            ].map(c => {
+              const n = counts[c.key]
+              const pct = Math.min((n / MAX) * 100, 100)
+              const full = n >= MAX
+              return (
+                <div key={c.key} style={{ background: 'rgba(255,255,255,0.12)', borderRadius: '10px', padding: '12px 20px', minWidth: '200px', textAlign: 'left' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '6px' }}>
+                    <span style={{ color: 'white', fontSize: '0.82rem', fontWeight: 600 }}>{c.label}</span>
+                    {full
+                      ? <span style={{ background: '#e53935', color: 'white', fontSize: '0.7rem', fontWeight: 700, borderRadius: '4px', padding: '2px 7px' }}>COMPLET</span>
+                      : <span style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.78rem' }}>{n}/{MAX}</span>
+                    }
+                  </div>
+                  <div className="capacity-bar-bg">
+                    <div className="capacity-bar-fill" style={{ width: `${pct}%`, background: full ? '#e53935' : 'var(--gold)' }} />
+                  </div>
+                </div>
+              )
+            })}
+          </div>
         </div>
 
         {/* Form card */}
@@ -153,8 +233,8 @@ export default function CircuitsPage() {
                 <h2 style={{ fontFamily: 'var(--font-head)', color: 'var(--green-dark)', fontSize: '1.5rem', marginBottom: '12px' }}>
                   Inscription enregistrée !
                 </h2>
-                <p style={{ color: '#555', marginBottom: '28px', maxWidth: '480px', margin: '0 auto 28px' }}>
-                  Merci <strong>{form.prenom} {form.nom}</strong>, votre demande pour le <strong>{form.circuit.split('—')[0].trim()}</strong> a bien été reçue.
+                <p style={{ color: '#555', maxWidth: '480px', margin: '0 auto 28px' }}>
+                  Merci <strong>{form.prenom} {form.nom}</strong>, votre inscription au <strong>{form.circuit.split(':')[0]}</strong> a bien été reçue.
                   Un email de confirmation sera envoyé à <strong>{form.email}</strong>.
                 </p>
                 <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>
@@ -179,7 +259,7 @@ export default function CircuitsPage() {
                   <p style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--green)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '16px' }}>
                     <i className="fas fa-user" style={{ marginRight: '6px' }} />Informations personnelles
                   </p>
-                  <div className="form-row" style={{ gap: '20px' }}>
+                  <div className="form-row">
                     {field('prenom', 'Prénom', 'text', true, 'Jean')}
                     {field('nom', 'Nom', 'text', true, 'DUPONT')}
                   </div>
@@ -191,9 +271,7 @@ export default function CircuitsPage() {
                 </div>
 
                 <div className="form-row">
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
-                    {field('organisation', 'Organisation / Entreprise', 'text', false, 'Nom de votre structure')}
-                  </div>
+                  {field('organisation', 'Organisation / Entreprise', 'text', false, 'Nom de votre structure')}
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
                     <label style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--green-dark)' }}>
                       Pays <span style={{ color: '#e53935' }}>*</span>
@@ -221,13 +299,25 @@ export default function CircuitsPage() {
                     </label>
                     <select
                       value={form.circuit}
-                      onChange={e => { setForm(f => ({ ...f, circuit: e.target.value })); setErrors(er => ({ ...er, circuit: undefined })) }}
+                      onChange={e => { setForm(f => ({ ...f, circuit: e.target.value })); setErrors(er => ({ ...er, circuit: undefined })); setSubmitError('') }}
                       style={{ border: `1.5px solid ${errors.circuit ? '#e53935' : '#cdd5d0'}` }}
                     >
                       <option value="">-- Choisissez un circuit --</option>
-                      {CIRCUITS.map(c => <option key={c} value={c}>{c}</option>)}
+                      {CIRCUITS.map(c => {
+                        const full = isComplet(c)
+                        return (
+                          <option key={c} value={c} disabled={full}>
+                            {c}{full ? ' — COMPLET' : ''}
+                          </option>
+                        )
+                      })}
                     </select>
                     {errors.circuit && <span style={{ fontSize: '0.78rem', color: '#e53935' }}>{errors.circuit}</span>}
+                    {form.circuit && isComplet(form.circuit) && (
+                      <div style={{ background: '#ffeaea', border: '1px solid #e53935', borderRadius: '8px', padding: '10px 14px', fontSize: '0.85rem', color: '#c62828' }}>
+                        <i className="fas fa-ban" style={{ marginRight: '6px' }} />Ce circuit est complet. Veuillez choisir l'autre circuit.
+                      </div>
+                    )}
                   </div>
 
                   <div style={{ display: 'flex', alignItems: 'center', gap: '12px', background: 'rgba(1,119,100,0.07)', border: '1.5px solid var(--green)', borderRadius: '10px', padding: '14px 18px' }}>
@@ -238,7 +328,6 @@ export default function CircuitsPage() {
                       <p style={{ fontSize: '0.85rem', color: '#555' }}>14h00 – 18h00</p>
                     </div>
                   </div>
-
                 </div>
 
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
@@ -253,9 +342,17 @@ export default function CircuitsPage() {
                   />
                 </div>
 
-                <button type="submit" className="submit-btn">
-                  <i className="fas fa-paper-plane" style={{ marginRight: '8px' }} />
-                  Soumettre mon inscription
+                {submitError && (
+                  <div style={{ background: '#ffeaea', border: '1px solid #e53935', borderRadius: '8px', padding: '12px 16px', fontSize: '0.88rem', color: '#c62828' }}>
+                    <i className="fas fa-exclamation-circle" style={{ marginRight: '6px' }} />{submitError}
+                  </div>
+                )}
+
+                <button type="submit" className="submit-btn" disabled={submitting || (!!form.circuit && isComplet(form.circuit))}>
+                  {submitting
+                    ? <><i className="fas fa-spinner fa-spin" style={{ marginRight: '8px' }} />Enregistrement...</>
+                    : <><i className="fas fa-paper-plane" style={{ marginRight: '8px' }} />Soumettre mon inscription</>
+                  }
                 </button>
 
                 <p style={{ textAlign: 'center', fontSize: '0.75rem', color: '#999', marginTop: '-6px' }}>
