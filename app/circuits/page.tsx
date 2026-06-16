@@ -239,9 +239,6 @@ export default function CircuitsPage() {
                     </div>
                   </div>
 
-                  <div style={{ marginTop: '16px' }}>
-                    {field('participants', 'Nombre de participants', 'number', false)}
-                  </div>
                 </div>
 
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
