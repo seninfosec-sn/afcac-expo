@@ -4,11 +4,8 @@ import { useState } from 'react'
 import Link from 'next/link'
 
 const CIRCUITS = [
-  'Circuit Lomé Ville — Marché central, quartier colonial, artisanat',
-  'Circuit Lac Togo & Togoville — Pirogue traditionnelle, village lacustre',
-  'Circuit Kpalimé & Chutes d\'Akloa — Forêt tropicale, chutes d\'eau',
-  'Circuit Koutammakou — Pays Tamberma (Patrimoine UNESCO)',
-  'Circuit Combo (Lomé + Lac Togo)',
+  'CIRCUIT 1 : 100 Personnes maxi. (Circuit en bus)',
+  'CIRCUIT 2 : 100 Personnes maxi. (Ville de Lomé)',
 ]
 
 const PAYS = [
@@ -283,10 +280,8 @@ export default function CircuitsPage() {
           {!submitted && (
             <div style={{ maxWidth: '860px', margin: '32px auto 0', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '16px' }}>
               {[
-                { icon: 'fa-city', title: 'Lomé Ville', desc: 'Marché central, architecture coloniale, artisanat' },
-                { icon: 'fa-water', title: 'Lac Togo', desc: 'Togoville, pirogue traditionnelle, village lacustre' },
-                { icon: 'fa-tree', title: 'Kpalimé', desc: 'Forêt tropicale et chutes d\'Akloa' },
-                { icon: 'fa-landmark', title: 'Koutammakou', desc: 'Patrimoine UNESCO, Pays Tamberma' },
+                { icon: 'fa-bus', title: 'Circuit 1 — Bus', desc: '100 personnes maximum. Circuit en bus, découverte guidée.' },
+                { icon: 'fa-city', title: 'Circuit 2 — Lomé', desc: '100 personnes maximum. Visite de la ville de Lomé.' },
               ].map(c => (
                 <div key={c.title} style={{ background: 'white', borderRadius: '12px', padding: '20px', borderTop: '3px solid var(--gold)', boxShadow: '0 2px 12px rgba(0,0,0,0.06)', textAlign: 'center' }}>
                   <div style={{ width: '44px', height: '44px', borderRadius: '50%', background: 'rgba(1,119,100,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 12px', color: 'var(--green)' }}>
