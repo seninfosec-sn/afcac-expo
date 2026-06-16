@@ -31,7 +31,7 @@ interface FormData {
 const EMPTY: FormData = {
   prenom: '', nom: '', email: '', telephone: '',
   organisation: '', pays: '', participants: '1',
-  circuit: '', date: '', commentaires: '',
+  circuit: '', date: '2026-06-19', commentaires: '',
 }
 
 export default function CircuitsPage() {
@@ -47,7 +47,6 @@ export default function CircuitsPage() {
     if (!form.telephone.trim()) e.telephone = 'Requis'
     if (!form.pays) e.pays = 'Requis'
     if (!form.circuit) e.circuit = 'Requis'
-    if (!form.date) e.date = 'Requis'
     return e
   }
 
@@ -231,22 +230,16 @@ export default function CircuitsPage() {
                     {errors.circuit && <span style={{ fontSize: '0.78rem', color: '#e53935' }}>{errors.circuit}</span>}
                   </div>
 
-                  <div className="form-row">
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
-                      <label htmlFor="date" style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--green-dark)' }}>
-                        Date souhaitée <span style={{ color: '#e53935' }}>*</span>
-                      </label>
-                      <input
-                        id="date"
-                        type="date"
-                        min="2026-06-15"
-                        max="2026-06-19"
-                        value={form.date}
-                        onChange={e => { setForm(f => ({ ...f, date: e.target.value })); setErrors(er => ({ ...er, date: undefined })) }}
-                        style={{ padding: '10px 14px', border: `1.5px solid ${errors.date ? '#e53935' : '#cdd5d0'}`, borderRadius: '8px', fontSize: '0.95rem', fontFamily: 'var(--font-body)', outline: 'none', background: 'white' }}
-                      />
-                      {errors.date && <span style={{ fontSize: '0.78rem', color: '#e53935' }}>{errors.date}</span>}
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '12px', background: 'rgba(1,119,100,0.07)', border: '1.5px solid var(--green)', borderRadius: '10px', padding: '14px 18px' }}>
+                    <i className="fas fa-calendar-alt" style={{ color: 'var(--green)', fontSize: '1.3rem', flexShrink: 0 }} />
+                    <div>
+                      <p style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--green)', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '2px' }}>Date du circuit</p>
+                      <p style={{ fontSize: '1rem', fontWeight: 700, color: 'var(--green-dark)' }}>Vendredi 19 juin 2026</p>
+                      <p style={{ fontSize: '0.85rem', color: '#555' }}>14h00 – 18h00</p>
                     </div>
+                  </div>
+
+                  <div style={{ marginTop: '16px' }}>
                     {field('participants', 'Nombre de participants', 'number', false)}
                   </div>
                 </div>
