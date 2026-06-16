@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Link from 'next/link'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 interface Particle {
@@ -89,6 +90,9 @@ export default function Hero() {
         <div className="hero-actions">
           <a href="#register" className="btn btn-primary">{t.hero.cta}</a>
           <a href="#about" className="btn btn-outline">{t.hero.ctaSecondary}</a>
+          <Link href="/circuits" className="btn btn-outline" style={{ borderColor: 'var(--gold)', color: 'var(--gold)', display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+            <i className="fas fa-map-marked-alt" /> CIRCUITS TOURISTIQUES
+          </Link>
         </div>
       </div>
 
