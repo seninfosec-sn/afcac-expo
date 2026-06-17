@@ -41,6 +41,18 @@ const T = {
     c2desc: '100 people max. City of Lomé visit.',
     circ1: 'CIRCUIT 1: 100 People max. (Bus circuit)',
     circ2: 'CIRCUIT 2: 100 People max. (City of Lomé)',
+    c1stops: [
+      'AFLAO BORDER WITH GHANA (The only land border in the world adjacent to a capital city)',
+      'SANVEE CONDJI BORDER WITH BENIN (It has a juxtaposed control post, a major cross-border infrastructure designed to centralize customs and police controls)',
+      'ANEHO TOWN (contemplate the confluence between Lake Togo and the Atlantic Ocean and appreciate the murals of the town hall detailing the rites of the taking of the sacred stone)',
+      "SLAVE HOUSE OF AGBODRAFO (Historical vestige of the slave trade, it served as a warehouse for slave traders before slaves departed for America)",
+    ],
+    c2stops: [
+      'PALAIS DE LOMÉ (One of the iconic monuments of the Togolese capital, a major center of art and culture)',
+      "CENTRE D'ART D'AFRIQUE (A private center housing a vast collection of thousands of ancient African art objects, from the 10th to the 19th century)",
+      "ARTIST KOUMY'S HOUSE (located in a large district of Lomé, the artist's house serves as an artistic villa where he exhibits his works, with a gallery featuring colorful frescoes and mosaics)",
+      'ARTISAN VILLAGE (a stop for purchasing Togolese souvenirs)',
+    ],
   },
   fr: {
     back: 'Retour au site',
@@ -75,6 +87,18 @@ const T = {
     c2desc: '100 personnes maximum. Visite de la ville de Lomé.',
     circ1: 'CIRCUIT 1 : 100 Personnes maxi. (Circuit en bus)',
     circ2: 'CIRCUIT 2 : 100 Personnes maxi. (Ville de Lomé)',
+    c1stops: [
+      "FRONTIERE AFLAO AVEC LE GHANA (La seule frontière terrestre au monde qui jouxte une capitale)",
+      "FRONTIERE SANVEE CONDJI AVEC LE BENIN (Il y existe un poste de contrôle juxtaposé, une infrastructure transfrontalière majeure conçue pour centraliser les contrôles douaniers et policiers)",
+      "ANEHO VILLE (contempler l'embouchure entre le Lac Togo et l'océan atlantique et apprécier les fresques murales de la mairie détaillant les rites de la prise de la pierre sacrée)",
+      "Maison des esclaves d'Agbodrafo (Vestige historique de la traite négrière, il servait d'entrepôt aux négriers avant le départ des esclaves vers l'Amérique)",
+    ],
+    c2stops: [
+      "PALAIS DE LOME (L'un des monuments emblématiques de la capitale togolaise, il est un grand centre d'art et de culture)",
+      "CENTRE D'ART D'AFRIQUE (C'est un centre privé qui abrite une vaste collection de milliers d'objets d'art africain ancien (du Xème au XIXème siècle))",
+      "MAISON DE L'ARTISTE KOUMY (située dans un grand quartier de Lomé, la maison de l'artiste fait office de villa artistique où il expose aussi ses œuvres. Il y installe une galerie avec ses fresques et mosaïques colorées)",
+      "VILLAGE ARTISANAL (un arrêt pour achat de souvenirs du Togo par les visiteurs)",
+    ],
   },
   pt: {
     back: 'Voltar ao site',
@@ -109,6 +133,18 @@ const T = {
     c2desc: 'Máximo 100 pessoas. Visita à cidade de Lomé.',
     circ1: 'CIRCUITO 1: Máx. 100 Pessoas (Circuito de autocarro)',
     circ2: 'CIRCUITO 2: Máx. 100 Pessoas (Cidade de Lomé)',
+    c1stops: [
+      'FRONTEIRA AFLAO COM O GANA (A única fronteira terrestre no mundo adjacente a uma capital)',
+      'FRONTEIRA SANVEE CONDJI COM O BENIM (Dispõe de um posto de controlo juxtaposto, uma importante infraestrutura transfronteiriça concebida para centralizar os controlos aduaneiros e policiais)',
+      'CIDADE DE ANEHO (contemplar a confluência entre o Lago Togo e o oceano Atlântico e apreciar os murais da câmara municipal com os ritos da tomada da pedra sagrada)',
+      "CASA DOS ESCRAVOS DE AGBODRAFO (Vestígio histórico do comércio de escravos, servia de armazém antes da partida dos escravos para a América)",
+    ],
+    c2stops: [
+      'PALAIS DE LOMÉ (Um dos monumentos emblemáticos da capital togolesa, é um grande centro de arte e cultura)',
+      "CENTRE D'ART D'AFRIQUE (Centro privado com uma vasta coleção de milhares de objetos de arte africana antiga, do século X ao XIX)",
+      "CASA DO ARTISTA KOUMY (situada num grande bairro de Lomé, a casa do artista serve como villa artística onde expõe as suas obras, com uma galeria de frescos e mosaicos coloridos)",
+      'ALDEIA ARTESANAL (paragem para compra de lembranças do Togo)',
+    ],
   },
 }
 
@@ -323,9 +359,32 @@ export default function CircuitsPage() {
             <i className="fas fa-map-marked-alt" style={{ color: 'var(--gold)', fontSize: '0.8rem' }} />
             <span style={{ color: 'var(--gold)', fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.1em' }}>{t.badge}</span>
           </div>
-          <h1 style={{ fontFamily: 'var(--font-head)', color: 'white', fontSize: 'clamp(1.6rem, 4vw, 2.4rem)', fontWeight: 800, marginBottom: '12px' }}>
+          <h1 style={{ fontFamily: 'var(--font-head)', color: 'white', fontSize: 'clamp(1.6rem, 4vw, 2.4rem)', fontWeight: 800, marginBottom: '24px' }}>
             {t.title}
           </h1>
+
+          {/* Circuit details */}
+          <div style={{ maxWidth: '860px', margin: '0 auto 20px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '16px', textAlign: 'left' }}>
+            {([
+              { key: 'c1', title: t.circ1, stops: t.c1stops, icon: 'fa-bus' },
+              { key: 'c2', title: t.circ2, stops: t.c2stops, icon: 'fa-city' },
+            ] as const).map(c => (
+              <div key={c.key} style={{ background: 'rgba(255,255,255,0.10)', border: '1px solid rgba(255,255,255,0.22)', borderRadius: '12px', padding: '18px 20px' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '14px' }}>
+                  <span style={{ background: 'var(--gold)', borderRadius: '6px', width: '30px', height: '30px', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                    <i className={`fas ${c.icon}`} style={{ color: 'var(--green-dark)', fontSize: '0.85rem' }} />
+                  </span>
+                  <span style={{ color: 'var(--gold)', fontFamily: 'var(--font-head)', fontWeight: 700, fontSize: '0.82rem', letterSpacing: '0.04em', lineHeight: 1.3 }}>{c.title}</span>
+                </div>
+                <ol style={{ margin: 0, paddingLeft: '20px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                  {c.stops.map((s, i) => (
+                    <li key={i} style={{ color: 'rgba(255,255,255,0.85)', fontSize: '0.82rem', lineHeight: 1.5 }}>{s}</li>
+                  ))}
+                </ol>
+              </div>
+            ))}
+          </div>
+
           <p style={{ color: 'rgba(255,255,255,0.78)', fontSize: '1rem', maxWidth: '560px', margin: '0 auto 28px' }}>
             {t.subtitle}
           </p>
