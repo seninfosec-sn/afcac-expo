@@ -19,7 +19,7 @@ export default function Programme() {
           <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'flex-start', gap: '24px', marginTop: '8px' }}>
             <div className="prog-bulletin-bar" style={{ justifyContent: 'center', flexDirection: 'column', alignItems: 'center', margin: 0 }}>
               <span className="btn btn-primary prog-bulletin-btn" style={{ cursor: 'default', pointerEvents: 'none' }}>
-                <i className="fas fa-file-alt" /> Download the Agenda
+                <i className="fas fa-file-alt" /> {p.downloadAgenda}
               </span>
               <div className="prog-bulletin-langs">
                 <a href="/Program 4.pdf" download className="prog-lang-btn">EN</a>
@@ -35,14 +35,14 @@ export default function Programme() {
                 className="btn btn-primary prog-bulletin-btn"
                 style={{ whiteSpace: 'nowrap' }}
               >
-                <i className="fas fa-calendar-check" /> Bilateral Meetings
+                <i className="fas fa-calendar-check" /> {p.bilateralMeetings}
               </a>
               <a
                 href="/circuits"
                 className="btn prog-bulletin-btn"
                 style={{ whiteSpace: 'nowrap', background: 'var(--gold)', color: 'var(--green-dark)', border: 'none', fontWeight: 700 }}
               >
-                <i className="fas fa-map-marked-alt" /> Circuits Touristiques
+                <i className="fas fa-map-marked-alt" /> {p.circuits}
               </a>
             </div>
           </div>

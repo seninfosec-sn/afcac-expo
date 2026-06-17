@@ -48,7 +48,7 @@ export default function Remarks() {
               LIVE
             </span>
             <span style={{ color: 'white', fontWeight: 700, fontSize: '1rem', letterSpacing: '0.04em' }}>
-              AFCAC Expo 2026 — Live Stream
+              {r.liveStreamTitle}
             </span>
             <a
               href="https://www.youtube.com/watch?v=IkbJAhx7QW8"
@@ -68,7 +68,7 @@ export default function Remarks() {
                 gap: '6px',
               }}
             >
-              <i className="fab fa-youtube" /> Watch on YouTube
+              <i className="fab fa-youtube" /> {r.watchYoutube}
             </a>
           </div>
           <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}>
@@ -92,7 +92,7 @@ export default function Remarks() {
           textTransform: 'uppercase',
           marginBottom: '28px',
         }}>
-          Promotional Videos
+          {r.promoVideos}
         </h3>
 
         <div className="remarks-grid">

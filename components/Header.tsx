@@ -87,7 +87,7 @@ export default function Header() {
             </li>
             <li>
               <a href="/circuits" className="nav-link" style={{ color: 'var(--gold)', fontWeight: 700 }} onClick={closeMenu}>
-                <i className="fas fa-map-marked-alt" style={{ marginRight: '5px' }} />Circuits Touristiques
+                <i className="fas fa-map-marked-alt" style={{ marginRight: '5px' }} />{t.programme.circuits}
               </a>
             </li>
             <li>
@@ -98,7 +98,7 @@ export default function Header() {
             </li>
             <li>
               <a href="https://meet.afcac.org/" target="_blank" rel="noopener noreferrer" className="nav-link btn-register" style={{ background: 'var(--gold)', borderColor: 'var(--gold)', color: 'var(--green-dark)' }} onClick={closeMenu}>
-                <i className="fas fa-calendar-check" style={{ marginRight: '5px' }} />Bilateral Meetings
+                <i className="fas fa-calendar-check" style={{ marginRight: '5px' }} />{t.programme.bilateralMeetings}
               </a>
             </li>
           </ul>
