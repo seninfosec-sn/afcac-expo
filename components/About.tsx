@@ -43,14 +43,9 @@ export default function About() {
           </div>
         </div>
 
-        <div className="event-banner">
-          <a href="https://www.afcac.org/expo-registration/" target="_blank" rel="noopener noreferrer">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/29-April-Togo-Event-Banner-.gif"
-              alt="AFCAC Expo 2026 — Lomé, Togo"
-              style={{ width: '100%', height: 'auto', display: 'block', borderRadius: 'var(--radius)', cursor: 'pointer' }}
-            />
+        <div style={{ display: 'flex', justifyContent: 'center', margin: '32px 0' }}>
+          <a href="/circuits" className="btn btn-primary" style={{ background: 'var(--gold)', borderColor: 'var(--gold)', color: 'var(--green-dark)', fontWeight: 700, fontSize: '1.05rem', padding: '14px 36px', display: 'inline-flex', alignItems: 'center', gap: '10px' }}>
+            <i className="fas fa-map-marked-alt" /> {t.programme.circuits}
           </a>
         </div>
 
