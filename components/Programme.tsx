@@ -27,7 +27,7 @@ export default function Programme() {
                 <a href="/PT Program.pdf" download className="prog-lang-btn">PT</a>
               </div>
             </div>
-            <div style={{ display: 'flex', alignItems: 'center' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
               <a
                 href="https://meet.afcac.org/"
                 target="_blank"
@@ -36,6 +36,13 @@ export default function Programme() {
                 style={{ whiteSpace: 'nowrap' }}
               >
                 <i className="fas fa-calendar-check" /> Bilateral Meetings
+              </a>
+              <a
+                href="/circuits"
+                className="btn prog-bulletin-btn"
+                style={{ whiteSpace: 'nowrap', background: 'var(--gold)', color: 'var(--green-dark)', border: 'none', fontWeight: 700 }}
+              >
+                <i className="fas fa-map-marked-alt" /> Circuits Touristiques
               </a>
             </div>
           </div>

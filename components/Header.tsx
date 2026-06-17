@@ -86,6 +86,11 @@ export default function Header() {
               <a href="#travel" className={lc('travel')} onClick={closeMenu}>{t.header.travel}</a>
             </li>
             <li>
+              <a href="/circuits" className="nav-link" style={{ color: 'var(--gold)', fontWeight: 700 }} onClick={closeMenu}>
+                <i className="fas fa-map-marked-alt" style={{ marginRight: '5px' }} />Circuits Touristiques
+              </a>
+            </li>
+            <li>
               <a href="#accommodation" className={lc('accommodation')} onClick={closeMenu}>{t.header.accommodation}</a>
             </li>
             <li>
