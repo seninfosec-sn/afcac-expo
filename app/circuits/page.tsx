@@ -377,9 +377,17 @@ export default function CircuitsPage() {
                   <span style={{ color: 'var(--gold)', fontFamily: 'var(--font-head)', fontWeight: 700, fontSize: '0.82rem', letterSpacing: '0.04em', lineHeight: 1.3 }}>{c.title}</span>
                 </div>
                 <ol style={{ margin: 0, paddingLeft: '20px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                  {c.stops.map((s, i) => (
-                    <li key={i} style={{ color: 'rgba(255,255,255,0.85)', fontSize: '0.82rem', lineHeight: 1.5 }}>{s}</li>
-                  ))}
+                  {c.stops.map((s, i) => {
+                    const parenIdx = s.indexOf('(')
+                    const name = parenIdx > -1 ? s.slice(0, parenIdx).trim() : s
+                    const desc = parenIdx > -1 ? s.slice(parenIdx) : ''
+                    return (
+                      <li key={i} style={{ color: 'rgba(255,255,255,0.85)', fontSize: '0.82rem', lineHeight: 1.5 }}>
+                        <span style={{ color: 'var(--gold)', fontWeight: 700 }}>{name}</span>
+                        {desc && <span style={{ color: 'rgba(255,255,255,0.75)', fontWeight: 400 }}> {desc}</span>}
+                      </li>
+                    )
+                  })}
                 </ol>
               </div>
             ))}
