@@ -351,7 +351,7 @@ export default function CircuitsPage() {
         .circuit-select-section { max-width: 960px; margin: 0 auto; padding: 40px 24px 0; }
         .circuit-cards-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
         @media (max-width: 700px) { .circuit-cards-grid { grid-template-columns: 1fr; } }
-        .circuit-select-card { background: white; border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); border: 2px solid transparent; overflow: hidden; transition: border-color 0.2s, box-shadow 0.2s; }
+        .circuit-select-card { background: white; border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); border: 2px solid transparent; overflow: hidden; transition: border-color 0.2s, box-shadow 0.2s; display: flex; flex-direction: column; }
         .circuit-select-card:hover { border-color: var(--gold); box-shadow: 0 8px 32px rgba(0,0,0,0.13); }
         .circuit-select-card.full { opacity: 0.7; }
         .circuits-card { max-width: 860px; margin: 0 auto; background: white; border-radius: 16px; box-shadow: 0 8px 40px rgba(0,0,0,0.10); padding: 48px 48px 56px; }
@@ -438,7 +438,7 @@ export default function CircuitsPage() {
                       )}
                     </div>
                     {/* Stops list */}
-                    <div style={{ padding: '18px 20px' }}>
+                    <div style={{ padding: '18px 20px', flex: 1 }}>
                       <ol style={{ margin: 0, paddingLeft: '18px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
                         {c.stops.map((s, i) => {
                           const parenIdx = s.indexOf('(')
