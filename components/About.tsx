@@ -44,7 +44,7 @@ export default function About() {
         </div>
 
         <div style={{ display: 'flex', justifyContent: 'center', margin: '32px 0' }}>
-          <a href="/circuits" className="btn btn-primary" style={{ background: 'var(--gold)', borderColor: 'var(--gold)', color: 'var(--green-dark)', fontWeight: 700, fontSize: '1.05rem', padding: '14px 36px', display: 'inline-flex', alignItems: 'center', gap: '10px' }}>
+          <a href="/circuits" className="btn btn-primary" style={{ background: 'var(--gold)', borderColor: 'var(--gold)', color: 'var(--green-dark)', fontWeight: 700, fontSize: '1.2rem', padding: '18px 56px', display: 'inline-flex', alignItems: 'center', gap: '10px' }}>
             <i className="fas fa-map-marked-alt" /> {t.programme.circuits}
           </a>
         </div>
