@@ -15,7 +15,7 @@ export default function Travel() {
           <div className="section-divider" />
         </div>
 
-        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'flex-start', gap: '24px', marginBottom: '32px' }}>
+        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '32px' }}>
           <div className="prog-bulletin-bar" style={{ justifyContent: 'center', flexDirection: 'column', alignItems: 'center', margin: 0 }}>
             <span className="btn btn-primary prog-bulletin-btn" style={{ cursor: 'default', pointerEvents: 'none' }}>
               <i className="fas fa-file-alt" /> {tr.downloadBulletin}
@@ -25,11 +25,6 @@ export default function Travel() {
               <a href="https://www.afcac.org/wp-content/uploads/2026/05/FR_EXPO-Information-Bulletin-Lome-TOGO-19.05.2026.pdf" target="_blank" rel="noopener noreferrer" className="prog-lang-btn">FR</a>
               <a href="https://www.afcac.org/wp-content/uploads/2026/05/PORT_EXPO-Information-Bulletin-Lome-TOGO_19.05.2026.pdf" target="_blank" rel="noopener noreferrer" className="prog-lang-btn">PR</a>
             </div>
-          </div>
-          <div style={{ display: 'flex', alignItems: 'center' }}>
-            <a href="/circuits" className="btn prog-bulletin-btn" style={{ background: 'var(--gold)', color: 'var(--green-dark)', border: 'none', fontWeight: 700, whiteSpace: 'nowrap' }}>
-              <i className="fas fa-map-marked-alt" /> {tr.circuits}
-            </a>
           </div>
         </div>
 
