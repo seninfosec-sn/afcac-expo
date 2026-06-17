@@ -81,6 +81,9 @@ export const translations = {
     remarks: {
       sectionTag: 'Leadership',
       sectionTitle: 'Live Stream',
+      liveStreamTitle: 'AFCAC Expo 2026 — Live Stream',
+      watchYoutube: 'Watch on YouTube',
+      promoVideos: 'Promotional Videos',
       watchMessage: 'Watch Message',
       speaker1Name: 'Secretary General, AFCAC',
       speaker1Org: 'African Civil Aviation Commission',
@@ -94,6 +97,9 @@ export const translations = {
     programme: {
       sectionTag: 'Schedule',
       sectionTitle: 'Event Programme',
+      downloadAgenda: 'Download the Agenda',
+      bilateralMeetings: 'Bilateral Meetings',
+      circuits: 'Tourist Circuits',
       sectionDesc: 'Lomé, Togo — 15–19 June 2026 | Five days of high-level sessions, ministerial roundtables, bilateral meetings, industrial exhibition and official ceremonies.',
       colTime: 'Time',
       colRoom: 'Room',
@@ -283,6 +289,8 @@ export const translations = {
     travel: {
       sectionTag: 'Practical Information',
       sectionTitle: 'Travel Tips',
+      downloadBulletin: 'Download the Information Bulletin',
+      circuits: 'Tourist Circuits',
       cards: [
         { icon: 'fas fa-boxes', title: 'Logistic Details', desc: '', link: 'https://www.afcac.org/expo-logistic/', linkLabel: 'Logistic' },
         { icon: 'fas fa-plane', title: 'By Air', desc: 'Lomé\'s Gnassingbé Eyadema International Airport is just 4 km from the city centre. It serves numerous African and international destinations via direct and connecting flights.' },
@@ -293,6 +301,8 @@ export const translations = {
     accommodation: {
       sectionTag: 'Where to Stay',
       sectionTitle: 'Accommodation',
+      downloadHotels: 'Download list of hotels',
+      circuits: 'Tourist Circuits',
       sectionDesc:
         'AFCAC has negotiated preferential rates with partner hotels in Lomé for convention delegates.',
       officialBadge: 'Venue',
@@ -447,6 +457,9 @@ export const translations = {
     remarks: {
       sectionTag: 'Leadership',
       sectionTitle: 'Live Stream',
+      liveStreamTitle: 'AFCAC Expo 2026 — Live Stream',
+      watchYoutube: 'Regarder sur YouTube',
+      promoVideos: 'Vidéos promotionnelles',
       watchMessage: 'Voir le message',
       speaker1Name: 'Secrétaire général de l\'AFCAC',
       speaker1Org: 'Commission africaine de l\'aviation civile',
@@ -460,6 +473,9 @@ export const translations = {
     programme: {
       sectionTag: 'Programme',
       sectionTitle: 'Programme de l\'Événement',
+      downloadAgenda: 'Télécharger le Programme',
+      bilateralMeetings: 'Réunions Bilatérales',
+      circuits: 'Circuits Touristiques',
       sectionDesc: 'Lomé, Togo — 15–19 juin 2026 | Cinq jours de sessions de haut niveau, tables rondes ministérielles, réunions bilatérales, exposition industrielle et cérémonies officielles.',
       colTime: 'Heure',
       colRoom: 'Salle',
@@ -649,6 +665,8 @@ export const translations = {
     travel: {
       sectionTag: 'Informations pratiques',
       sectionTitle: 'Conseils de voyage',
+      downloadBulletin: 'Télécharger le Bulletin d\'information',
+      circuits: 'Circuits Touristiques',
       cards: [
         { icon: 'fas fa-boxes', title: 'Détails logistiques', desc: '', link: 'https://www.afcac.org/expo-logistic/', linkLabel: 'Logistic' },
         { icon: 'fas fa-plane', title: 'Par avion', desc: 'L\'aéroport international Gnassingbé Eyadema de Lomé est situé à seulement 4 km du centre-ville. Il dessert de nombreuses destinations africaines et internationales.' },
@@ -659,6 +677,8 @@ export const translations = {
     accommodation: {
       sectionTag: 'Hébergement',
       sectionTitle: 'Hébergement',
+      downloadHotels: 'Télécharger la liste des hôtels',
+      circuits: 'Circuits Touristiques',
       sectionDesc:
         'L\'AFCAC a négocié des tarifs préférentiels avec les hôtels partenaires de Lomé pour les délégués de la convention.',
       officialBadge: 'Venue',
@@ -813,6 +833,9 @@ export const translations = {
     remarks: {
       sectionTag: 'Liderança',
       sectionTitle: 'Live Stream',
+      liveStreamTitle: 'AFCAC Expo 2026 — Live Stream',
+      watchYoutube: 'Ver no YouTube',
+      promoVideos: 'Vídeos Promocionais',
       watchMessage: 'Ver mensagem',
       speaker1Name: 'Secretário-Geral da AFCAC',
       speaker1Org: 'Comissão Africana de Aviação Civil',
@@ -826,6 +849,9 @@ export const translations = {
     programme: {
       sectionTag: 'Programa',
       sectionTitle: 'Programa do Evento',
+      downloadAgenda: 'Descarregar o Programa',
+      bilateralMeetings: 'Reuniões Bilaterais',
+      circuits: 'Circuitos Turísticos',
       sectionDesc: 'Lomé, Togo — 15–19 de junho de 2026 | Cinco dias de sessões de alto nível, mesas-redondas ministeriais, reuniões bilaterais, exposição industrial e cerimónias oficiais.',
       colTime: 'Hora',
       colRoom: 'Sala',
@@ -1015,6 +1041,8 @@ export const translations = {
     travel: {
       sectionTag: 'Informações Práticas',
       sectionTitle: 'Dicas de Viagem',
+      downloadBulletin: 'Descarregar o Boletim de Informação',
+      circuits: 'Circuitos Turísticos',
       cards: [
         { icon: 'fas fa-boxes', title: 'Detalhes Logísticos', desc: '', link: 'https://www.afcac.org/expo-logistic/', linkLabel: 'Logistic' },
         { icon: 'fas fa-plane', title: 'De Avião', desc: 'O Aeroporto Internacional Gnassingbé Eyadema de Lomé está situado a apenas 4 km do centro da cidade, com ligações para numerosos destinos africanos e internacionais.' },
@@ -1025,6 +1053,8 @@ export const translations = {
     accommodation: {
       sectionTag: 'Alojamento',
       sectionTitle: 'Alojamento',
+      downloadHotels: 'Descarregar a lista de hotéis',
+      circuits: 'Circuitos Turísticos',
       sectionDesc:
         'A AFCAC negociou tarifas preferenciais com hotéis parceiros em Lomé para os delegados da convenção.',
       officialBadge: 'Venue',
