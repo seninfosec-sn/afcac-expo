@@ -413,28 +413,6 @@ export default function CircuitsPage() {
             <i className="fas fa-hand-pointer" style={{ marginRight: '6px' }} />{t.choosePrompt}
           </p>
 
-          {/* Capacity overview */}
-          <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
-            {circuits.map(c => {
-              const n = counts[c.key]
-              const pct = Math.min((n / MAX) * 100, 100)
-              const full = isComplet(c.key)
-              return (
-                <div key={c.key} style={{ background: 'rgba(255,255,255,0.12)', borderRadius: '10px', padding: '10px 18px', minWidth: '180px', textAlign: 'left' }}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '4px' }}>
-                    <span style={{ color: 'white', fontSize: '0.8rem', fontWeight: 600 }}>{c.capLabel}</span>
-                    {full
-                      ? <span style={{ background: '#e53935', color: 'white', fontSize: '0.68rem', fontWeight: 700, borderRadius: '4px', padding: '2px 6px' }}>{t.complet}</span>
-                      : <span style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.75rem' }}>{n}/{MAX}</span>
-                    }
-                  </div>
-                  <div className="capacity-bar-bg">
-                    <div className="capacity-bar-fill" style={{ width: `${pct}%`, background: full ? '#e53935' : 'var(--gold)' }} />
-                  </div>
-                </div>
-              )
-            })}
-          </div>
         </div>
 
         {/* Circuit selection cards */}
