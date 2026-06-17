@@ -406,9 +406,21 @@ export default function CircuitsPage() {
           <h1 style={{ fontFamily: 'var(--font-head)', color: 'white', fontSize: 'clamp(1.6rem, 4vw, 2.4rem)', fontWeight: 800, marginBottom: '10px' }}>
             {t.title}
           </h1>
-          <p style={{ color: 'rgba(255,255,255,0.78)', fontSize: '1rem', maxWidth: '560px', margin: '0 auto 6px' }}>
+          <p style={{ color: 'rgba(255,255,255,0.78)', fontSize: '1rem', maxWidth: '560px', margin: '0 auto 20px' }}>
             {t.subtitle}
           </p>
+
+          {/* Circuit date info */}
+          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '14px', background: 'rgba(255,255,255,0.10)', border: '1px solid rgba(255,255,255,0.22)', borderRadius: '12px', padding: '14px 24px', marginBottom: '20px' }}>
+            <i className="fas fa-calendar-alt" style={{ color: 'var(--gold)', fontSize: '1.4rem', flexShrink: 0 }} />
+            <div style={{ textAlign: 'left' }}>
+              <p style={{ fontSize: '0.7rem', fontWeight: 700, color: 'var(--gold)', letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: '4px' }}>{t.secCircuit}</p>
+              <p style={{ fontSize: '0.72rem', fontWeight: 600, color: 'rgba(255,255,255,0.65)', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '2px' }}>{t.dateLabel}</p>
+              <p style={{ fontSize: '1rem', fontWeight: 800, color: 'white', marginBottom: '2px' }}>{t.dateValue}</p>
+              <p style={{ fontSize: '0.88rem', color: 'rgba(255,255,255,0.75)' }}>{t.dateTime}</p>
+            </div>
+          </div>
+
           <p style={{ color: 'var(--gold)', fontSize: '0.9rem', fontWeight: 600, margin: '0 auto 24px' }}>
             <i className="fas fa-hand-pointer" style={{ marginRight: '6px' }} />{t.choosePrompt}
           </p>
