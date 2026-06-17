@@ -90,7 +90,7 @@ export default function Hero() {
         <div className="hero-actions">
           <a href="#register" className="btn btn-primary">{t.hero.cta}</a>
           <a href="#about" className="btn btn-outline">{t.hero.ctaSecondary}</a>
-          <Link href="/circuits" className="btn btn-outline" style={{ borderColor: '#e53935', color: '#e53935', display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+          <Link href="/circuits" className="btn" style={{ background: '#e53935', borderColor: '#e53935', color: 'white', display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
             <i className="fas fa-map-marked-alt" /> {t.programme.circuits}
           </Link>
         </div>
