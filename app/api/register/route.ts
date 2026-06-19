@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { getDb, initDb } from '@/lib/db'
+import { getDb, initDb, initSettings, getRegistrationsOpen } from '@/lib/db'
 
 const MAX = 100
 
@@ -14,21 +14,25 @@ const CIRCUIT_KEY: Record<string, string> = {
 
 export async function GET() {
   await initDb()
+  await initSettings()
   const sql = getDb()
-  const rows = await sql`
-    SELECT circuit_key, COUNT(*)::int AS count
-    FROM registrations
-    GROUP BY circuit_key
-  `
+  const [rows, open] = await Promise.all([
+    sql`SELECT circuit_key, COUNT(*)::int AS count FROM registrations GROUP BY circuit_key`,
+    getRegistrationsOpen(),
+  ])
   const counts = { circuit1: 0, circuit2: 0 }
   for (const r of rows) {
     if (r.circuit_key === 'circuit1') counts.circuit1 = r.count
     if (r.circuit_key === 'circuit2') counts.circuit2 = r.count
   }
-  return NextResponse.json(counts)
+  return NextResponse.json({ ...counts, closed: !open })
 }
 
 export async function POST(req: NextRequest) {
+  await initSettings()
+  const open = await getRegistrationsOpen()
+  if (!open) return NextResponse.json({ error: 'inscriptions_fermees' }, { status: 403 })
+
   const body = await req.json()
   const { circuit, prenom, nom, titre, email, telephone, organisation, pays, commentaires } = body
 

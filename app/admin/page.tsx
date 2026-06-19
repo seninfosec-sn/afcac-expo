@@ -26,8 +26,8 @@ const circuitLabels: Record<string, string> = {
 }
 
 function toRows(regs: Registration[], label: string) {
-  return regs.map((r, i) => [
-    i + 1, r.prenom, r.nom, r.titre || '',
+  return regs.map((r, idx) => [
+    idx + 1, r.prenom, r.nom, r.titre || '',
     r.email, r.telephone || '',
     r.organisation || '', r.pays, label,
     new Date(r.registeredAt).toLocaleString('fr-FR'),
@@ -102,6 +102,8 @@ export default function AdminPage() {
   const [activeTab, setActiveTab] = useState<'circuit1' | 'circuit2'>('circuit1')
   const [search, setSearch] = useState('')
   const [exporting, setExporting] = useState<'excel' | 'pdf' | null>(null)
+  const [registrationsOpen, setRegistrationsOpen] = useState<boolean | null>(null)
+  const [togglingReg, setTogglingReg] = useState(false)
 
   // Edit & Delete state
   const [editReg, setEditReg] = useState<Registration | null>(null)
@@ -117,7 +119,11 @@ export default function AdminPage() {
       const res = await fetch('/api/admin', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ password }) })
       if (res.status === 401) { setError('Mot de passe incorrect.'); return }
       if (!res.ok) { setError('Erreur serveur. Réessayez.'); return }
-      setData(await res.json())
+      const d = await res.json()
+      setData(d)
+      // Fetch registration open/closed status
+      const sr = await fetch('/api/admin/settings', { method: 'GET' })
+      if (sr.ok) { const s = await sr.json(); setRegistrationsOpen(s.open) }
     } catch { setError('Erreur de connexion.') }
     finally { setLoading(false) }
   }
@@ -129,6 +135,18 @@ export default function AdminPage() {
       if (res.ok) setData(await res.json())
     } catch {}
     finally { setLoading(false) }
+  }
+
+  async function toggleRegistrations() {
+    setTogglingReg(true)
+    try {
+      const res = await fetch('/api/admin/settings', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ password, open: !registrationsOpen }),
+      })
+      if (res.ok) setRegistrationsOpen(!registrationsOpen)
+    } finally { setTogglingReg(false) }
   }
 
   async function handleExport(type: 'excel' | 'pdf') {
@@ -300,6 +318,16 @@ export default function AdminPage() {
           <button className="hbtn hbtn-excel" onClick={() => handleExport('excel')} disabled={exporting !== null}>{exporting === 'excel' ? '...' : '📊'} Excel</button>
           <button className="hbtn hbtn-pdf" onClick={() => handleExport('pdf')} disabled={exporting !== null}>{exporting === 'pdf' ? '...' : '📄'} PDF</button>
         </div>
+        {registrationsOpen !== null && (
+          <button
+            className="hbtn"
+            style={{ background: registrationsOpen ? '#e53935' : '#1D6F42', color: 'white' }}
+            onClick={toggleRegistrations}
+            disabled={togglingReg}
+          >
+            {togglingReg ? '...' : registrationsOpen ? '🔒 Fermer les inscriptions' : '🔓 Ouvrir les inscriptions'}
+          </button>
+        )}
         <button className="hbtn hbtn-outline" onClick={refresh} disabled={loading}>⟳ Actualiser</button>
         <button className="hbtn hbtn-danger" onClick={() => setData(null)}>Déconnexion</button>
         <Link href="/" style={{ color:'rgba(255,255,255,0.5)', fontSize:'0.82rem', textDecoration:'none' }}>← Site</Link>
@@ -362,7 +390,7 @@ export default function AdminPage() {
                 </tr>
               </thead>
               <tbody>
-                {filtered.map((r, i) => (
+                {filtered.map((r) => (
                   <tr key={r.id}>
                     <td style={{ color:'#999', fontSize:'0.78rem', textAlign:'center' }}>{activeRegs.indexOf(r) + 1}</td>
                     <td>{r.prenom}</td>

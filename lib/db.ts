@@ -10,6 +10,37 @@ export function getDb(): NeonQueryFunction<false, false> {
   return _sql
 }
 
+export async function initSettings() {
+  const sql = getDb()
+  await sql`
+    CREATE TABLE IF NOT EXISTS settings (
+      key   VARCHAR(100) PRIMARY KEY,
+      value VARCHAR(255) NOT NULL
+    )
+  `
+  await sql`
+    INSERT INTO settings (key, value) VALUES ('registrations_open', 'true')
+    ON CONFLICT (key) DO NOTHING
+  `
+}
+
+export async function getRegistrationsOpen(): Promise<boolean> {
+  const sql = getDb()
+  try {
+    const rows = await sql`SELECT value FROM settings WHERE key = 'registrations_open'`
+    if (rows.length === 0) return true
+    return rows[0].value === 'true'
+  } catch { return true }
+}
+
+export async function setRegistrationsOpen(open: boolean): Promise<void> {
+  const sql = getDb()
+  await sql`
+    INSERT INTO settings (key, value) VALUES ('registrations_open', ${open ? 'true' : 'false'})
+    ON CONFLICT (key) DO UPDATE SET value = EXCLUDED.value
+  `
+}
+
 export async function initDb() {
   const sql = getDb()
   await sql`

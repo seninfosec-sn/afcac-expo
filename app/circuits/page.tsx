@@ -37,6 +37,10 @@ const T = {
     errGeneral: 'An error occurred. Please try again.',
     errConnection: 'Connection error. Please try again.',
     errFull: 'This circuit just reached its maximum capacity (100 people). Please choose the other circuit.',
+    errClosed: 'Registrations are closed.',
+    closedTitle: 'Registrations are closed',
+    closedMsg: 'Registration for the Tourist Circuits is now closed. Thank you for your interest.',
+    closedBack: 'Back to site',
     req: 'Required', invalidEmail: 'Invalid email',
     circ1: 'CIRCUIT 1: 100 People max. (Bus circuit)',
     circ2: 'CIRCUIT 2: 100 People max. (City of Lomé)',
@@ -85,6 +89,10 @@ const T = {
     errGeneral: 'Une erreur est survenue. Veuillez réessayer.',
     errConnection: 'Erreur de connexion. Veuillez réessayer.',
     errFull: 'Ce circuit vient d\'atteindre sa capacité maximale (100 personnes). Veuillez choisir l\'autre circuit.',
+    errClosed: 'Les inscriptions sont fermées.',
+    closedTitle: 'Inscriptions fermées',
+    closedMsg: 'Les inscriptions pour les Circuits Touristiques sont désormais clôturées. Merci de votre intérêt.',
+    closedBack: 'Retour au site',
     req: 'Requis', invalidEmail: 'Email invalide',
     circ1: 'CIRCUIT 1 : 100 Personnes maxi. (Circuit en bus)',
     circ2: 'CIRCUIT 2 : 100 Personnes maxi. (Ville de Lomé)',
@@ -133,6 +141,10 @@ const T = {
     errGeneral: 'Ocorreu um erro. Por favor tente novamente.',
     errConnection: 'Erro de ligação. Por favor tente novamente.',
     errFull: 'Este circuito atingiu a capacidade máxima (100 pessoas). Por favor escolha o outro circuito.',
+    errClosed: 'As inscrições estão encerradas.',
+    closedTitle: 'Inscrições encerradas',
+    closedMsg: 'As inscrições para os Circuitos Turísticos estão agora encerradas. Obrigado pelo seu interesse.',
+    closedBack: 'Voltar ao site',
     req: 'Obrigatório', invalidEmail: 'Email inválido',
     circ1: 'CIRCUITO 1: Máx. 100 Pessoas (Circuito de autocarro)',
     circ2: 'CIRCUITO 2: Máx. 100 Pessoas (Cidade de Lomé)',
@@ -243,7 +255,7 @@ export default function CircuitsPage() {
   const [errors, setErrors] = useState<Partial<FormData>>({})
   const [submitting, setSubmitting] = useState(false)
   const [submitError, setSubmitError] = useState('')
-  const [counts, setCounts] = useState<{ circuit1: number; circuit2: number }>({ circuit1: 0, circuit2: 0 })
+  const [counts, setCounts] = useState<{ circuit1: number; circuit2: number; closed?: boolean }>({ circuit1: 0, circuit2: 0 })
   const formRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -301,7 +313,9 @@ export default function CircuitsPage() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),
       })
-      if (res.status === 409) {
+      if (res.status === 403) {
+        setCounts(c => ({ ...c, closed: true }))
+      } else if (res.status === 409) {
         setSubmitError(t.errFull)
         if (selectedCircuitKey) setCounts(c => ({ ...c, [selectedCircuitKey]: MAX }))
       } else if (!res.ok) {
@@ -375,6 +389,20 @@ export default function CircuitsPage() {
         .select-circ-btn:not(.full):hover { background: #c9a84c; }
         .select-circ-btn.full { background: #ccc; color: #888; cursor: not-allowed; }
       `}</style>
+
+      {/* ── Registrations closed popup ─────────────────────────────────── */}
+      {counts.closed && (
+        <div style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.75)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 9999, padding: '24px' }}>
+          <div style={{ background: 'white', borderRadius: '20px', padding: '48px 40px', maxWidth: '460px', width: '100%', textAlign: 'center', boxShadow: '0 24px 60px rgba(0,0,0,0.35)' }}>
+            <div style={{ width: 72, height: 72, borderRadius: '50%', background: '#ffeaea', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 20px', fontSize: '2rem' }}>🔒</div>
+            <h2 style={{ fontFamily: 'var(--font-head)', color: 'var(--green-dark)', fontSize: '1.4rem', marginBottom: '12px' }}>{t.closedTitle}</h2>
+            <p style={{ color: '#555', fontSize: '0.95rem', lineHeight: 1.6, marginBottom: '28px' }}>{t.closedMsg}</p>
+            <Link href="/" style={{ display: 'inline-block', background: 'var(--green-dark)', color: 'white', padding: '12px 32px', borderRadius: '10px', fontWeight: 700, textDecoration: 'none', fontSize: '0.95rem' }}>
+              ← {t.closedBack}
+            </Link>
+          </div>
+        </div>
+      )}
 
       <div className="circuits-page">
         {/* Header */}
